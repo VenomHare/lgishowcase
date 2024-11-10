@@ -3,8 +3,7 @@ import Footer from './../Footer'
 import "./../../src/styles/showcase.css"
 import  YouTubePlayer from './../YoutubePlayer';
 import { useEffect, useState } from 'react';
-import {fetchRecentVideos, fetchYouTubeRSS} from "./../utils.ts"
-const apiKey = import.meta.env.VITE_API_KEY;
+import { fetchYouTubeRSS} from "./../utils.ts"
 const channelId = import.meta.env.VITE_CHANNEL_ID;
 
 type Video = {
@@ -15,7 +14,7 @@ type Video = {
 
 const Showcase = () => {
 
-    const [error, setError] = useState<string|null>(null);
+    // const [error, setError] = useState<string|null>(null);
     const [videos, setVideos] = useState<Video[]>([])
     const [currentVideo, setCurrentVideo] = useState<string>("");
 
@@ -26,7 +25,7 @@ const Showcase = () => {
                 setVideos(fetchedVideos);
                 setCurrentVideo(fetchedVideos[0].link);
             })
-            .catch((err)=>{setError(err.message)});
+            // .catch((err)=>{setError(err.message)});
             
         return () =>{}
     },[])

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import NavBar from './../components/NavBar'
 import DisplayProducts from './../components/DisplayProducts'
 import Brief from './../components/Brief'

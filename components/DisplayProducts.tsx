@@ -1,28 +1,6 @@
 import { useState } from 'react';
 import './../src/styles/slides.css'
 import DisplayBlock from './DisplayBlock';
-import { RiArrowDropDownLine } from "react-icons/ri";
-// const ExlucisveLast = 2;
-// const LimitedLast=1;
-// const BasicLast=1;
-
-// const getNext = ( cur: number, Last:number) => {
-//     if (cur == Last) {
-//         cur = 1;
-//         return 1;
-//     }
-//     cur = cur + 1;
-//     return cur + 1;
-// }
-
-// const getPrev = (cur: number, Last:number) => {
-//     if (cur == 1) {
-//         cur = Last;
-//         return Last;
-//     }
-//     cur = cur - 1;
-//     return cur;
-// }
 
 const imgs = [
     "https://cdn.discordapp.com/attachments/1304332618698985533/1304332727230926911/1.png?ex=672f0203&is=672db083&hm=33869e5d34867b92c68e8db58e4e754a0daa53af37b294ecf738e2e495d46323&",
