@@ -7,6 +7,22 @@
         {
             "src":"/roster",
             "dest":"/"
+        },
+        {
+            "src":"/free",
+            "dest":"/"
+        },
+        {
+            "src":"/showcase",
+            "dest":"/"
+        },
+        {
+            "src":"/exclusive",
+            "dest":"/"
+        },
+        {
+            "src":"/policies",
+            "dest":"/"
         }
     ]
 }
