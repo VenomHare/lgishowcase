@@ -1,32 +1,34 @@
 {
-    "routes":[
+    "routes": [
         {
-            "src":"/",
-            "dest":"/"
+            "src": "/",
+            "dest": "/"
         },
         {
-            "src":"/roster",
-            "dest":"/"
+            "src": "/roster",
+            "dest": "/"
         },
         {
-            "src":"/free",
-            "dest":"/"
+            "src": "/free",
+            "dest": "/"
         },
         {
-            "src":"/showcase",
-            "dest":"/"
+            "src": "/showcase",
+            "dest": "/"
         },
         {
-            "src":"/exclusive",
-            "dest":"/"
+            "src": "/exclusive",
+            "dest": "/"
         },
         {
-            "src":"/policies",
-            "dest":"/"
-        },
+            "src": "/policies",
+            "dest": "/"
+        }
+    ],
+    "crons": [
         {
-            "src":"/api/rss",
-            "dest":"/"
+            "path": "/api/rss",
+            "schedule": "0 10 * * *"
         }
     ]
 }
