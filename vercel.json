@@ -23,6 +23,10 @@
         {
             "src":"/policies",
             "dest":"/"
+        },
+        {
+            "src":"/api/rss",
+            "dest":"/"
         }
     ]
 }
