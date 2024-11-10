@@ -5,8 +5,8 @@
   "type": "module",
     "scripts": {
       "dev": "npx vite",
-      "build": "npx vite build",
-      "serve": "npx vite preview",
+      "build": "vite build",
+      "preview": "npx vite preview",
       "postinstall": "chmod +x ./node_modules/.bin/vite"
     },  
   "dependencies": {
