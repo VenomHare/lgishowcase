@@ -7,7 +7,8 @@
     "dev": "npx vite",
     "build": "npx vite build",
     "lint": "eslint .",
-    "preview": "npx vite preview"
+    "preview": "npx vite preview",
+    "postinstall": "chmod +x ./node_modules/.bin/vite",
   },
   "dependencies": {
     "chmod": "^0.2.1",
