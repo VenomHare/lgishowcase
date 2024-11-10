@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-    "scripts": {
-      "dev": "npx vite",
-      "build": "vite build",
-      "preview": "npx vite preview",
-      "postinstall": "chmod +x ./node_modules/.bin/vite"
-    },  
+  "scripts": {
+    "dev": "npx vite",
+    "build": "tsc -b && npx vite build",
+    "lint": "eslint .",
+    "preview": "npx vite preview"
+  },
   "dependencies": {
     "chmod": "^0.2.1",
     "react": "^18.3.1",
