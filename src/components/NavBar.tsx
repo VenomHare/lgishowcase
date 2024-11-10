@@ -1,5 +1,5 @@
-import './../src/styles/nav.css'
-import logo from './../src/assets/Logo_square.png'
+import './../styles/nav.css'
+import logo from './../assets/Logo_square.png'
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from 'react';
 import { RxCross2 } from "react-icons/rx";

@@ -1,4 +1,4 @@
-import './../src/styles/display.css'
+import './../styles/display.css'
 const Basics = () => {
     return (<div className='basichead' id='basics'>
         <h2 className='basicTitle'>Basics</h2>

@@ -1,6 +1,6 @@
 import NavBar from './../NavBar'
 import Footer from './../Footer'
-import "./../../src/styles/exclusive.css"
+import "./../../styles/exclusive.css"
 import DisplayBlock from '../DisplayBlock'
 const pack1 = [
     "https://media.discordapp.net/attachments/1304332618698985533/1305164180319371374/2.png?ex=6732085d&is=6730b6dd&hm=bc05d5b3ed2880f07fa47c06926e2cbcaa6bcc7458fd918af31e665faad84d85&=&format=webp&quality=lossless",

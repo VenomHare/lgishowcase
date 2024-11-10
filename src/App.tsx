@@ -1,8 +1,8 @@
-import NavBar from './../components/NavBar'
-import DisplayProducts from './../components/DisplayProducts'
-import Brief from './../components/Brief'
-import Basics from './../components/Basics'
-import Footer from './../components/Footer'
+import NavBar from './components/NavBar'
+import DisplayProducts from './components/DisplayProducts'
+import Brief from './components/Brief'
+import Basics from './components/Basics'
+import Footer from './components/Footer'
 import './App.css'
 import './styles/main.css'
 

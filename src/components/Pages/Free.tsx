@@ -1,4 +1,4 @@
-import './../../src/styles/free.css'
+import './../../styles/free.css'
 import DisplayBlock from '../DisplayBlock'
 import NavBar from '../NavBar'
 import Footer from '../Footer'

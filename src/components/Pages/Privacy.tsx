@@ -1,6 +1,6 @@
 import NavBar from './../NavBar'
 import Footer from './../Footer'
-import "./../../src/styles/privacy.css"
+import "./../../styles/privacy.css"
 
 const Privacy = () => {
     return (<>

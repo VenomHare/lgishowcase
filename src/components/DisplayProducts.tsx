@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './../src/styles/slides.css'
+import './../styles/slides.css'
 import DisplayBlock from './DisplayBlock';
 
 const imgs = [

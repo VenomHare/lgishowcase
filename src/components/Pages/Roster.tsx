@@ -1,5 +1,5 @@
 import Footer from '../Footer'
-import './../../src/styles/roster.css'
+import './../../styles//roster.css'
 import NavBar from './../NavBar'
 import RosterBlock from "./../RosterBlock"
 import {DeluxeList, ExclusiveList, LimitedList} from './../RosterLists'

@@ -1,6 +1,6 @@
 import NavBar from './../NavBar'
 import Footer from './../Footer'
-import "./../../src/styles/showcase.css"
+import "./../../styles//showcase.css"
 import  YouTubePlayer from './../YoutubePlayer';
 import { useEffect, useState } from 'react';
 import { fetchYouTubeRSS} from "./../utils.ts"

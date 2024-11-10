@@ -1,8 +1,8 @@
-import './../src/styles/footer.css'
-import logo from './../src/assets/Logo_square.png'
-import smack from './../src/assets/smacklogo.png'
-import wwlogo from './../src/assets/wwlogo.png'
-import pslogo  from './../src/assets/pslogo.png'
+import './../styles/footer.css'
+import logo from './../assets/Logo_square.png'
+import smack from './../assets/smacklogo.png'
+import wwlogo from './../assets/wwlogo.png'
+import pslogo  from './../assets/pslogo.png'
 import { AiOutlineYoutube,AiOutlineDiscord } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandPaypal } from "react-icons/tb";
