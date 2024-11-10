@@ -8,8 +8,11 @@ import Exclusive from "./components/Pages/Exclusive.tsx"
 import Showcase from "./components/Pages/Showcase.tsx"
 import './index.css'
 import {
+  BrowserRouter,
   createBrowserRouter,
+  Route,
   RouterProvider,
+  Routes,
 } from "react-router-dom";
 import App from './App.tsx'
 
@@ -53,8 +56,15 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(<>
   <StrictMode>
-    {/* <App /> */}
-    
-    <RouterProvider router={router} />
+  <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/roster" element={<Roster />} />
+        <Route path="/showcase" element={<Showcase />} />
+        <Route path="/exclusive" element={<Exclusive />} />
+        <Route path="/polices" element={<Privacy/>} />
+        <Route path="/free" element={<Free/>} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 </>);
