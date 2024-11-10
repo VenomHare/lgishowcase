@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(182, 184, 174);
+    height: fit-content;
+    width: 100svw;
+} 
+.maintitle{
+    color: rgb(31, 30, 30);
+    font-size: 10rem;
+    font-family: 'Jost','comic sans ms';
+}
+.subtitle{
+    color: rgb(31, 30, 30);
+    font-size: 3rem;
+    font-family: "Cedarville Cursive", cursive;
+}
+.page-details{
+    color: rgb(31, 30, 30);
+    margin: 3svh;
+    font-size: 1.4rem;
+    font-family: 'Jost','comic sans ms';
+}
+.Brief{
+    font-family: 'Jost','comic sans ms';
+    width: 75svw;
+    margin: 30px auto;
+    color: black;
+    z-index: 10;
+}
+.Brief::before{
+    content: '';
+    background-color: rgb(226, 180, 119);
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 10%;
+    width: 78svw;
+    height: 30svh;
+    transform: skewX(4deg) ;
+    border-radius: 10px;
+}
+.briefTitle{
+    text-align: center;    
+    font-size: 3rem;
+    font-weight: 600;
+}
+.briefSub{
+    text-align: center;    
+    font-size: 2rem;
+    font-weight: 600;
+}
+.briefdetail{
+    text-align: center;    
+    font-size: 1rem;
+    font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+    .Brief::before{
+        width: 85svw;
+        height: 45svh;
+        left: 10%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .page-details{
+        font-size: 1rem;
+    }
+    .maintitle{
+        font-size: 5rem;
+    }
+    .subtitle{
+        font-size: 2rem;
+    }
+    .Brief::before{
+        width: 85svw;
+        height: 68svh;
+        left: 10%;  
+    }
+}

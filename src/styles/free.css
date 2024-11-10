@@ -1,0 +1,22 @@
+.free-container{
+    width: 75svw;
+    height: 80svh;
+
+    background-color: rgba(0, 255, 255, 0.39);
+    margin: 5svh auto;
+    border-radius: 20px;
+    border: 4px solid white;
+
+    padding: 2svw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:1024px) {
+    .free-container
+    {
+        height: fit-content;
+        padding: 5svw;
+    }
+}

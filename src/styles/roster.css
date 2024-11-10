@@ -1,0 +1,103 @@
+.rosterHeader{
+    width: 100svw;
+    height: 15svh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: 'Jost','comic sans ms';
+    background-color: rgb(182, 184, 174);
+    color: #000;
+
+    font-family: 'Jost',"comic sans ms";
+}
+.RosterBlockParent{
+    width: 90svw;
+    height: 50svh;
+    margin: 10svh auto;
+
+    font-family: 'Jost',"comic sans ms";
+    display: flex;
+
+    background-color: rgb(17, 39, 58);
+
+    border: 5px solid white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.rosterlist{
+    height: 90%;
+
+    column-gap: 1svw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.rosterlist *{
+
+    display: inline-block;
+    width: 18svw;
+    font-size: 1.2rem;
+    text-align: left;
+
+    position: relative;
+}
+.rosterlist *::before{
+    content: "▣";
+    display: block;
+    position: absolute;
+    left: -10%;
+}
+.rosterThumbnail{
+    /* width: 30svw; */
+    height: 50svh;
+    border-radius:10px;
+}
+.rosterTitle{
+    font-size: 2rem;
+    font-weight: 800;
+
+}
+.RosterButton{
+    margin: 10px;
+}
+.rosterMobile{
+    display: none;
+}
+.RosterButton{
+    display: none;
+}
+@media screen and (max-width:1024px){
+    .rosterThumbnail{
+        width: 75svw;
+    }
+    .listBlock{
+        display: flex;
+        flex-direction: column;
+    }
+    .RosterButton{
+        display: block;
+    }
+    .rosterMobile{
+        display: block;
+    }
+    .rosterPC{
+        display: none;
+    }
+    .RosterBlockParent{
+        padding: 20px;
+        flex-direction: column;
+        gap: 3svh;
+        height: fit-content;
+        width: 80svw;
+    }
+    .rosterlist *{
+        width: 37svw;
+    }
+}
+@media screen and (max-width:500px){
+    .rosterlist *{
+        width: 70svw;
+    }
+}

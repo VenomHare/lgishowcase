@@ -1,0 +1,21 @@
+.exclusiveTitle{
+    width: 100svw;
+    height: fit-content;
+    background-color: rgb(182, 184, 174);
+    color: #000;
+    font-family: 'Jost', 'comic sans ms';
+    padding: 4svh 0;
+}
+.showcaseContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.showContainer{
+    padding: 2rem;
+    border: 2px solid white;
+    margin: 1svh;
+    border-radius: 10px;
+    background-color: rgb(17, 39, 58);
+}

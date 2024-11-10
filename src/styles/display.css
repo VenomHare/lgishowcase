@@ -1,0 +1,76 @@
+.basicBlock {
+    border: 2px solid rgb(141, 141, 137);
+    background-color: rgba(136, 136, 132, 0.692);
+    height: fit-content;
+    padding: 1svw;
+    border-radius: 15px;
+    text-align: left;
+
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0px black;
+}
+
+.head3 {
+    text-align: center;
+}
+
+.blockcontainer {
+    column-count: 4;
+    column-gap: 1svw;
+    width: 100s;
+}
+.basichead{
+    font-family: 'Jost', 'comic sans ms';
+    background-color: rgb(182, 184, 174);
+    color: black;
+    margin: 10svh auto;
+    padding: 5svh 1svw;
+}
+.basicTitle{
+    font-size: 2.5rem;
+    padding: 1svw;
+}
+.basicdetails{
+    margin: 1%;
+    font-size: 1.3rem;
+}
+.basicSubTitle{
+    font-size: 1.7rem;
+    text-decoration: underline;
+}
+.basicBlock div{
+    position: relative;
+}
+.basicBlock div::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    top: 30%;
+    left: -2%;
+}
+@media screen and (max-width: 1024px) {
+    .basicTitle{
+        font-size: 8svw;
+    }
+    .basicdetails{
+        font-size: 1em;
+    }
+    .blockcontainer{
+        column-count: 2;
+    }
+}
+@media screen and (max-width: 500px) {
+    .blockcontainer{
+        column-count: 1;
+    }
+    .basicBlock{
+        padding: 2svh;
+    }
+}
