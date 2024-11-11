@@ -20,13 +20,12 @@ export default async function handler(req, res) {
         const result = await parseStringPromise(xmlString);
         const items = result.feed.entry;
         const formattedItems = items.map((item) => {
-            console.log(item);
             return {
             title: item.title[0],
             link: item.link[0].$.href,
             thumbnail: item["media:group"][0]["media:thumbnail"][0]["$"].url,
         }});
-
+        console.log(JSON.parse(formattedItems));
         res.status(200).json(formattedItems);
     } catch (error) {
         console.error(error);
