@@ -25,7 +25,7 @@ export default async function handler(req, res) {
             link: item.link[0].$.href,
             thumbnail: item["media:group"][0]["media:thumbnail"][0]["$"].url,
         }});
-        console.log(JSON.parse(formattedItems));
+        console.log(formattedItems);
         res.status(200).json(formattedItems);
     } catch (error) {
         console.error(error);
