@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         const xmlString = await response.text();
         const result = await parseStringPromise(xmlString);
         const items = result.feed.entry;
-        console.log(items[0]["media:group"]);
+        console.log(items[0]["media:group"][0]["media:thumbnail"]);
         const formattedItems = items.map((item) => ({
             title: item.title[0],
             link: item.link[0].$.href,
