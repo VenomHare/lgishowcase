@@ -1,5 +1,7 @@
-const fetch = require('node-fetch');
-const { parseStringPromise } = require('xml2js');
+// const fetch = require('node-fetch');
+// const { parseStringPromise } = require('xml2js');
+import fetch from 'node-fetch'
+import { parseStringPromise } from 'xml2js';
 
 module.exports = async function handler(req, res) {
     const { channel_id: channelId } = req.query;
