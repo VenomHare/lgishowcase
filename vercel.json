@@ -1,14 +1,15 @@
 {
     "version":2,
     "functions": {
-        "api/rss.ts": {
+        "api/rss.js": {
             "runtime": "nodejs18.x"
+            
         }
     },
     "routes": [
         {
             "src": "/api/rss",
-            "dest": "/api/rss.ts"
+            "dest": "/api/rss.js"
         },
         {
             "src": "/api",
