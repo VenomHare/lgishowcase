@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+import ApiRoutes from 'vite-plugin-api-routes'
 // https://vite.dev/config/
 export default defineConfig({
   server: {
@@ -13,5 +14,10 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    ApiRoutes({
+      routeBase:"./src/api"
+    }),
+  ],
 })

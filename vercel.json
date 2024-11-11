@@ -23,12 +23,10 @@
         {
             "src": "/policies",
             "dest": "/"
-        }
-    ],
-    "crons": [
+        },
         {
-            "path": "/api/rss",
-            "schedule": "0 10 * * *"
+            "src": "/api/rss",
+            "dest": "/api/rss.ts"
         }
     ]
 }
