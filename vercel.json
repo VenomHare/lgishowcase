@@ -2,6 +2,11 @@
     "rewrites":[
         {"source":"/api", "destination":"/api/rss.cjs"},
         {"source":"/api/rss", "destination":"/api/rss.cjs"},
-        {"source":"/(.*)","destination":"/index.html"}
+        {"source":"/roster","destination":"/index.html"},
+        {"source":"/showcase","destination":"/index.html"},
+        {"source":"/policies","destination":"/index.html"},
+        {"source":"/exclusive","destination":"/index.html"},
+        {"source":"/free","destination":"/index.html"},
+        {"source":"/","destination":"/index.html"}
     ]
 }
