@@ -25,9 +25,9 @@ const Showcase = () => {
                 setVideos(fetchedVideos);
             })
             // .catch((err)=>{setError(err.message)});
-        setTimeout(()=>{
-            setCurrentVideo(videos[0].link);
-        }, 500)
+            .finally(()=>{
+                setCurrentVideo(videos[0].link);
+            })
         return () =>{}
     },[])
 
