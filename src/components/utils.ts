@@ -6,18 +6,9 @@ export async function fetchYouTubeRSS(channelId: string) {
         }
 
         const text = await response.text();
-        console.log("api: ", text);
         // Parse the XML response
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(text, 'application/xml');
-        const items = Array.from(xmlDoc.getElementsByTagName('entry'));
-
-        // Map XML entries to a simpler data structure
-        return items.map(item => ({
-            title: item.getElementsByTagName('title')[0]?.textContent || '',
-            link: item.getElementsByTagName('link')[0]?.getAttribute('href') || '',
-            thumbnail: item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0]?.getAttribute('url') || '',
-        }));
+        const items = JSON.parse(text);
+        return items;
     } catch (error) {
         console.error('Error fetching or parsing RSS feed:', error);
         return [];
