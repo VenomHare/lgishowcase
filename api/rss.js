@@ -5,7 +5,7 @@ import { parseStringPromise } from 'xml2js';
 
 export default async function handler(req, res) {
     const { channel_id: channelId } = req.query;
-
+    console.log(channelId);
     if (!channelId) {
         return res.status(400).json({ message: 'Missing channel_id parameter' });
     }
@@ -13,11 +13,11 @@ export default async function handler(req, res) {
     try {
         const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
         const response = await fetch(feedUrl);
-
+        console.log(1);
         if (!response.ok) {
             return res.status(response.status).json({ message: 'Failed to fetch RSS feed' });
         }
-
+        console.log(2);
         const xmlString = await response.text();
         const result = await parseStringPromise(xmlString);
         const items = result.feed.entry;
