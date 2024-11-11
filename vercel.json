@@ -1,15 +1,4 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "api/rss.cjs",
-            "use": "@vercel/node"
-        },
-        {
-            "src": "./index.html",
-            "use": "@vercel/static"
-        }
-    ],
     "routes": [
         {
             "src": "/",
@@ -39,5 +28,10 @@
             "src": "/api/rss",
             "dest": "/api/rss.cjs"
         }
-    ]
+    ],
+    "functions": {
+        "api/rss.cjs": {
+            "maxDuration": 30
+        }
+    }
 }
