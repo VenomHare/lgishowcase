@@ -26,7 +26,8 @@ const Showcase = () => {
             })
             // .catch((err)=>{setError(err.message)});
             .finally(()=>{
-                setCurrentVideo(videos[0].link);
+                console.log(videos);
+                setCurrentVideo(videos[1].link);
             })
         return () =>{}
     },[])
