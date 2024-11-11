@@ -23,10 +23,11 @@ const Showcase = () => {
         fetchYouTubeRSS(channelId)
             .then((fetchedVideos)=>{
                 setVideos(fetchedVideos);
-                setCurrentVideo(videos[0].link);
             })
             // .catch((err)=>{setError(err.message)});
-            
+        setTimeout(()=>{
+            setCurrentVideo(videos[0].link);
+        }, 500)
         return () =>{}
     },[])
 
