@@ -1,6 +1,6 @@
 {
     "rewrites":[
-        {"source":"/api", "destination":"/api/rss.cjs"},
+        {"source":"/api", "destination":"/api/rss.js"},
         {"source":"/api/rss", "destination":"/api/rss.cjs"},
         {"source":"/roster","destination":"/index.html"},
         {"source":"/showcase","destination":"/index.html"},
