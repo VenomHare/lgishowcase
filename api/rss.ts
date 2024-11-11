@@ -1,13 +1,12 @@
-// api/fetchYouTubeFeed.ts
-// import { Request, Response } from 'express';
-import { parseStringPromise } from 'xml2js';
 import { VercelRequest, VercelResponse } from '@vercel/node';
+import fetch from 'node-fetch';
+import { parseStringPromise } from 'xml2js';
 
-const  handler = async(req: VercelRequest, res: VercelResponse) => {
-    const { channelId } = req.query;
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+    const { channel_id: channelId } = req.query;
 
     if (!channelId) {
-        return res.status(400).json({ message: 'Missing channelId parameter' });
+        return res.status(400).json({ message: 'Missing channel_id parameter' });
     }
 
     try {
@@ -19,12 +18,9 @@ const  handler = async(req: VercelRequest, res: VercelResponse) => {
         }
 
         const xmlString = await response.text();
-
-        // Parse the XML response
         const result = await parseStringPromise(xmlString);
         const items = result.feed.entry;
 
-        // Map XML entries to a simpler data structure
         const formattedItems = items.map((item: any) => ({
             title: item.title[0],
             link: item.link[0].$.href,
@@ -37,4 +33,3 @@ const  handler = async(req: VercelRequest, res: VercelResponse) => {
         return res.status(500).json({ message: 'Internal server error' });
     }
 }
-export default handler
