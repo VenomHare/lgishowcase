@@ -1,7 +1,7 @@
 {
     "rewrites":[
-        {"src":"/api", "dest":"/api/rss.cjs"},
-        {"src":"/api/rss", "dest":"/api/rss.cjs"},
-        {"src":"/(.*)","dest":"/index.html"}
+        {"source":"/api", "destination":"/api/rss.cjs"},
+        {"source":"/api/rss", "destination":"/api/rss.cjs"},
+        {"source":"/(.*)","destination":"/index.html"}
     ]
 }
