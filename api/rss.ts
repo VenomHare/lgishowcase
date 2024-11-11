@@ -1,8 +1,9 @@
 // api/fetchYouTubeFeed.ts
-import { Request, Response } from 'express';
+// import { Request, Response } from 'express';
 import { parseStringPromise } from 'xml2js';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
-export default async function handler(req: Request, res: Response) {
+const  handler = async(req: VercelRequest, res: VercelResponse) => {
     const { channelId } = req.query;
 
     if (!channelId) {
@@ -36,3 +37,4 @@ export default async function handler(req: Request, res: Response) {
         return res.status(500).json({ message: 'Internal server error' });
     }
 }
+export default handler
