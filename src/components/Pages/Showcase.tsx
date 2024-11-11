@@ -15,6 +15,7 @@ type Video = {
 const Showcase = () => {
 
     // const [error, setError] = useState<string|null>(null);
+    const [loading,setLoading] = useState(true)
     const [videos, setVideos] = useState<Video[]>([])
     const [currentVideo, setCurrentVideo] = useState<string>("");
 
@@ -27,9 +28,15 @@ const Showcase = () => {
                 setCurrentVideo(fetchedVideos[0].link);
             })
             // .catch((err)=>{setError(err.message)});
-
+            .finally(()=>{
+                setLoading(false);
+            })
         return () =>{}
     },[])
+
+    if (loading){
+        return <h1> Showcase Videos are loading...</h1>
+    }
 
     return (<>
         <NavBar active="showcase" />
