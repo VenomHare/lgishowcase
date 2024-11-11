@@ -24,11 +24,10 @@ const Showcase = () => {
             .then((fetchedVideos)=>{
                 console.log("Feteched",fetchedVideos);
                 setVideos(fetchedVideos);
+                setCurrentVideo(videos[0].link);
             })
             // .catch((err)=>{setError(err.message)});
-            .finally(()=>{
-                setCurrentVideo(videos[1].link);
-            })
+
         return () =>{}
     },[])
 
