@@ -3,7 +3,7 @@
 import fetch from 'node-fetch'
 import { parseStringPromise } from 'xml2js';
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
     const { channel_id: channelId } = req.query;
 
     if (!channelId) {
