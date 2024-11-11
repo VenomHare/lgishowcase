@@ -23,7 +23,7 @@ const Showcase = () => {
         fetchYouTubeRSS(channelId)
             .then((fetchedVideos)=>{
                 setVideos(fetchedVideos);
-                setCurrentVideo(fetchedVideos[0].link);
+                setCurrentVideo(videos[0].link);
             })
             // .catch((err)=>{setError(err.message)});
             
