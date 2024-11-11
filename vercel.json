@@ -1,10 +1,5 @@
 {
-    "builds": [
-        {
-            "src": "api/rss.ts",
-            "use": "@vercel/node"
-        }
-    ],
+
     "routes": [
         {
             "src": "/",

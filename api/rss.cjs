@@ -1,8 +1,7 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
-import fetch from 'node-fetch';
-import { parseStringPromise } from 'xml2js';
+const fetch = require('node-fetch');
+const { parseStringPromise } = require('xml2js');
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+module.exports = async function handler(req, res) {
     const { channel_id: channelId } = req.query;
 
     if (!channelId) {
@@ -21,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const result = await parseStringPromise(xmlString);
         const items = result.feed.entry;
 
-        const formattedItems = items.map((item: any) => ({
+        const formattedItems = items.map((item) => ({
             title: item.title[0],
             link: item.link[0].$.href,
             thumbnail: item['media:thumbnail'][0].$.url,
@@ -32,4 +31,4 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         console.error(error);
         return res.status(500).json({ message: 'Internal server error' });
     }
-}
+};
