@@ -1,11 +1,6 @@
 {
     "version":2,
-    "functions": {
-        "api/rss.js": {
-            "runtime": "nodejs18.x"
-            
-        }
-    },
+
     "routes": [
         {
             "src": "/api/rss",
