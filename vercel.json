@@ -28,10 +28,5 @@
             "src": "/api/rss",
             "dest": "/api/rss.cjs"
         }
-    ],
-    "functions": {
-        "api/rss.cjs": {
-            "maxDuration": 30
-        }
-    }
+    ]
 }
