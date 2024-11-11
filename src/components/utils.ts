@@ -6,7 +6,7 @@ export async function fetchYouTubeRSS(channelId: string) {
         }
 
         const text = await response.text();
-
+        console.log("api: ", text);
         // Parse the XML response
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(text, 'application/xml');
