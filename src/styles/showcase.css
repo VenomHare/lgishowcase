@@ -36,6 +36,7 @@
     width: 80%;
 }
 .ShowcaseVidParent{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
