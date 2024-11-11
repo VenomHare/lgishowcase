@@ -4,11 +4,11 @@
     "routes": [
         {
             "src": "/api/rss",
-            "dest": "/api/rss.js"
+            "dest": "/api/rss.cjs"
         },
         {
             "src": "/api",
-            "dest": "/api/rss.js"
+            "dest": "/api/rss.cjs"
         },
         {
             "src": "/roster",
