@@ -24,7 +24,7 @@ const Showcase = () => {
             .then((fetchedVideos)=>{
                 console.log("Feteched",fetchedVideos);
                 setVideos(fetchedVideos);
-                setCurrentVideo(videos[0].link);
+                setCurrentVideo(fetchedVideos[0].link);
             })
             // .catch((err)=>{setError(err.message)});
 
