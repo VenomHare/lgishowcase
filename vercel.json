@@ -27,7 +27,7 @@
         },
         {
             "src": "/api/rss",
-            "dest": "/api/rss.ts"
+            "dest": "/api/rss.cjs"
         }
     ]
 }
