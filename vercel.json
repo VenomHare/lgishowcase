@@ -8,40 +8,34 @@
         {
             "src": "/api/rss",
             "dest": "/api/rss.ts"
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/api",
-            "destination": "/api/rss.js"
         },
         {
-            "source": "/api/rss",
-            "destination": "/api/rss.cjs"
+            "src": "/api",
+            "dest": "/api/rss.js"
         },
         {
-            "source": "/roster",
-            "destination": "/index.html"
+            "src": "/roster",
+            "dest": "/"
         },
         {
-            "source": "/showcase",
-            "destination": "/index.html"
+            "src": "/showcase",
+            "dest": "/"
         },
         {
-            "source": "/policies",
-            "destination": "/index.html"
+            "src": "/policies",
+            "dest": "/index.html"
         },
         {
-            "source": "/exclusive",
-            "destination": "/index.html"
+            "src": "/exclusive",
+            "dest": "/"
         },
         {
-            "source": "/free",
-            "destination": "/index.html"
+            "src": "/free",
+            "dest": "/"
         },
         {
-            "source": "/",
-            "destination": "/index.html"
+            "src": "/",
+            "dest": "/"
         }
     ]
      
