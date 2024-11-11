@@ -1,32 +1,7 @@
 {
-    "routes": [
-        {
-            "src": "/",
-            "dest": "/"
-        },
-        {
-            "src": "/roster",
-            "dest": "/"
-        },
-        {
-            "src": "/free",
-            "dest": "/"
-        },
-        {
-            "src": "/showcase",
-            "dest": "/"
-        },
-        {
-            "src": "/exclusive",
-            "dest": "/"
-        },
-        {
-            "src": "/policies",
-            "dest": "/"
-        },
-        {
-            "src": "/api/rss",
-            "dest": "/api/rss.cjs"
-        }
+    "rewrites":[
+        {"src":"/api", "dest":"/api/rss.cjs"},
+        {"src":"/api/rss", "dest":"/api/rss.cjs"},
+        {"src":"/(.*)","dest":"/index.html"}
     ]
 }
