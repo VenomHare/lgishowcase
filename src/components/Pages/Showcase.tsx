@@ -22,11 +22,11 @@ const Showcase = () => {
     useEffect(()=>{
         fetchYouTubeRSS(channelId)
             .then((fetchedVideos)=>{
+                console.log(fetchedVideos);
                 setVideos(fetchedVideos);
             })
             // .catch((err)=>{setError(err.message)});
             .finally(()=>{
-                console.log(videos);
                 setCurrentVideo(videos[1].link);
             })
         return () =>{}
