@@ -1,4 +1,5 @@
 {
+    "version":2,
     "functions": {
         "api/my-api.ts": {
             "runtime": "nodejs18.x"
