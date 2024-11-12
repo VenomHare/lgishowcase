@@ -5,9 +5,9 @@ import RosterBlock from "./../RosterBlock"
 import {DeluxeList, ExclusiveList, LimitedList} from './../RosterLists'
 const Roster = () => {
   const thumbnail = [
-    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317640/1_jk6u4z.png",
+    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317640/3_skbost.png",
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317639/2_orgr2g.png",
-    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317640/3_skbost.png"
+    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317640/1_jk6u4z.png",
   
   ]
   return (
