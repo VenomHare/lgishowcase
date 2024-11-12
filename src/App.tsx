@@ -13,7 +13,7 @@ function App() {
       <NavBar active='home'/>
       <div className="heading">
         <h1 className='maintitle'>
-          LGI MoDx'z
+          LGI MOD'z
         </h1>
         <h3 className='subtitle'>A Mod that you always want</h3>
         <div className="page-details"> 
