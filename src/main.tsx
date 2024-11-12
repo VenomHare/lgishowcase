@@ -6,6 +6,8 @@ import Privacy from "./components/Pages/Privacy.tsx"
 import ErrorPage from "./components/Pages/ErrorPage.tsx"
 import Exclusive from "./components/Pages/Exclusive.tsx"
 import Showcase from "./components/Pages/Showcase.tsx"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './index.css'
 import {
   createBrowserRouter,
@@ -55,7 +57,8 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(<>
   <StrictMode>
     {/* <App /> */}
-    
+    <Analytics/>
+    <SpeedInsights/>
     <RouterProvider router={router} />
   </StrictMode>
 </>);
