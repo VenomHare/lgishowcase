@@ -5,7 +5,6 @@ import { parseStringPromise } from 'xml2js';
 
 export default async function handler(req, res) {
     const { channel_id: channelId } = req.query;
-    console.log(channelId);
     if (!channelId) {
         return res.status(400).json({ message: 'Missing channel_id parameter' });
     }
@@ -25,7 +24,6 @@ export default async function handler(req, res) {
             link: item.link[0].$.href,
             thumbnail: item["media:group"][0]["media:thumbnail"][0]["$"].url,
         }});
-        console.log(formattedItems);
         res.status(200).json(formattedItems);
     } catch (error) {
         console.error(error);
