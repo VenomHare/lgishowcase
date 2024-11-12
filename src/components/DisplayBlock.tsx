@@ -1,4 +1,5 @@
 import React, {  useState } from 'react'
+import ImageView from './ImageView'
 
 const getNext = ( cur: number, Last:number) => {
     if (cur >= Last) {
@@ -44,7 +45,7 @@ const DisplayBlock : React.FC<Props> = ({ PicLast, imgURLs, thumbnail,ButtonText
                     <div className="img-container">
                         {
                             imgURLs.map((str,index)=>(
-                                <img src={str} key={index} alt={`image ${index}`} className={`slideitem ${picture == index+1 ? "show" : "hide"}`} />
+                                <ImageView imageURL={str} key={`Image${index}`} alt={`image ${index}`} classname={`slideitem ${picture == index+1 ? "show" : "hide"}`} />
                             ))
                         }
                         {/* <img src="./../src/assets/slideDeluxe/1.png" alt="1" className={`slideitem ${picture == 1 ? "show" : "hide"}`} />

@@ -1,0 +1,55 @@
+.openimageParent
+{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 9999;
+    background: #000000e0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+
+}
+.openimageCancel{
+    position: fixed;
+    top: 5svh;
+    right: 5svw;
+    font-size: 4svh;
+    cursor: pointer;
+    background-color: aliceblue;
+    color: #000;
+    border-radius: 5px;
+    
+    z-index: 1000;
+
+    box-shadow: 0 0 10px 10px #000;
+    display: grid;
+    place-items: center;
+}
+.opennedImage{
+    max-width: 85svw;
+    max-height: 90svh;
+}
+.imgInstruct{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .opennedImage{
+        max-width: 100svw;
+        max-height: 80svh;
+    }
+    .imgInstruct{
+        display: block;
+        font-size: 1.4em;
+        font-family: 'Jost',"comic sans ms";
+    }
+}

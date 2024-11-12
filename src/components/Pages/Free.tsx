@@ -2,6 +2,8 @@ import './../../styles/free.css'
 import DisplayBlock from '../DisplayBlock'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
+
+
 const imgs = [
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318452/1_smscsd.png",
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318452/4_kfs2yu.png",
