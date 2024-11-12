@@ -7,7 +7,7 @@ import ErrorPage from "./components/Pages/ErrorPage.tsx"
 import Exclusive from "./components/Pages/Exclusive.tsx"
 import Showcase from "./components/Pages/Showcase.tsx"
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './index.css'
 import {
   createBrowserRouter,
