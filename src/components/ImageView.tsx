@@ -25,6 +25,7 @@ const ImageView: React.FC<Props> = ({ imageURL, classname, alt, key }) => {
                         <TransformWrapper>
                             <div className='openimageParent' key={key}>
                                 <div className="imgInstruct">Double Tap or Pinch to ZOOM</div>
+                                
                                 <div className='openimageCancel' onClick={() => { setIsOpen(false) }}><RxCross2 /></div>
                                 <TransformComponent>
                                     <img src={imageURL} alt={alt}  className='opennedImage'/>
