@@ -1,17 +1,8 @@
 import { useState } from 'react';
 import './../styles/slides.css'
 import DisplayBlock from './DisplayBlock';
+import { BasicSliderImages, BasicSliderThumbnail, DeluxeSliderImages, DeluxeSliderThumbnail, LimitedSliderImages, LimitedSliderThumbnail } from './config';
 
-const imgs = [
-    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
-]
-const thumbnail = [
-    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317640/1_jk6u4z.png",
-    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317639/2_orgr2g.png",
-    "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317640/3_skbost.png"
-
-]
 
 const DisplayProducts = () => {
     const [curPack, setCurPack] = useState("basic")
@@ -23,13 +14,13 @@ const DisplayProducts = () => {
 
     const switcher = () => {
         if (curPack == "basic"){
-            return <DisplayBlock PicLast={2} imgURLs={imgs} thumbnail={thumbnail[0]} />
+            return <DisplayBlock PicLast={BasicSliderImages.length} imgURLs={BasicSliderImages} thumbnail={BasicSliderThumbnail} />
         }
         else if (curPack == "deluxe"){
-            return <DisplayBlock PicLast={2} imgURLs={imgs} thumbnail={thumbnail[1]} />
+            return <DisplayBlock PicLast={DeluxeSliderImages.length} imgURLs={DeluxeSliderImages} thumbnail={DeluxeSliderThumbnail} />
         }
         else if (curPack == "limited"){
-            return <DisplayBlock PicLast={2} imgURLs={imgs} thumbnail={thumbnail[2]} />
+            return <DisplayBlock PicLast={LimitedSliderImages.length} imgURLs={LimitedSliderImages} thumbnail={LimitedSliderThumbnail} />
         }
         else{
             return {};
