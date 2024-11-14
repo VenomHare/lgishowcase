@@ -1,0 +1,117 @@
+
+
+.downloadssParent{
+    min-height: 70svh ;
+}
+.downloadContent{   
+    position: relative;
+    width: 75svw;
+    margin: 10svh auto;
+    padding: 5svh 2svw;
+
+    background: #000;
+    
+    border-radius: 20px;
+    border: 3px solid white;
+
+    transition: all 4s ease;
+}
+.DownloadsTitle{
+    position: absolute;
+    top: -5svh;
+    left: 3svw;
+    background-color: #b91c1c;
+
+    border-radius: 15px;
+    font-family: 'Jost','comic sans ms';
+
+    padding: 1svw;
+}
+.dTitle{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.dDesc{
+    font-size: 1.3rem;
+}
+.downloadData{
+    overflow-y: hidden;
+    overflow-x: visible;
+    margin-top: 4svh;   
+    animation: delay 1s ease ;
+    height: fit-content;
+}
+@keyframes delay {
+    0%{
+        height: 0svh;
+    }
+    /* 50%{
+        height: 30svh;
+    } */
+    100%{ 
+        height: 65svh;
+    }
+}
+
+/* DownloadBlock.tsx */
+.downloadBlockParent
+{
+    width: 95%;
+    height: 10svh;
+    background-color: #0f172a;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 10px auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Jost', 'comic sans ms';
+}
+.downloadBlockTitle{
+    font-size: 1.3rem;
+}
+.downloadBlockButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 10svw;
+    height: 5svh;
+
+    font-size: 1.5rem;
+    color: #f8fafc;
+    padding: 10px;
+    background-color: #dc2626 !important;
+}
+.downloadBlockButton:hover{
+    background-color: #b91c1c !important;
+    color: #f8fafc;
+    transform: scale(1.05);
+}
+.downloadBlockButton:active{
+    transform: scale(0.95);
+}
+.downloadicon{
+    font-size: 2rem;
+    display: grid;
+}
+.downloadDescription{
+    color: #aaa9a9;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .downloadbuttontext{
+        display: none;
+    }
+    .downloadContent{
+        width: 95svw;
+        padding: 1svh 2svw;
+        margin: 3svh auto;
+    }
+    .DownloadsTitle{
+        left: 0;
+        padding: 1svw;
+        position: static;
+    }
+}

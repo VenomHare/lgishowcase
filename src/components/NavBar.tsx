@@ -55,6 +55,11 @@ const NavBar : React.FC<Props>= ({active}) => {
                         Privacy Policies
                     </button>
                 </a>
+                <a href="/downloads">
+                    <button data-active={active == "downloads"}>
+                        Downloads
+                    </button>
+                </a>
                 {/* <a href="faq">
                     <button data-active={active == "faq"}>
                         FAQ

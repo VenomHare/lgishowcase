@@ -14,6 +14,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App.tsx'
+import Downloads from './components/Pages/Downloads.tsx'
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,11 @@ const router = createBrowserRouter([
     element: <Showcase/>,
     errorElement:  <ErrorPage />
   },
-  
+  {
+    path: "/downloads",
+    element: <Downloads />,
+    errorElement:  <ErrorPage />
+  },
 ]);
 
 createRoot(document.getElementById('root')!).render(<>
