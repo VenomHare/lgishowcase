@@ -1,23 +1,26 @@
-.privacyParent{
-        background-color: rgb(226, 180, 119);
-        text-align: left;
-        padding: 2svh 5svw;
-        margin: 5svh auto;
-        border-radius: 5px;
-        color: #000;
-        font-family: 'Jost','comic sans ms';
+.privacyParent {
+    background-color: rgb(226, 180, 119);
+    text-align: left;
+    padding: 2svh 5svw;
+    margin: 5svh auto;
+    border-radius: 5px;
+    color: #000;
+    font-family: 'Jost', 'comic sans ms';
 }
-.privacyParent h1{
+
+.privacyParent h1 {
     text-align: center;
     position: relative;
     margin-bottom: 10svh;
-        z-index: 9;
+    z-index: 9;
 }
-.privacyParent p{
+
+.privacyParent p {
     position: relative;
     z-index: 9;
 }
-.privacyParent h1::before{
+
+.privacyParent h1::before {
     content: "";
     z-index: -1;
     display: block;
@@ -30,38 +33,52 @@
     top: -100%;
     left: 24%;
 }
-.privacyParent h2{
+
+.privacyParent h2 {
     text-align: center;
 }
-.privacyParent h3{
+
+.privacyParent h3 {
     text-align: center;
 }
+
 @media screen and (min-width: 1200px) {
-    .privacyParent{
+    .privacyParent {
         width: 55svw;
     }
 }
-@media screen and (max-width: 1024px) {
-    .privacyParent{
-        width: 65svw;
-    }
-    .privacyParent h1::before{
-        height: 15svh;
-        width: 35svw;
+@media screen and (max-width: 1200px){
+    .privacyParent h1::before {
+        width: 40svw;
+        height: 2   0svh;
+        left: 27%;
     }
 }
+@media screen and (max-width: 1024px) {
+    .privacyParent {
+        width: 65svw;
+    }
+
+    .privacyParent h1::before {
+        height: 20svh;
+        width: 60svw;
+        left: 1%;
+    }
+}
+
 @media screen and (max-width: 500px) {
-    .privacyParent{
+    .privacyParent {
         width: 85svw;
     }
-    .privacyParent h1{
+
+    .privacyParent h1 {
         margin-bottom: 10svh;
     }
-    .privacyParent h1::before{
-        height: 20svh;
-        width: 85svw;
-        top: -70%;
-        left: 0%;
 
+    .privacyParent h1::before {
+        height: 15svh;
+        width: 85svw;
+        top: -45%;
+        left: 0%;
     }
 }
