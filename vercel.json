@@ -31,6 +31,10 @@
             "dest": "/"
         },
         {
+            "src": "/downloads",
+            "dest": "/"
+        },
+        {
             "src": "/",
             "dest": "/"
         }
