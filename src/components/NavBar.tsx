@@ -46,7 +46,7 @@ const NavBar : React.FC<Props>= ({active}) => {
                     </button>
                 </a>
                 <a href="exclusive">
-                    <button data-active={active == "exlcusive"}>
+                    <button data-active={active == "exclusive"}>
                         Exclusive Zone
                     </button>
                 </a>

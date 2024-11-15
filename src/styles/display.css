@@ -1,6 +1,6 @@
 .basicBlock {
     border: 2px solid rgb(141, 141, 137);
-    background-color: rgba(136, 136, 132, 0.692);
+    background-color: var(--basic-block-background);
     height: fit-content;
     padding: 1svw;
     border-radius: 15px;
@@ -10,7 +10,7 @@
     width: 100%;
     margin-bottom: 10px;
     box-sizing: border-box;
-    box-shadow: 0 0 10px 0px black;
+    box-shadow: 0 0 10px 0px var(--basic-block-glow-color);
 }
 
 .head3 {
@@ -24,7 +24,7 @@
 }
 .basichead{
     font-family: 'Jost', 'comic sans ms';
-    background-color: rgb(182, 184, 174);
+    background-color: var(--basics-tab-background);
     color: black;
     margin: 10svh auto;
     padding: 5svh 1svw;

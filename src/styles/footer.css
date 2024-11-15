@@ -1,7 +1,7 @@
 .footerparent{
     width: 100svw;
     height: 20svh;
-    background-color: #4b4a4a;
+    background: var(--footer-background);
 
     display: flex;
     justify-content: space-around;
@@ -18,14 +18,15 @@
     width: 20%;
 }
 .footicon{
-    color: black;
+    color: #e2daad;
     font-size: 2.5rem;
 }
 .footlink *:hover{
-    text-shadow: 0 0 10px 10px wheat;
+    filter: drop-shadow(0 0px 4px var(--footer-links-on-hover));
 }
 .footersmack{
     width: 5svw;
+    aspect-ratio: 3/3;
 }
 .footerlogos{
     display: flex;  

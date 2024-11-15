@@ -151,8 +151,20 @@ const exclusivePackImage3 = [
 ]
 
 
+/**
+ * 
+███████╗░█████╗░░█████╗░████████╗███████╗██████╗░
+██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗░░██║░░██║██║░░██║░░░██║░░░█████╗░░██████╔╝
+██╔══╝░░██║░░██║██║░░██║░░░██║░░░██╔══╝░░██╔══██╗
+██║░░░░░╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
+╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
+ */
+const smackLogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731677673/small_logo_hsm4qh.png"
+const wwlogo = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731677110/wwlogo_ty4mwm.png"
+const pslogo = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731677112/pslogo_yfcnky.png"
 
-
+const lgiLogo = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731677195/Logo_square_y22rlr.png"
 
 export {
     DownloadPageData,
@@ -173,4 +185,9 @@ export {
     exclusivePackImage1,
     exclusivePackImage2,
     exclusivePackImage3,
+
+    smackLogo,
+    wwlogo,
+    pslogo,
+    lgiLogo,
 }

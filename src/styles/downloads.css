@@ -20,7 +20,7 @@
     position: absolute;
     top: -5svh;
     left: 3svw;
-    background-color: #b91c1c;
+    background-color: var(--downloads-title-bg);
 
     border-radius: 15px;
     font-family: 'Jost','comic sans ms';
@@ -58,7 +58,7 @@
 {
     width: 95%;
     height: 10svh;
-    background-color: #0f172a;
+    background-color: var(--downloads-block-bg);
     border-radius: 10px;
     border: 2px solid white;
     margin: 10px auto;
@@ -81,10 +81,10 @@
     font-size: 1.5rem;
     color: #f8fafc;
     padding: 10px;
-    background-color: #dc2626 !important;
+    background-color: var(--downloads-btn-bg)!important;
 }
 .downloadBlockButton:hover{
-    background-color: #b91c1c !important;
+    background-color: var(--downloads-btn-bg) !important;
     color: #f8fafc;
     transform: scale(1.05);
 }

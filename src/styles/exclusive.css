@@ -1,7 +1,7 @@
 .exclusiveTitle{
     width: 100svw;
     height: fit-content;
-    background-color: rgb(182, 184, 174);
+    background-color: var(--exclusive-title);
     color: #000;
     font-family: 'Jost', 'comic sans ms';
     padding: 4svh 0;
@@ -18,5 +18,5 @@
     border: 2px solid white;
     margin: 1svh;
     border-radius: 10px;
-    background-color: rgb(17, 39, 58);
+    background-color: var(--exclusive-block-bg);
 }

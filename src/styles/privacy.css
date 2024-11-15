@@ -1,5 +1,5 @@
 .privacyParent {
-    background-color: rgb(226, 180, 119);
+    background-color: var(--privacy-bg);
     text-align: left;
     padding: 2svh 5svw;
     margin: 5svh auto;
@@ -27,7 +27,7 @@
     position: absolute;
     width: 30svw;
     height: 20svh;
-    background-color: rgb(226, 128, 0);
+    background-color: var(--privacy-title-bg);
     border-radius: 5px;
     transform: skewY(-9deg);
     top: -100%;

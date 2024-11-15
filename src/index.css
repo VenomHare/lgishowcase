@@ -16,7 +16,7 @@ a:hover, a:active, a:focus{
   background-color: transparent !important;
 }
 *::selection{
-  background-color: #7a7a7a;
+  background-color: var(--selection-color);
 }
 a {
   font-weight: 500;

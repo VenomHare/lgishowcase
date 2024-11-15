@@ -7,7 +7,7 @@
     align-items: center;
     font-size: 1.5em;
     font-family: 'Jost','comic sans ms';
-    background-color: rgb(182, 184, 174);
+    background-color: var(--roster-heading-background);
     color: #000;
 
     font-family: 'Jost',"comic sans ms";
@@ -20,7 +20,7 @@
     font-family: 'Jost',"comic sans ms";
     display: flex;
 
-    background-color: rgb(17, 39, 58);
+    background-color:var(--roster-block-background);
 
     border: 5px solid white;
     padding: 40px;

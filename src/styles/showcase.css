@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
 
-    background-color: rgb(59, 39, 16);
+    background-color: var(--showcase-main-block-bg);
 
     border: 2px solid white;
     padding: 1svw;
@@ -44,7 +44,7 @@
     border: 1px solid white;
     width: 90%;
     border-radius: 10px;
-    background-color: rgb(17, 39, 58);
+    background-color: var(--showcase-video-background);
     padding: 10px ;
 }
 .ytthumb{

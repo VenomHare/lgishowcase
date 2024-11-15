@@ -20,8 +20,9 @@
     width: fit-content;
     padding: 0px 30px ;
     height: 80svh;
-    border: 5px solid rgb(95, 94, 94);
+    border: 5px solid var(--home-display-border);
     border-radius: 10px;
+    background-color: var(--home-display-main-background);
 }
 .slideitem{
     border-radius: 10px;
@@ -74,7 +75,7 @@
     width: 100%;
     padding: 3px 0;
     margin: 30px 0px;
-    background-color: rgb(187, 30, 3);
+    background-color: var(--home-display-buy-btn-bg);
     box-shadow: 10px 10px 0px black;
     cursor: pointer;
 }
@@ -91,21 +92,22 @@
     display: flex;
     justify-content: space-evenly;
     border-radius: 20px;
-    background-color:rgb(95, 94, 94);
+    background-color:var(--home-display-border);
     padding: 10px;
     gap: 2svw;
 }
 .switch{
     font-family: 'Jost', 'comic sans ms';
     cursor: pointer;
-    border: 1px solid aliceblue;
+    border: 1px solid var(--home-display-pack-select-button-border);
+    color: var(--home-display-pack-select-button-color);
     padding:  4px 45px;
     border-radius: 35px;
     transition: all ease 500ms;
 }
 .switch[data-active="true"]{
-    background-color: aliceblue;
-    color: black;
+    background-color: var(--home-display-pack-select-button-bg);
+    color: var(--home-display-pack-select-button-active-color);
     transition: all ease 500ms;
 }
 @media screen and (max-width: 1024px) {

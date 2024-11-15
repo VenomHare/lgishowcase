@@ -23,7 +23,6 @@ const Showcase = () => {
     useEffect(()=>{
         fetchYouTubeRSS(channelId)
             .then((fetchedVideos)=>{
-                console.log("Feteched",fetchedVideos);
                 setVideos(fetchedVideos);
                 setCurrentVideo(fetchedVideos[0].link);
             })

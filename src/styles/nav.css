@@ -14,7 +14,8 @@
     
     
     box-shadow: 0 0 15px black;
-    background: #4b4a4a ;
+    /* background: #4b4a4a ; */
+    background: var(--nav-bar-background) ;
     
     display: flex;
     justify-content: space-around;
@@ -42,14 +43,15 @@
 }
 .nav-buttons *{
     background-color: transparent;
+    color: var(--button-text-color);
 }
 .nav-buttons *:hover{
-    background-color: #1a1a1a;
+    background-color: var(--button-on-hover);
     outline: none;
 }
 .nav-buttons *[data-active=true]{
-    background:white;
-    color: #000;
+    background: var(--button-active-bg);
+    color: var(--button-active-font);
 }
 .title{
     display: none;

@@ -12,7 +12,7 @@ const Free = () => {
     return (
         <>
             <NavBar active='free' />
-            <div className="exclusiveTitle">
+            <div className="freeTitle">
                     <h1>FREE MOD</h1>
                     <h3>For further queries and updates, please open a ticket in our Discord server.</h3>
                 </div>
