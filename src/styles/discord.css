@@ -1,0 +1,25 @@
+.LargeDiscordParent{
+    width: 40svw;
+    height: 10svh;
+    margin: 10px auto;
+
+    border-radius: 5px;
+    background-color: #5865F2;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    cursor: pointer;
+}
+.dclargeicon{
+    font-size: 5rem;
+    height: 100%;
+}
+.dclargetext{
+    font-family: 'Jost','comic sans ms';
+    font-size: 2rem;
+}
+.dclargeouticon{
+    font-size: 2rem;
+}

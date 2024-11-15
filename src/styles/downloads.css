@@ -115,3 +115,21 @@
         position: static;
     }
 }
+@media screen and (max-height:550px) {
+    .DownloadsTitle{
+        max-height: 25svh;
+    }
+    .dTitle{
+        font-size: 1.2rem;
+    }
+    .dDesc{
+        font-size: .9rem;
+    }
+    .downloadBlockParent{
+        overflow: hidden;
+        height: 30svh;
+    }
+    .downloadBlockButton{
+        height: 10svh;
+    }
+}

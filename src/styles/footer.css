@@ -51,3 +51,14 @@
 }
 @media screen and (max-width: 500px) {
 }
+@media screen and (max-height:550px) {
+    .footerlgi{
+        width: 6svw;
+    }
+    .footicon{
+        font-size: 1rem;
+    }
+    .footersmack{
+        width: 7svw;
+    }
+}

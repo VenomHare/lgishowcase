@@ -107,3 +107,26 @@
         font-size: 1.3rem;
     }
 }
+
+@media screen and (max-height:550px) {
+    .title{
+        font-size: 1.3rem;
+    }
+    .logo{
+        width: 15svw;
+        max-height: 10svh;
+    }
+    .menuButton{
+        font-size: 1rem;
+    }
+    .nav-buttons {
+        gap: 1px;
+    }
+    .nav-buttons *{
+        font-size: .5rem;
+        border-radius: 2px;
+    }
+    ::-webkit-scrollbar{
+        width: 4px !important;
+    }
+}

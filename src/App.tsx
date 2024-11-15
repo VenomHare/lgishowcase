@@ -5,6 +5,7 @@ import Basics from './components/Basics'
 import Footer from './components/Footer'
 import './App.css'
 import './styles/main.css'
+import JoinDiscordLarge from './components/JoinDiscordLarge'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         </div>
       </div>
       <DisplayProducts/>
+      <JoinDiscordLarge/>
       <Brief/>
       <Basics/>
       <Footer/>

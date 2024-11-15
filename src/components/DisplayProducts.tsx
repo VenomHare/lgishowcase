@@ -14,13 +14,13 @@ const DisplayProducts = () => {
 
     const switcher = () => {
         if (curPack == "basic"){
-            return <DisplayBlock PicLast={BasicSliderImages.length} imgURLs={BasicSliderImages} thumbnail={BasicSliderThumbnail} />
+            return <DisplayBlock PicLast={BasicSliderImages.length} imgURLs={BasicSliderImages} thumbnail={BasicSliderThumbnail} onClick={()=>{window.open("https://discord.com/channels/836227245881557062/1305989721184538684","blank")}} />
         }
         else if (curPack == "deluxe"){
-            return <DisplayBlock PicLast={DeluxeSliderImages.length} imgURLs={DeluxeSliderImages} thumbnail={DeluxeSliderThumbnail} />
+            return <DisplayBlock PicLast={DeluxeSliderImages.length} imgURLs={DeluxeSliderImages} thumbnail={DeluxeSliderThumbnail} onClick={()=>{}} />
         }
         else if (curPack == "limited"){
-            return <DisplayBlock PicLast={LimitedSliderImages.length} imgURLs={LimitedSliderImages} thumbnail={LimitedSliderThumbnail} />
+            return <DisplayBlock PicLast={LimitedSliderImages.length} imgURLs={LimitedSliderImages} thumbnail={LimitedSliderThumbnail} onClick={()=>{}} />
         }
         else{
             return {};

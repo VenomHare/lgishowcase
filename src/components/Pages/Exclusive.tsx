@@ -11,18 +11,19 @@ const Exclusive = () => {
             <div className='ExclusiveParent'>
                 <div className="exclusiveTitle">
                     <h1>HCTP EXCLUSIVE MOD</h1>
-                    <h3>DM for Further Queries and Updates</h3>
+                    <h3>For further queries and updates, please open a ticket in our Discord server.</h3>
                 </div>
                 <div className="showcaseContainer">
                     <div className="showContainer">
-                        <DisplayBlock PicLast={exclusivePackImage1.length} imgURLs={exclusivePackImage1} ButtonText='Download'/>
+                        <DisplayBlock PicLast={exclusivePackImage1.length} imgURLs={exclusivePackImage1} ButtonText='Download'  onClick={()=>{}}/>
                     </div>
                     <div className="showContainer">
-                        <DisplayBlock PicLast={exclusivePackImage2.length} imgURLs={exclusivePackImage2} ButtonText='Download'/>
+                        <DisplayBlock PicLast={exclusivePackImage2.length} imgURLs={exclusivePackImage2} ButtonText='Download'  onClick={()=>{}}/>
                     </div>
                     <div className="showContainer">
-                        <DisplayBlock PicLast={exclusivePackImage3.length} imgURLs={exclusivePackImage3} ButtonText='Download'/>
+                        <DisplayBlock PicLast={exclusivePackImage3.length} imgURLs={exclusivePackImage3} ButtonText='Download'  onClick={()=>{}}/>
                     </div>
+
                 </div>
             </div>
             <Footer />

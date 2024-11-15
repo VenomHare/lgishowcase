@@ -24,10 +24,10 @@ type Props = {
     imgURLs: string[];
     thumbnail?: string;
     ButtonText?:string;
-
+    onClick: ()=>void;
 }
 
-const DisplayBlock : React.FC<Props> = ({ PicLast, imgURLs, thumbnail,ButtonText}) => {
+const DisplayBlock : React.FC<Props> = ({ PicLast, imgURLs, thumbnail,ButtonText, onClick}) => {
 
     const showThumbnail : boolean = !(thumbnail == null || thumbnail == "") 
     const [picture, setPicture] = useState(1);
@@ -57,7 +57,7 @@ const DisplayBlock : React.FC<Props> = ({ PicLast, imgURLs, thumbnail,ButtonText
                         <button onClick={() => { setPicture(getNext(picture, PicLast)); }}>next</button>
                     </div>
                 </div>
-                <div className='buy-btn'>{(ButtonText == null || ButtonText == "")?<>Buy Now</>:ButtonText}</div>
+                <div className='buy-btn' onClick={onClick}>{(ButtonText == null || ButtonText == "")?<>Buy Now</>:ButtonText}</div>
             </div>
         </div>
     )
