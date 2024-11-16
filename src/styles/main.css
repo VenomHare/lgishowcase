@@ -33,7 +33,7 @@
     color: var(--brief-text-color);
     z-index: 10;
 }
-.Brief::before{
+.briefBG{
     content: '';
     background-color: var(--brief-background-color);
     display: block;
@@ -41,7 +41,7 @@
     z-index: -1;
     left: 10%;
     width: 78svw;
-    height: 30svh;
+    height: 33svh;
     transform: skewX(4deg) ;
     border-radius: 10px;
 }
@@ -60,14 +60,14 @@
     font-size: 1rem;
     font-weight: 500;
 }
-@media screen and (max-width: 1024px) {
-    .Brief::before{
+@media screen and (max-width: 1200px) {
+    .briefBG{
         width: 85svw;
         height: 45svh;
         left: 10%;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .page-details{
         font-size: 1rem;
     }
@@ -77,9 +77,9 @@
     .subtitle{
         font-size: 2rem;
     }
-    .Brief::before{
+    .briefBG{
         width: 85svw;
-        height: 68svh;
+        height: 60svh;
         left: 10%;  
     }
 }

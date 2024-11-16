@@ -18,9 +18,10 @@
 }
 
 .blockcontainer {
-    column-count: 4;
+    column-count: 3;
     column-gap: 1svw;
-    width: 100s;
+    width: 75svw;
+    margin: 10px auto;
 }
 .basichead{
     font-family: 'Jost', 'comic sans ms';

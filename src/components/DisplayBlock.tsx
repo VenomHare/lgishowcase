@@ -48,16 +48,17 @@ const DisplayBlock : React.FC<Props> = ({ PicLast, imgURLs, thumbnail,ButtonText
                                 <ImageView imageURL={str} key={`Image${index}`} alt={`image ${index}`} classname={`slideitem ${picture == index+1 ? "show" : "hide"}`} />
                             ))
                         }
-                        {/* <img src="./../src/assets/slideDeluxe/1.png" alt="1" className={`slideitem ${picture == 1 ? "show" : "hide"}`} />
-                        <img src="./../src/assets/slideDeluxe/2.png" alt="2" className={`slideitem ${picture == 2 ? "show" : "hide"}`} /> */}
-                        {/* <img src="./../src/assets/slideDeluxe/2.png" alt="2" className={cur == 2 ? "show" : "hide"}/> */}
                     </div>
                     <div className="slide-controls">
                         <button onClick={() => { setPicture(getPrev(picture, PicLast)); }}>prev</button>
                         <button onClick={() => { setPicture(getNext(picture, PicLast)); }}>next</button>
                     </div>
                 </div>
-                <div className='buy-btn' onClick={onClick}>{(ButtonText == null || ButtonText == "")?<>Buy Now</>:ButtonText}</div>
+                <div className='buy-btn' onClick={onClick}>
+                    <span>
+                        {(ButtonText == null || ButtonText == "")?<>Buy Now</>:ButtonText}
+                    </span>
+                </div>
             </div>
         </div>
     )
