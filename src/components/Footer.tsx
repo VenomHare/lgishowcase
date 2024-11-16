@@ -2,7 +2,7 @@ import './../styles/footer.css'
 import { AiOutlineYoutube,AiOutlineDiscord } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandPaypal } from "react-icons/tb";
-import { lgiLogo, pslogo, smackLogo, wwlogo } from './config';
+import { lgiLogo, pslogo, smackLogo, wwlogo } from '../../config/config';
 
 const Footer = () => {
     return (

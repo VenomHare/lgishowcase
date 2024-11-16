@@ -27,6 +27,7 @@
 .footersmack{
     width: 5svw;
     aspect-ratio: 3/3;
+    /* filter: drop-shadow(0 0 5px white); */
 }
 .footerlogos{
     display: flex;  

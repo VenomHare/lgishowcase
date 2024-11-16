@@ -2,7 +2,7 @@ import NavBar from './../NavBar'
 import Footer from './../Footer'
 import "./../../styles/exclusive.css"
 import DisplayBlock from '../DisplayBlock'
-import { exclusivePackImage1, exclusivePackImage2, exclusivePackImage3 } from '../config'
+import { exclusivePackImage1, exclusivePackImage2, exclusivePackImage3 } from '../../../config/config'
 
 const Exclusive = () => {
     return (

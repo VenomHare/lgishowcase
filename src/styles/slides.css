@@ -53,7 +53,15 @@
 .slide-controls * {
     font-family: 'Jost', 'comic sans ms';
     color: black;
-    background: white;
+    background: transparent;
+
+    border: none;
+    color: #fff;
+    outline: none !important;
+    text-decoration: none;
+}
+.slide-controls * svg{
+    font-size: 1.5rem;
 }
 
 .dropswitches {

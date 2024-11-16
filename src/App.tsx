@@ -5,7 +5,7 @@ import Basics from './components/Basics'
 import Footer from './components/Footer'
 import './App.css'
 import './styles/main.css'
-import './styles/config.css'
+import './../config/config.css'
 import JoinDiscordLarge from './components/JoinDiscordLarge'
 
 function App() {

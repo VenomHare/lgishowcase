@@ -3,7 +3,7 @@ import './../../styles/downloads.css'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 import DownloadBlock from '../DownloadBlock'
-import { DownloadPageData } from '../config' 
+import { DownloadPageData } from '../../../config/config' 
 
 const Downloads = () => {
     return (<>

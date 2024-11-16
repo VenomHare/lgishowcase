@@ -1,4 +1,4 @@
-import { rosterDeluxeThumbnail, rosterExclusiveThumbnail, rosterLimitedThumbnail } from '../config'
+import { rosterDeluxeThumbnail, rosterExclusiveThumbnail, rosterLimitedThumbnail } from '../../../config/config'
 import Footer from '../Footer'
 import './../../styles//roster.css'
 import NavBar from './../NavBar'

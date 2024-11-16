@@ -2,7 +2,7 @@ import './../../styles/free.css'
 import DisplayBlock from '../DisplayBlock'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
-import { FreeSliderimgs } from '../config'
+import { FreeSliderimgs } from '../../../config/config'
 import JoinDiscordLarge from '../JoinDiscordLarge'
 
 

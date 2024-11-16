@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './../styles/slides.css'
 import DisplayBlock from './DisplayBlock';
-import { BasicSliderImages, BasicSliderThumbnail, DeluxeSliderImages, DeluxeSliderThumbnail, LimitedSliderImages, LimitedSliderThumbnail } from './config';
+import { BasicSliderImages, BasicSliderThumbnail, DeluxeSliderImages, DeluxeSliderThumbnail, LimitedSliderImages, LimitedSliderThumbnail } from '../../config/config';
 
 
 const DisplayProducts = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { HiOutlineFolderDownload } from "react-icons/hi";
-import { DownloadData } from './config';
+import { DownloadData } from '../../config/config';
 
 const DownloadBlock: React.FC<DownloadData> = ({ title, downloadLink, key, description }) => {
     return (

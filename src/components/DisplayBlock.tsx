@@ -1,5 +1,7 @@
 import React, {  useState } from 'react'
 import ImageView from './ImageView'
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
+
 
 const getNext = ( cur: number, Last:number) => {
     if (cur >= Last) {
@@ -50,8 +52,8 @@ const DisplayBlock : React.FC<Props> = ({ PicLast, imgURLs, thumbnail,ButtonText
                         }
                     </div>
                     <div className="slide-controls">
-                        <button onClick={() => { setPicture(getPrev(picture, PicLast)); }}>prev</button>
-                        <button onClick={() => { setPicture(getNext(picture, PicLast)); }}>next</button>
+                        <button onClick={() => { setPicture(getPrev(picture, PicLast)); }}><MdOutlineArrowBackIos /></button>
+                        <button onClick={() => { setPicture(getNext(picture, PicLast)); }}><MdOutlineArrowForwardIos /></button>
                     </div>
                 </div>
                 <div className='buy-btn' onClick={onClick}>
