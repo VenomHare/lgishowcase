@@ -37,6 +37,7 @@
 }
 
 .thumbnail {
+    aspect-ratio: 20/29;
     height: 65svh;
     border-radius: 20px;
 }

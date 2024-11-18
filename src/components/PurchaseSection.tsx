@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import './../styles/purchase.css'
 import TicketCreation from './TicketCreation'
 import { RxCross2 } from "react-icons/rx";

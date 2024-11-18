@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './../styles/slides.css'
 import DisplayBlock from './DisplayBlock';
 import { ModList, ModPack } from '../../config/config';

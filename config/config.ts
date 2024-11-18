@@ -245,7 +245,7 @@ const ModList : ModPack[] = [
         description: "sdasd as",
         isDiscounted: true,
         Discount: 40,
-        Price: 22,
+        Price: 50,
         thumbnail: DeluxeSliderThumbnail,
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
