@@ -2,7 +2,7 @@ import React, {  useState } from 'react'
 import ImageView from './ImageView'
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
-
+import { MdOutlineRemoveRedEye } from "react-icons/md";
 const getNext = ( cur: number, Last:number) => {
     if (cur >= Last) {
         cur = 1;
@@ -49,10 +49,13 @@ const DisplayBlock : React.FC<Props> = ({ imgURLs, thumbnail,ButtonText, onClick
                                 <ImageView imageURL={str} key={`Image${index}`} alt={`image ${index}`} classname={`slideitem ${picture == index+1 ? "show" : "hide"}`} />
                             ))
                         }
+                    <div className="image-scroller">
+                        {
+                            imgURLs.map((img,index)=><>
+                                <div className={"scrollerItem"} data-active={(picture == index+1)} onClick={()=>setPicture(index+1)} style={{background:`url("${img}")`}}>{picture == index+1?<><MdOutlineRemoveRedEye /></>:<></>}</div>
+                            </>)
+                        }
                     </div>
-                    <div className="slide-controls">
-                        <button onClick={() => { setPicture(getPrev(picture, PicLast)); }}><MdOutlineArrowBackIos /></button>
-                        <button onClick={() => { setPicture(getNext(picture, PicLast)); }}><MdOutlineArrowForwardIos /></button>
                     </div>
                 </div>
                 <div className='buy-btn' onClick={onClick}>

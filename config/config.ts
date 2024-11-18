@@ -11,49 +11,49 @@ Download page
 export type DownloadData = {
     title: string;
     description?: string;
-    downloadLink : string;
-    key?:string;
+    downloadLink: string;
+    key?: string;
 }
-const DownloadPageData : DownloadData[] = [
+const DownloadPageData: DownloadData[] = [
     {
         title: "Afs_Extractor.rar",
-        description:"Tools",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        description: "Tools",
+        downloadLink: " https://direct-link.net/1237994/download-afs-extractor"
     },
     {
         title: "AFSEXplorer.rar",
-        description:"Tools",
-        downloadLink:" https://direct-link.net/1237994/afsexplorer"
+        description: "Tools",
+        downloadLink: " https://direct-link.net/1237994/afsexplorer"
     },
     {
         title: "HxD.rar",
-        description:"Tools",
-        downloadLink:" https://link-hub.net/1237994/hxdrar"
+        description: "Tools",
+        downloadLink: " https://link-hub.net/1237994/hxdrar"
     },
     {
         title: "ULTRA ISO",
-        description:"Tools",
-        downloadLink:" https://link-target.net/1237994/ultra-iso-premium"
+        description: "Tools",
+        downloadLink: " https://link-target.net/1237994/ultra-iso-premium"
     },
     {
         title: "Noesis.rar",
-        description:"Tools",
-        downloadLink:" https://direct-link.net/1237994/noesisrar"
+        description: "Tools",
+        downloadLink: " https://direct-link.net/1237994/noesisrar"
     },
     {
         title: "Optpix_ImageStudio",
-        description:"Tools",
-        downloadLink:" https://link-target.net/1237994/optpix-imagestudio-v312"
+        description: "Tools",
+        downloadLink: " https://link-target.net/1237994/optpix-imagestudio-v312"
     },
     {
         title: "SVR_Anim_UnRepacker",
-        description:"Tools",
-        downloadLink:" https://link-target.net/1237994/svr-anim-unrepacker-v35"
+        description: "Tools",
+        downloadLink: " https://link-target.net/1237994/svr-anim-unrepacker-v35"
     },
     {
         title: "SVR_Anim_Editor",
-        description:"Tools",
-        downloadLink:" https://link-hub.net/1237994/svr-anim-editor-v7"
+        description: "Tools",
+        downloadLink: " https://link-hub.net/1237994/svr-anim-editor-v7"
     },
 ]
 
@@ -190,12 +190,12 @@ export type ModPack = {
     isDiscounted: boolean;
     Discount: number;
     Price: number;
-    thumbnail:string;
+    thumbnail: string;
     showcaseImgs: string[],
     homeShowcase: boolean,
 }
 
-const ModList : ModPack[] = [
+const ModList: ModPack[] = [
     {
         id: "basic",
         name: "Basic Pack",
@@ -206,7 +206,7 @@ const ModList : ModPack[] = [
         thumbnail: BasicSliderThumbnail,
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png ",
         ],
         homeShowcase: true,
     },
@@ -219,8 +219,31 @@ const ModList : ModPack[] = [
         Price: 22,
         thumbnail: LimitedSliderThumbnail,
         showcaseImgs: [
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964177/RR_-3_ofehz4.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964176/RR_-1_dkksch.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964175/Season_1_thmer3.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964173/Jeff_vs_Matt_2_j7cbdn.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964172/Season_2_yc1gcm.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964170/RR_2_bcqzfa.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_4_krs3ij.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_3_runrqy.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Season_3_bh33bx.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Jeff_vs_Matt_1_rcaj9n.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964165/gvs_g_3_anlnsa.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_2_u0afxg.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_e3xlja.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964103/Screenshot_273_prt1l2.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964100/Screenshot_263_mfmzka.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964085/Screenshot_298_ialfvq.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964071/Screenshot_297_qvz1bf.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964051/Screenshot_126_u2c7u3.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964044/Screenshot_135_xhckxq.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964031/Untitled1_lu9nsz.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964022/Untitled_4_xa55lh.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964016/Untitled_wmdj24.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963982/Screenshot_303_yy76sr.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963981/Screenshot_293_f4er2l.png",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963961/Screenshot_286_l9lqo7.png"
         ],
         homeShowcase: true,
     },
@@ -234,7 +257,7 @@ const ModList : ModPack[] = [
         thumbnail: rosterExclusiveThumbnail,
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
         ],
         homeShowcase: false,
     },
@@ -248,10 +271,10 @@ const ModList : ModPack[] = [
         thumbnail: DeluxeSliderThumbnail,
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
         ],
         homeShowcase: true,
-    }   
+    }
 ]
 
 export {

@@ -35,6 +35,11 @@
             "dest": "/"
         },
         {
+            "src": "/howtobuy",
+            "dest": "/"
+        },
+        
+        {
             "src": "/",
             "dest": "/"
         }
