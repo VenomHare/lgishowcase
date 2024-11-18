@@ -22,18 +22,17 @@ const getPrev = (cur: number, Last:number) => {
 }
 
 type Props = {
-    PicLast : number;
     imgURLs: string[];
     thumbnail?: string;
     ButtonText?:string;
     onClick: ()=>void;
 }
 
-const DisplayBlock : React.FC<Props> = ({ PicLast, imgURLs, thumbnail,ButtonText, onClick}) => {
+const DisplayBlock : React.FC<Props> = ({ imgURLs, thumbnail,ButtonText, onClick}) => {
 
     const showThumbnail : boolean = !(thumbnail == null || thumbnail == "") 
     const [picture, setPicture] = useState(1);
-
+    const PicLast = imgURLs.length;
     return (
         <div className="item">
             {

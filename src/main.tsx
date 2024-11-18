@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import App from './App.tsx'
 import Downloads from './components/Pages/Downloads.tsx'
+import HowToBuy from './components/Pages/HowToBuy.tsx'
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
   {
     path: "/downloads",
     element: <Downloads />,
+    errorElement:  <ErrorPage />
+  },
+  {
+    path: "/howtobuy",
+    element: <HowToBuy />,
     errorElement:  <ErrorPage />
   },
 ]);

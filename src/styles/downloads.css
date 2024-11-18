@@ -23,7 +23,7 @@
     background-color: var(--downloads-title-bg);
 
     border-radius: 15px;
-    font-family: 'Jost','comic sans ms';
+    font-family: var(--font);
 
     padding: 1svw;
 }
@@ -70,6 +70,7 @@
 }
 .downloadBlockTitle{
     font-size: 1.3rem;
+    width: 55%;
 }
 .downloadBlockButton{
     display: flex;

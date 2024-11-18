@@ -2,7 +2,6 @@
 
 const Brief = () => {
   return (<>
-    <div className="briefBG"></div>
     <div className='Brief'>
     <h2 className='briefTitle'>Briefly</h2>
       <h5 className='briefSub'>There are three types of patches</h5>

@@ -21,8 +21,8 @@ const DownloadPageData : DownloadData[] = [
         downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
     },
     {
-        title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
+        title: "ASDASd asd",
+        description:"sdas",
         downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
     },
     {
@@ -166,6 +166,95 @@ const pslogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731757741/ps
 
 const lgiLogo = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731677195/Logo_square_y22rlr.png"
 
+/**
+ * 
+██████╗░██╗░░░██╗██████╗░░█████╗░██╗░░██╗░█████╗░░██████╗███████╗  ██████╗░░█████╗░░██████╗░███████╗
+██╔══██╗██║░░░██║██╔══██╗██╔══██╗██║░░██║██╔══██╗██╔════╝██╔════╝  ██╔══██╗██╔══██╗██╔════╝░██╔════╝
+██████╔╝██║░░░██║██████╔╝██║░░╚═╝███████║███████║╚█████╗░█████╗░░  ██████╔╝███████║██║░░██╗░█████╗░░
+██╔═══╝░██║░░░██║██╔══██╗██║░░██╗██╔══██║██╔══██║░╚═══██╗██╔══╝░░  ██╔═══╝░██╔══██║██║░░╚██╗██╔══╝░░
+██║░░░░░╚██████╔╝██║░░██║╚█████╔╝██║░░██║██║░░██║██████╔╝███████╗  ██║░░░░░██║░░██║╚██████╔╝███████╗
+╚═╝░░░░░░╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
+ */
+
+const JoinDiscordImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731856331/JoinServer_bjddwc.png"
+const VerifyImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731844992/verify_yidqxd.png"
+const LocateChannelImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731845289/channel1_iyerst.png"
+const CreateImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731845801/Create1_gmd6mx.png"
+const OpenTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731843630/ticket1_vsffnz.png"
+const TicketViewImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731843630/ticket2_y8rics.png"
+const CloseTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731849487/Close_mswfsk.png"
+
+export type ModPack = {
+    id: string,
+    name: string;
+    description?: string;
+    isDiscounted: boolean;
+    Discount: number;
+    Price: number;
+    thumbnail:string;
+    showcaseImgs: string[],
+    homeShowcase: boolean,
+}
+
+const ModList : ModPack[] = [
+    {
+        id: "basic",
+        name: "Basic Pack",
+        description: "",
+        isDiscounted: true,
+        Discount: 40,
+        Price: 22,
+        thumbnail: BasicSliderThumbnail,
+        showcaseImgs: [
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+        ],
+        homeShowcase: true,
+    },
+    {
+        id: "limited",
+        name: "Limited Edition",
+        description: "",
+        isDiscounted: true,
+        Discount: 40,
+        Price: 22,
+        thumbnail: LimitedSliderThumbnail,
+        showcaseImgs: [
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+        ],
+        homeShowcase: true,
+    },
+    {
+        id: "exclusive",
+        name: "Exclusive Pack",
+        description: "",
+        isDiscounted: true,
+        Discount: 40,
+        Price: 22,
+        thumbnail: rosterExclusiveThumbnail,
+        showcaseImgs: [
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+        ],
+        homeShowcase: false,
+    },
+    {
+        id: "deluxe",
+        name: "Deluxe Edition",
+        description: "sdasd as",
+        isDiscounted: true,
+        Discount: 40,
+        Price: 22,
+        thumbnail: DeluxeSliderThumbnail,
+        showcaseImgs: [
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "        
+        ],
+        homeShowcase: true,
+    }   
+]
+
 export {
     DownloadPageData,
 
@@ -190,4 +279,13 @@ export {
     wwlogo,
     pslogo,
     lgiLogo,
+
+    JoinDiscordImage,
+    VerifyImage,
+    LocateChannelImage,
+    CreateImage,
+    OpenTicketImage,
+    TicketViewImage,
+    CloseTicketImage,
+    ModList,
 }

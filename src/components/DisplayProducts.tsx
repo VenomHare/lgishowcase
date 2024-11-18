@@ -1,48 +1,57 @@
 import { useState } from 'react';
 import './../styles/slides.css'
 import DisplayBlock from './DisplayBlock';
-import { BasicSliderImages, BasicSliderThumbnail, DeluxeSliderImages, DeluxeSliderThumbnail, LimitedSliderImages, LimitedSliderThumbnail } from '../../config/config';
+import { ModList, ModPack } from '../../config/config';
 
+type Props = {
+    setPurchaseVar : React.Dispatch<React.SetStateAction<boolean>>,
+    setModData: React.Dispatch<React.SetStateAction<ModPack>>,
+    ModData: ModPack;
 
-const DisplayProducts = () => {
-    const [curPack, setCurPack] = useState("basic")
+}
+
+const DisplayProducts : React.FC<Props>= ({setPurchaseVar, setModData, ModData}) => {
+    // const [curPack, setCurPack] = useState<ModPack>(ModList[0]);
 
     const handleChange = (e:React.FormEvent<HTMLSelectElement>)=>{
         const target = e.target as HTMLSelectElement; 
-        setCurPack(target.value);
+        const data  = ModList.find((mod)=>mod.id == target.value) || ModList[0];
+        setModData(data);
     }
 
-    const switcher = () => {
-        if (curPack == "basic"){
-            return <DisplayBlock PicLast={BasicSliderImages.length} imgURLs={BasicSliderImages} thumbnail={BasicSliderThumbnail} onClick={()=>{window.open("https://discord.com/channels/836227245881557062/1305989721184538684","blank")}} />
-        }
-        else if (curPack == "deluxe"){
-            return <DisplayBlock PicLast={DeluxeSliderImages.length} imgURLs={DeluxeSliderImages} thumbnail={DeluxeSliderThumbnail} onClick={()=>{}} />
-        }
-        else if (curPack == "limited"){
-            return <DisplayBlock PicLast={LimitedSliderImages.length} imgURLs={LimitedSliderImages} thumbnail={LimitedSliderThumbnail} onClick={()=>{}} />
-        }
-        else{
-            return {};
-        }
-    }
+
 
     return (<>
         <div className="displaybox">
             <div className="switches">
                 <div className="dropswitches">
                     <select onChange={handleChange} defaultValue={"basic"}>
-                        <option value="basic">Basic</option>
-                        <option value="deluxe">Deluxe</option>
-                        <option value="limited">Limited Edition</option>
+                        {
+                            ModList.map((mod, index)=>{
+                                return<>
+                                    {
+                                        mod.homeShowcase ?
+                                            <option key={index} value={mod.id} >{mod.name}</option>
+                                        :<></>
+                                    }
+                                </>
+                            })
+                        }
                     </select>
                 </div>
-                <div className="switch" data-active={curPack == "basic"} onClick={()=>{setCurPack("basic")}}> Basic </div>
-                <div className="switch" data-active={curPack == "deluxe"} onClick={()=>{setCurPack("deluxe")}}> Deluxe </div>
-                <div className="switch" data-active={curPack == "limited"} onClick={()=>{setCurPack("limited")}}> Limited Edition </div>
+                {
+                    ModList.map((m, index)=>{
+                        return<>
+                        {
+                            m.homeShowcase ?
+                                <div className='switch' key={index} data-active={ModData?.id == m.id} onClick={()=>{setModData(m)}}>{m.name}</div>
+                            : <></>
+                        }
+                    </>})
+                }
             </div>
             <>
-                {switcher()}
+                <DisplayBlock imgURLs={ModData?.showcaseImgs} thumbnail={ModData.thumbnail} onClick={()=>{setPurchaseVar(true)}}/>
             </>
         </div>
     </>

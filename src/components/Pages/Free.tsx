@@ -4,6 +4,7 @@ import NavBar from '../NavBar'
 import Footer from '../Footer'
 import { FreeSliderimgs } from '../../../config/config'
 import JoinDiscordLarge from '../JoinDiscordLarge'
+import PurchaseSection from '../PurchaseSection'
 
 
 

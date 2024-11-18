@@ -1,5 +1,6 @@
 :root {
     --selection-color: #7a7a7a;
+    --font:'Jost','comic sans ms';
 
     /*
         
@@ -135,4 +136,12 @@
     --downloads-btn-bg: #dc2626 ;
 
 
+
+    --purchase-background: rgb(95, 94, 94);
+    --purchase-border-color: #fff;
+    --purchase-server-btn-background: #5865F2;
+    --purchase-channel-btn-background: #5865F2;
+    --purchase-pack-details-text: #fff;
+    --purchase-outer-glow:#023350;
+    --purchase-ticket-detail-bg:  #0e102980;
 }

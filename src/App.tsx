@@ -7,11 +7,18 @@ import './App.css'
 import './styles/main.css'
 import './../config/config.css'
 import JoinDiscordLarge from './components/JoinDiscordLarge'
+import { useState } from 'react'
+import PurchaseSection from './components/PurchaseSection'
+import { ModList, ModPack } from '../config/config'
 
 function App() {
 
+  const [PurchaseBlock, setPurchaseBlock] = useState(false);
+  const [ModData, setModData] = useState<ModPack>(ModList[0]);
+
   return (
     <>
+      <PurchaseSection setActiveVar={setPurchaseBlock} ActiveVar={PurchaseBlock} Mod={ModData}/>
       <NavBar active='home'/>
       <div className="heading">
         <h1 className='maintitle'>
@@ -23,7 +30,7 @@ function App() {
           Another bonus is that all of the Create A Wrestler parts were available from the word "go" (in Smackdown! Shut Your Mouth, players progressed through Season Mode to unlock CAW parts). Furthermore, as mentioned above, HCTP included (for the first time in the series) eleven Legends from the 1970s, 80s and 90s.
         </div>
       </div>
-      <DisplayProducts/>
+      <DisplayProducts setPurchaseVar={setPurchaseBlock} setModData={setModData} ModData={ModData} />
       <JoinDiscordLarge/>
       <Brief/>
       <Basics/>
