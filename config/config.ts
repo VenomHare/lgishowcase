@@ -17,45 +17,44 @@ export type DownloadData = {
 const DownloadPageData : DownloadData[] = [
     {
         title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
+        description:"Tools",
         downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
     },
     {
-        title: "ASDASd asd",
-        description:"sdas",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        title: "AFSEXplorer.rar",
+        description:"Tools",
+        downloadLink:" https://direct-link.net/1237994/afsexplorer"
     },
     {
-        title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        title: "HxD.rar",
+        description:"Tools",
+        downloadLink:" https://link-hub.net/1237994/hxdrar"
     },
     {
-        title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        title: "ULTRA ISO",
+        description:"Tools",
+        downloadLink:" https://link-target.net/1237994/ultra-iso-premium"
     },
     {
-        title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        title: "Noesis.rar",
+        description:"Tools",
+        downloadLink:" https://direct-link.net/1237994/noesisrar"
     },
     {
-        title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        title: "Optpix_ImageStudio",
+        description:"Tools",
+        downloadLink:" https://link-target.net/1237994/optpix-imagestudio-v312"
     },
     {
-        title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        title: "SVR_Anim_UnRepacker",
+        description:"Tools",
+        downloadLink:" https://link-target.net/1237994/svr-anim-unrepacker-v35"
     },
     {
-        title: "Afs_Extractor.rar",
-        description:"Afs_Extractor.rar",
-        downloadLink:" https://direct-link.net/1237994/download-afs-extractor"
+        title: "SVR_Anim_Editor",
+        description:"Tools",
+        downloadLink:" https://link-hub.net/1237994/svr-anim-editor-v7"
     },
-    
 ]
 
 /* 
