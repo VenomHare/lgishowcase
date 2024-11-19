@@ -193,6 +193,7 @@ export type ModPack = {
     thumbnail: string;
     showcaseImgs: string[],
     homeShowcase: boolean,
+    rosterListPath?: string,
 }
 
 const ModList: ModPack[] = [

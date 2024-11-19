@@ -9,6 +9,7 @@ yarn-error.log*
 
 # Node modules
 node_modules
+node_modules\.bin
 
 # Build output
 dist
