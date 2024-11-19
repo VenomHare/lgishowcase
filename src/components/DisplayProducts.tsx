@@ -6,11 +6,10 @@ type Props = {
     setPurchaseVar : React.Dispatch<React.SetStateAction<boolean>>,
     setModData: React.Dispatch<React.SetStateAction<ModPack>>,
     ModData: ModPack;
-    setRosterView: React.Dispatch<React.SetStateAction<boolean>>;
 
 }
 
-const DisplayProducts : React.FC<Props>= ({setPurchaseVar, setModData, ModData, setRosterView}) => {
+const DisplayProducts : React.FC<Props>= ({setPurchaseVar, setModData, ModData}) => {
     // const [curPack, setCurPack] = useState<ModPack>(ModList[0]);
 
     const handleChange = (e:React.FormEvent<HTMLSelectElement>)=>{
@@ -19,11 +18,13 @@ const DisplayProducts : React.FC<Props>= ({setPurchaseVar, setModData, ModData, 
         setModData(data);
     }
 
+
+
     return (<>
         <div className="displaybox">
             <div className="switches">
                 <div className="dropswitches">
-                    <select onChange={handleChange} defaultValue={"limited"}>
+                    <select onChange={handleChange} defaultValue={"basic"}>
                         {
                             ModList.map((mod, index)=>{
                                 return<>
@@ -49,7 +50,7 @@ const DisplayProducts : React.FC<Props>= ({setPurchaseVar, setModData, ModData, 
                 }
             </div>
             <>
-            <DisplayBlock Mod={ModData} onClick={()=>{setPurchaseVar(true)}} setRosterView={setRosterView}/>
+                <DisplayBlock imgURLs={ModData?.showcaseImgs} thumbnail={ModData.thumbnail} onClick={()=>{setPurchaseVar(true)}}/>
             </>
         </div>
     </>

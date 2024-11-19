@@ -15,6 +15,7 @@
 .RosterBlockParent{
     width: 75svw;
     height: 50svh;
+    margin: 10svh auto;
 
     font-family: 'Jost',"comic sans ms";
     display: flex;
@@ -28,11 +29,13 @@
 
 .rosterlist{
     height: 90%;
+
     column-gap: 1svw;
     overflow-y: auto;
     overflow-x: hidden;
 }
 .rosterlist *{
+
     display: inline-block;
     width: 18svw;
     font-size: 1.2rem;
@@ -49,7 +52,7 @@
 .rosterThumbnail{
     /* width: 30svw; */
     height: 50svh;
-    aspect-ratio: 20/29;
+    aspect-ratio: 2/3;
     border-radius:10px;
 }
 .rosterTitle{
@@ -57,56 +60,19 @@
     font-weight: 800;
 
 }
-
 .RosterButton{
     margin: 10px;
 }
-
 .rosterMobile{
     display: none;
 }
-
 .RosterButton{
     display: none;
 }
-
-.homeRoster{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100svw;
-    height: 100svh;
-    background: #000000da;
-    z-index: 9999;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.closeRoster{
-    position: fixed;
-    top: 10svh;
-    left: 50svw;
-    transform: translate(-50%, -50%);
-    font-size: 1.4rem;
-    font-family: var(--font);
-    background: var(--roster-block-background);
-    padding: 1svh;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-}
-.closeRoster:hover{
-    box-shadow: 0 0 10px 10px var(--roster-block-background);
-}
-
 @media screen and (max-width:1024px){
     .rosterThumbnail{
         max-width: 75svw;
-        height: 20svh;
-        aspect-ratio: 20/29;
+        aspect-ratio: 2/3;
     }
     .listBlock{
         display: flex;
@@ -117,23 +83,15 @@
     }
     .rosterMobile{
         display: block;
-        overflow-y: auto;
-    }
-    .rosterlist{
-        height: 42svh;
-        margin: 1svh auto;
     }
     .rosterPC{
         display: none;
-    }
-    .closeRoster{
-        top: 5svh;
     }
     .RosterBlockParent{
         padding: 20px;
         flex-direction: column;
         gap: 3svh;
-        height: 75svh;
+        height: fit-content;
         width: 80svw;
     }
     .rosterlist *{

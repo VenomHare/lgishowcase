@@ -6,8 +6,6 @@
     border-radius: 5px;
     background-color: var(--discord-bg);
 
-    box-shadow: 0 0 10px 0px var(--discord-shadow);
-
     display: flex;
     justify-content: space-around;
     align-items: center;

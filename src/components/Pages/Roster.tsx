@@ -1,12 +1,9 @@
-import { rosterDeluxeThumbnail, rosterLimitedThumbnail } from '../../../config/config'
+import { rosterDeluxeThumbnail, rosterExclusiveThumbnail, rosterLimitedThumbnail } from '../../../config/config'
 import Footer from '../Footer'
 import './../../styles//roster.css'
 import NavBar from './../NavBar'
 import RosterBlock from "./../RosterBlock"
-import LimitedRosterNames from './../../assets/LimitedRosterNames.txt'
-import DeluxeRosterNames from './../../assets/DeluxeRosterNames.txt'
-import RosterLists from '../RosterLists'
-
+import {DeluxeList, ExclusiveList, LimitedList} from './../RosterLists'
 const Roster = () => {
 
   return (
@@ -17,13 +14,15 @@ const Roster = () => {
         <div className="rosterHeader">
           <h1>Roster</h1>
         </div>
-
-        <RosterBlock thumbnail={rosterLimitedThumbnail} title='Limited Edition'>
-          <RosterLists filepath={LimitedRosterNames} />
+        <RosterBlock thumbnail={rosterLimitedThumbnail} title='Limited Edition' >
+          {LimitedList()}
+        </RosterBlock>
+        <RosterBlock thumbnail={rosterExclusiveThumbnail} title='Exclusive Edition'>
+          {ExclusiveList()}
         </RosterBlock>
         <RosterBlock thumbnail={rosterDeluxeThumbnail} title='Deluxe Edition'>
-          <RosterLists filepath={DeluxeRosterNames} />
-          </RosterBlock>
+          {DeluxeList()}
+        </RosterBlock>
       </div>
       <Footer/>
     </>

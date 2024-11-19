@@ -28,11 +28,11 @@ const NavBar : React.FC<Props>= ({active}) => {
                     </button>
                 </a>
 
-                {/* <a href="/roster">
+                <a href="/roster">
                     <button data-active={active == "roster"}>
                         Roster
                     </button>
-                </a> */}
+                </a>
 
                 <a href="/showcase">
                     <button data-active={active == "showcase"}>
