@@ -237,7 +237,9 @@
     }
 
     .slideitem {
-        width: 60svw;
+        height: auto;
+        width: 100% !important;
+        aspect-ratio: 16/9 !important;
     }
 
     .switch {
