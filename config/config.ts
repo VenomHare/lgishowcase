@@ -1,4 +1,5 @@
-
+import LimitedListText from "./../src/assets/LimitedRosterNames.txt";
+import DeluxeListText from "./../src/assets/DeluxeRosterNames.txt";
 /*
 Download page
 ██████╗░░█████╗░░██╗░░░░░░░██╗███╗░░██╗██╗░░░░░░█████╗░░█████╗░██████╗░░██████╗  ██████╗░░█████╗░░██████╗░███████╗
@@ -209,12 +210,12 @@ const ModList: ModPack[] = [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png ",
         ],
-        homeShowcase: true,
+        homeShowcase: false,
     },
     {
         id: "limited",
         name: "Limited Edition",
-        description: "",
+        description: "This is Limited Edition Mod Pack",
         isDiscounted: true,
         Discount: 40,
         Price: 22,
@@ -247,6 +248,7 @@ const ModList: ModPack[] = [
             "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963961/Screenshot_286_l9lqo7.png"
         ],
         homeShowcase: true,
+        rosterListPath: LimitedListText,
     },
     {
         id: "exclusive",
@@ -265,7 +267,7 @@ const ModList: ModPack[] = [
     {
         id: "deluxe",
         name: "Deluxe Edition",
-        description: "sdasd as",
+        description: "This is Deluxe Edition Mod Pack",
         isDiscounted: true,
         Discount: 40,
         Price: 50,
@@ -275,6 +277,7 @@ const ModList: ModPack[] = [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
         ],
         homeShowcase: true,
+        rosterListPath: DeluxeListText,
     }
 ]
 
