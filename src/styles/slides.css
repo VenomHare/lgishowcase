@@ -12,9 +12,11 @@
     gap: 40px;
     justify-content: center;
     align-items: center;
+    /* height: f; */
 }
 
 .displaybox {
+    width: 65svw !important;
     position: relative;
     margin: 5svh auto;
     display: flex;
@@ -24,6 +26,11 @@
     border: 5px solid var(--home-display-border);
     border-radius: 10px;
     background-color: var(--home-display-main-background);
+}
+.patchnotes{
+    font-family: var(--font);
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 .image-scroller{
     width: 100%;
@@ -40,7 +47,7 @@
 }
 .scrollerItem{
     aspect-ratio: 16/9;
-    width: 25%;
+    min-width: 20%;
     height: 80%;
     background-repeat: no-repeat;
     background-size: cover !important;
@@ -73,22 +80,38 @@
 }
 .slideitem {
     border-radius: 10px;
-    height: 40svh;
-    transition: all ease 500ms;
+    width: 35svw !important;
+    aspect-ratio: 16/9;
+    /* height: 33svh; */
     width: fit-content;
     padding: 4px;
 }
 .showcase{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2svh;
+    margin-top: 1svh;
 }
 .thumbnail {
     aspect-ratio: 20/29;
-    height: 65svh;
+    height: 60svh;
     border-radius: 20px;
 }
 
+.thumbnailSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    gap: 1svh;
+    font-family: var(--font);
+}
+
+.slideRosterButton{
+    padding: 1.5svh;
+    /* background: ; */
+}
 
 .dropswitches {
     display: none;
@@ -96,6 +119,9 @@
 
 .slideshow {
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     border-radius: 10px;
     border: 2px solid rgb(158, 154, 154);
 
@@ -105,16 +131,18 @@
     font-size: 2rem;
     font-weight: 400;
     font-family: 'Jost', 'comic sans ms';
+    display: none;
 }
 
 
 .buy-btn {
+    width: 100%;
     align-items: center;
-    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    background: var(--home-display-buy-btn-bg);
     border: 0;
     border-radius: 10px;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--home-display-buy-btn-color);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -197,7 +225,7 @@
     transition: all ease 500ms;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .switches {
         width: 25svw;
         display: block;
