@@ -1,5 +1,5 @@
 .basicBlock {
-    border: 2px solid rgb(141, 141, 137);
+    border: 2px solid var(--basic-block-border);
     background-color: var(--basic-block-background);
     height: fit-content;
     padding: 1svw;
@@ -26,7 +26,7 @@
 .basichead{
     font-family: 'Jost', 'comic sans ms';
     background-color: var(--basics-tab-background);
-    color: black;
+    color: var(--basic-text-color);
     margin: 10svh auto;
     padding: 5svh 1svw;
 }
@@ -44,6 +44,7 @@
 }
 .basicBlock div{
     position: relative;
+    font-family: var(--font-poppin);
 }
 .basicBlock div::before{
     content: "";
@@ -51,7 +52,7 @@
     position: absolute;
     width: 5px;
     height: 5px;
-    background-color: black;
+    background-color: var(--basic-text-color);
     border-radius: 50%;
     top: 30%;
     left: -2%;

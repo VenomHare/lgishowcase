@@ -23,7 +23,7 @@
     background-color: var(--downloads-title-bg);
 
     border-radius: 15px;
-    font-family: var(--font);
+    font-family: var(--font-footer);
 
     padding: 1svw;
 }
@@ -78,18 +78,22 @@
     justify-content: space-around;
     width: 10svw;
     height: 5svh;
+    border-radius: 10px;
 
     font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-footer);
     color: #f8fafc;
     padding: 10px;
-    background-color: var(--downloads-btn-bg)!important;
+    background-color: var(--downloads-btn-bg) !important;
 }
 .downloadBlockButton:hover{
-    background-color: var(--downloads-btn-bg) !important;
+    background-color: var(--downloads-btn-bg);
     color: #f8fafc;
     transform: scale(1.05);
 }
 .downloadBlockButton:active{
+    background-color: var(--downloads-btn-bg) ;
     transform: scale(0.95);
 }
 .downloadicon{

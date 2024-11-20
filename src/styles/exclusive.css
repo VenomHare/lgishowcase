@@ -15,7 +15,7 @@
 }
 .showContainer{
     padding: 2rem;
-    border: 2px solid white;
+    border: 2px solid var(--exclusive-block-border);
     margin: 1svh;
     border-radius: 10px;
     background-color: var(--exclusive-block-bg);

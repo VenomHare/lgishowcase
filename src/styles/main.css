@@ -12,18 +12,19 @@
 } 
 .maintitle{
     margin-top: 5svh;
-    color: rgb(31, 30, 30);
+    color:var(--home-main-heading-color);
     font-size: 10rem;
-    font-family: var(--font-freshman);
+    font-family: var(--font-Neon-Rave);
+    font-style: italic;
 }
 .subtitle{
-    color: rgb(31, 30, 30);
+    color:var(--home-main-heading-color);
     font-size: 3rem;
     font-family: "Cedarville Cursive", cursive;
     /* font-family: var(--font-poppin); */
 }
 .page-details{
-    color: rgb(31, 30, 30);
+    color:var(--home-main-heading-color);
     margin: 3svh;
     font-size: 1.4rem;
     font-family: var(--font);
@@ -31,14 +32,15 @@
     font-family: var(--font-poppin);
 }
 .Brief{
-    font-family: var(--font);
-    width: 75svw;
+    font-family: var(--font-poppin);
+    width: 70svw;
     margin: 30px auto;
     color: var(--brief-text-color);
     z-index: 10;
     background: var(--brief-background-color);
     padding: 5svh 5svw;
     border-radius: 10px;
+    box-shadow: 0 0 10px 2px var(--home-brief-bg-glow);
 }
 .briefBG{
     content: '';
@@ -78,7 +80,7 @@
         font-size: 1rem;
     }
     .maintitle{
-        font-size: 5rem;
+        font-size: 4.8rem;
     }
     .subtitle{
         font-size: 2rem;

@@ -11,7 +11,7 @@ const Downloads = () => {
         <div className='downloadssParent'>
             <div className="downloadContent">
                 <div className='DownloadsTitle'>
-                    <div className="dTitle">Downloads</div>
+                    <div className="dTitle">Community Downloads</div>
                     <div className="dDesc">Here you will find downloads for tools and patches</div>
                 </div>
                 <div className="downloadData">

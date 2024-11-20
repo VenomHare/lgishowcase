@@ -48,7 +48,7 @@ const router = createBrowserRouter([
     errorElement:  <ErrorPage />
   },
   {
-    path: "/downloads",
+    path: "/community",
     element: <Downloads />,
     errorElement:  <ErrorPage />
   },

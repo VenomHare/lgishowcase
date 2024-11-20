@@ -33,9 +33,7 @@
     font-size: 8svw;
     width: 100%;
 }
-.logo{
-    width: 5svw;
-}
+
 
 .nav-buttons{
     display: flex;  
@@ -44,6 +42,8 @@
 .nav-buttons *{
     background-color: transparent;
     color: var(--button-text-color);
+    font-family: var(--font-poppin);
+    font-size: 1.1rem;
 }
 .nav-buttons *:hover{
     background-color: var(--button-on-hover);
@@ -61,6 +61,11 @@
     align-items: center;
     gap: 5px;
     background-color: var(--discord-bg);
+}
+@media screen and (min-width: 1024) {
+    .logo{
+        width: 5svw;
+    }
 }
 @media screen and (max-width: 1024px) {
     a{
@@ -101,7 +106,7 @@
 }
 @media screen and (max-width: 500px) {
     .logo{
-        width: 15svw;
+        width: 60svw ;
         max-height: 10svh;
     }
     .menuButton{
@@ -121,7 +126,7 @@
         font-size: 1.3rem;
     }
     .logo{
-        width: 15svw;
+        width: 30svw;
         max-height: 10svh;
     }
     .menuButton{

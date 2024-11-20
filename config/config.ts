@@ -82,6 +82,8 @@ Home Page
 ██║░░██║╚█████╔╝██║░╚═╝░██║███████╗  ██║░░░░░██║░░██║╚██████╔╝███████╗
 ╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
 */
+const WebsiteLogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732126711/LGI_MODZ_blue_shadow_dh1jy2.png";
+
 const BasicSliderImages = [
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
@@ -164,7 +166,7 @@ const smackLogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731758043
 const wwlogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731757741/wwe_logo_xx4aud.png"
 const pslogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731757741/ps2_logo_huhowt.png"
 
-const lgiLogo = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731677195/Logo_square_y22rlr.png"
+const lgiLogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732130135/LGI_blue_shadow_oietni.png"
 
 const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
@@ -290,6 +292,7 @@ export {
     rosterDeluxeThumbnail,
     rosterExclusiveThumbnail,
 
+    WebsiteLogo,
     BasicSliderImages,
     LimitedSliderImages,
     DeluxeSliderImages,

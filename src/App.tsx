@@ -19,24 +19,7 @@ function App() {
   const [PurchaseBlock, setPurchaseBlock] = useState(false);
   const [ModData, setModData] = useState<ModPack>(ModList.find(m => m.id == "limited") || ModList[0]);
   const [rosterView, setRosterView] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const triggerElement = document.querySelector('.maintitle');
-      const triggerPosition = triggerElement?.getBoundingClientRect().bottom;
-      console.log(triggerPosition);
-      
-      if (triggerPosition && triggerPosition <= 125) {
-        setShowTitle(true);
-      } else {
-        setShowTitle(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <>
@@ -60,7 +43,7 @@ function App() {
       </>
 
 
-      <NavBar active='home' showTitle={showTitle}/>
+      <NavBar active='home' />
       <div className="heading">
         <h1 className='maintitle'>
           LGI MOD'z

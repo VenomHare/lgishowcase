@@ -4,9 +4,10 @@
     padding: 2svh 5svw;
     margin: 5svh auto;
     border-radius: 5px;
-    color: #000;
-    font-family: 'Jost', 'comic sans ms';
+    color: var(--privacy-text);
+    font-family: var(--font-poppin);
     text-align: justify;
+    box-shadow: 0 0 10px 1px var(--privacy-glow);
 }
 
 .privacyParent h1 {
@@ -14,6 +15,7 @@
     position: relative;
     margin-bottom: 10svh;
     z-index: 9;
+    font-family: var(--font);
 }
 
 .privacyParent p {

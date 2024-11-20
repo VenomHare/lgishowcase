@@ -8,7 +8,8 @@
 
     background-color: var(--showcase-main-block-bg);
 
-    border: 2px solid white;
+    color: #fff;
+    box-shadow: 0 0 10px 2px var(--showcase-main-block-border);
     padding: 1svw;
     border-radius: 10px;
 }
@@ -27,7 +28,7 @@
     /* height: 100% !important; */
 }
 .youtubePlayer{
-    color: black;
+    color: #fff;
     width: 60svw;
     aspect-ratio: 16 / 9;
 }

@@ -25,10 +25,11 @@
     height: 80svh;
     border: 5px solid var(--home-display-border);
     border-radius: 10px;
-    background-color: var(--home-display-main-background);
+    /* background-color: var(--home-display-main-background); */
+    box-shadow: inset 0 0 20px 10px var(--home-display-main-background), 0 0 20px 10px var(--home-display-main-background);
 }
 .patchnotes{
-    font-family: var(--font);
+    font-family: var(--font-poppins);
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -110,9 +111,13 @@
 
 .slideRosterButton{
     padding: 1.5svh;
+    border: 2px solid var(--home-display-roster-btn-bg);
     /* background: ; */
+    transition: all ease 300ms;
 }
-
+.slideRosterButton:hover{
+    background: #0077ff8a;
+}
 .dropswitches {
     display: none;
 }
@@ -123,7 +128,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    border: 2px solid rgb(158, 154, 154);
+    border: 2px solid var(--home-display-slideshow-bg);
 
 }
 
@@ -256,10 +261,17 @@
         font-size: 1.4em;
         border: none;
         outline: none;
-        background-color: rgb(95, 94, 94);
+        background-color: var(--home-display-border);
         text-align: center;
     }
-
+    .dropswitches option[selected]{
+        background: #0077ff7c;
+        color: red;
+        /* opacity: .4; */
+    }
+    .dropswitches option{
+        background: #0077ff7c;
+    }
     .img-container{
         max-width: 85svw;
     }

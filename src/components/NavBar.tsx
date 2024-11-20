@@ -1,34 +1,21 @@
 import './../styles/nav.css'
-import logo from './../assets/Logo_square.png'
+// import logo from './../assets/Logo_square.png'
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from 'react';
 import { RxCross2 } from "react-icons/rx";
 import { IoOpenOutline } from "react-icons/io5";
 
-import { discordServerLink } from '../../config/config';
+import { discordServerLink, WebsiteLogo } from '../../config/config';
 type Props = {
     active: string,
-    showTitle?: boolean
 }
-const NavBar : React.FC<Props>= ({active, showTitle}) => {
+const NavBar : React.FC<Props>= ({active}) => {
     
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
     <div className='nav-parent'>
             <div className="titlebox">
-                <img src={logo} className='logo'/>
-                {
-                    showTitle !== undefined ? <>
-                        {
-                            showTitle ? <>
-                                <h2 className='title'>LGI MODZ</h2>
-                            </>:<></>
-                        }
-                    </>:<>
-                        <h2 className='title'>LGI MODZ</h2>
-                    </>
-                }
-                
+                <img src={WebsiteLogo} className='logo'/>
             </div>
             <div className="menuButton" onClick={()=>{setIsMenuOpen(!isMenuOpen)}}>
                 {
@@ -72,9 +59,9 @@ const NavBar : React.FC<Props>= ({active, showTitle}) => {
                         Privacy Policies
                     </button>
                 </a>
-                <a href="/downloads">
-                    <button data-active={active == "downloads"}>
-                        Downloads
+                <a href="/community">
+                    <button data-active={active == "community"}>
+                        Community
                     </button>
                 </a>
                 <a href={discordServerLink} target='blank'>

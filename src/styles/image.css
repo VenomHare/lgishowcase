@@ -54,4 +54,12 @@
         font-size: 1.4em;
         font-family: 'Jost',"comic sans ms";
     }
+    .openimageCancel{
+        width: 12svw !important;
+        height: 12svw !important;
+        top: 20svh;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 50%;
+    }
 }

@@ -1,10 +1,13 @@
 :root {
-    
-    --selection-color: #7a7a7a;
+    --selection-color: #0077ff9d;
+    --scrollbar-thumb: #0077ff;
+    --scrollbar-thumb-hover: #0060ce;
+    --scrollbar-track: #0077ff21;
     --font:'Jost','comic sans ms';
     --font-poppin : "Poppins", sans-serif;
-    --font-freshman: 'Freshman', sans-serif;
-
+    --font-Neon-Rave: 'Neon Rave', sans-serif;
+    --font-footer:'Funnel Display','Poppins',sans-serif;
+    --root-bg: #17191f;
     /*
         
     ███╗░░██╗░█████╗░██╗░░░██╗██████╗░░█████╗░██████╗░
@@ -14,7 +17,7 @@
     ██║░╚███║██║░░██║░░╚██╔╝░░██████╦╝██║░░██║██║░░██║
     ╚═╝░░╚══╝╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝
 */
-    --nav-bar-background: #4b4a4a;
+    --nav-bar-background: #17191f;
     --button-on-hover: #1a1a1a;
     --button-active-bg: #fff;
     --button-active-font: #000;
@@ -29,7 +32,8 @@
 ╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
 */
     /* --footer-background: #4b4a4a; */
-    --footer-background: linear-gradient(90deg, rgb(185 88 88 / 89%) 0%, rgba(144, 78, 37, 1) 50%, rgb(193 171 25) 100%);
+    /* --footer-background: linear-gradient(90deg, rgb(185 88 88 / 89%) 0%, rgba(144, 78, 37, 1) 50%, rgb(193 171 25) 100%); */
+    --footer-background: #282b33;
     --footer-links-on-hover: rgb(132, 133, 241);
 
     /*
@@ -41,25 +45,31 @@
 ██║░░██║╚█████╔╝██║░╚═╝░██║███████╗██║░░░░░██║░░██║╚██████╔╝███████╗
 ╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
 */
-    --home-main-heading-bg: rgb(182, 184, 174);
+    --home-main-heading-bg: #17191f;
+    --home-main-heading-color: #e8e0e0;
 
-    --home-display-border: rgb(95, 94, 94);
+    --home-display-border: #0077ff;
     --home-display-pack-select-button-bg: #fff;
     --home-display-pack-select-button-border: #fff;
     --home-display-pack-select-button-color: #fff;
     --home-display-pack-select-button-active-color: #000;
     --home-display-pack-select-button-active-border: #fff;
-    --home-display-main-background: transparent;
+    --home-display-main-background: #0077ff1e;
     --home-display-buy-btn-bg: linear-gradient(135deg, #f34079 40%, #fc894d);
+    --home-display-roster-btn-bg: #0077ff;
+    --home-display-slideshow-bg: #0077ff;
 
     --discord-bg: #5865F2;
     --discord-text-color: #fff;
 
-    --brief-background-color: rgb(226, 180, 119);
-    --brief-text-color: #000;
+    --brief-background-color: #1c1e24;
+    --brief-text-color: #ffffff;
+    --home-brief-bg-glow: #0077ff;
 
-    --basics-tab-background: rgb(182, 184, 174);
-    --basic-block-background: rgba(136, 136, 132, 0.692);
+    --basic-text-color: #fff;
+    --basics-tab-background: #17191f;
+    --basic-block-background: #0077ff2d;
+    --basic-block-border: #0077ff; 
     --basic-block-glow-color: #000;
 
     /*    
@@ -83,8 +93,9 @@
     ╚═════╝░╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝
 */
 
-    --showcase-main-block-bg: rgb(59, 39, 16);
-    --showcase-video-background: rgb(17, 39, 58);
+    --showcase-main-block-bg: #050505;
+    --showcase-video-background: #0077ffb7;
+    --showcase-main-block-border: #0077ff;
 
     /*
     
@@ -96,8 +107,9 @@
     ╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
     */
 
-    --free-title-bg: rgb(182, 184, 174);
-    --free-block-bg: rgba(0, 255, 255, 0.39);
+    --free-title-bg: #282b33;
+    --free-block-border: #0077ff;
+    --free-block-bg: #0077ff1e;
 
     /*
         
@@ -109,8 +121,10 @@
 ╚══════╝╚═╝░░╚═╝░╚════╝░╚══════╝░╚═════╝░╚═════╝░╚═╝░░░╚═╝░░░╚══════╝
     */
 
-    --exclusive-title: rgb(182, 184, 174);
-    --exclusive-block-bg: rgb(17, 39, 58);
+    --exclusive-title: #282b33;
+    --exclusive-block-bg: #0077ff1e;    
+    --exclusive-block-border: #0077ff;
+
 
     /*
         
@@ -122,8 +136,10 @@
 ╚═╝░░░░░╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░  ╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
     */
 
-    --privacy-title-bg: rgb(226, 128, 0);
-    --privacy-bg: rgb(226, 180, 119);
+    --privacy-title-bg: #0077ff;
+    --privacy-bg: #22242c;
+    --privacy-text: #fff;
+    --privacy-glow: #0077ff;
 
     /*
     
@@ -134,7 +150,7 @@
 ██████╔╝╚█████╔╝░░╚██╔╝░╚██╔╝░██║░╚███║███████╗╚█████╔╝██║░░██║██████╔╝██████╔╝
 ╚═════╝░░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝░░╚══╝╚══════╝░╚════╝░╚═╝░░╚═╝╚═════╝░╚═════╝░
 */
-    --downloads-title-bg: #b91c1c;
+    --downloads-title-bg: #0077ff;
     --downloads-block-bg: #0f172a;
     --downloads-btn-bg: #dc2626 ;
 

@@ -11,14 +11,14 @@ const DownloadBlock: React.FC<DownloadData> = ({ title, downloadLink, key, descr
                     description != null ? <div className="downloadDescription">{description}</div> : <></>
                 }
             </div>
-            <a className='downloadBlockButton' href={downloadLink} target='_blank'>
+            <div className='downloadBlockButton' onClick={()=>{window.open(downloadLink)}}>
                 <div className='downloadbuttontext'>
                     Download
                 </div>
                 <div className="downloadicon">
                     <HiOutlineFolderDownload />
                 </div>
-            </a>
+            </div>
         </div>
     )
 }
