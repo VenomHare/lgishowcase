@@ -86,6 +86,7 @@
     color: #f8fafc;
     padding: 10px;
     background-color: var(--downloads-btn-bg) !important;
+    cursor: pointer;
 }
 .downloadBlockButton:hover{
     background-color: var(--downloads-btn-bg);
