@@ -217,7 +217,7 @@ const ModList: ModPack[] = [
     {
         id: "limited",
         name: "Limited Edition",
-        description: "This is Limited Edition Mod Pack",
+        description: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: true,
         Discount: 40,
         Price: 22,
@@ -269,10 +269,10 @@ const ModList: ModPack[] = [
     {
         id: "deluxe",
         name: "Deluxe Edition",
-        description: "This is Deluxe Edition Mod Pack",
+        description: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: true,
         Discount: 40,
-        Price: 50,
+        Price: 10,
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
