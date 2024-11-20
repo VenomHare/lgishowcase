@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import './App.css'
 import './styles/main.css'
 import './../config/config.css'
-import JoinDiscordLarge from './components/JoinDiscordLarge'
+import './styles/roster.css'
 import { useState } from 'react'
 import PurchaseSection from './components/PurchaseSection'
 import { ModList, ModPack } from '../config/config'
@@ -54,7 +54,6 @@ function App() {
         </div>
       </div>
       <DisplayProducts setPurchaseVar={setPurchaseBlock} setModData={setModData} ModData={ModData} setRosterView={setRosterView}/>
-      <JoinDiscordLarge />
       <Brief />
       <Basics />
       <Footer />

@@ -166,6 +166,8 @@ const pslogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731757741/ps
 
 const lgiLogo = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731677195/Logo_square_y22rlr.png"
 
+const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
+
 /**
  * 
 ██████╗░██╗░░░██╗██████╗░░█████╗░██╗░░██╗░█████╗░░██████╗███████╗  ██████╗░░█████╗░░██████╗░███████╗
@@ -219,7 +221,7 @@ const ModList: ModPack[] = [
         isDiscounted: true,
         Discount: 40,
         Price: 22,
-        thumbnail: LimitedSliderThumbnail,
+        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/HCTP_2k25_Limited_dmft4v.png",
         showcaseImgs: [
             "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964177/RR_-3_ofehz4.png",
             "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964176/RR_-1_dkksch.png",
@@ -271,7 +273,7 @@ const ModList: ModPack[] = [
         isDiscounted: true,
         Discount: 40,
         Price: 50,
-        thumbnail: DeluxeSliderThumbnail,
+        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
@@ -305,6 +307,7 @@ export {
     wwlogo,
     pslogo,
     lgiLogo,
+    discordServerLink,
 
     JoinDiscordImage,
     VerifyImage,

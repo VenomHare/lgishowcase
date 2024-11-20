@@ -56,6 +56,12 @@
 .title{
     display: none;
 }
+.discordBtn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--discord-bg);
+}
 @media screen and (max-width: 1024px) {
     a{
         width: fit-content;

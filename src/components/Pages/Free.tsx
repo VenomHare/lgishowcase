@@ -3,10 +3,6 @@ import DisplayBlock from '../DisplayBlock'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 import { FreeSliderimgs } from '../../../config/config'
-import JoinDiscordLarge from '../JoinDiscordLarge'
-import PurchaseSection from '../PurchaseSection'
-
-
 
 
 const Free = () => {
@@ -18,9 +14,8 @@ const Free = () => {
                     <h3>For further queries and updates, please open a ticket in our Discord server.</h3>
                 </div>
             <div className='free-container'>
-                <DisplayBlock PicLast={FreeSliderimgs.length} imgURLs={FreeSliderimgs} ButtonText='Download'  onClick={()=>{}}/>
+                <DisplayBlock  imgURLs={FreeSliderimgs} ButtonText='Download'  onClick={()=>{}}/>
             </div>
-            <JoinDiscordLarge/>
             <Footer/>
         </>
     )

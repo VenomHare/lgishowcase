@@ -8,7 +8,6 @@ const RosterLists:React.FC<{filepath: string}> = ({filepath}) => {
         fetch(filepath)
         .then((response) => response.text().then((data) => {
             let n = data.split('\n');
-            console.log(n);
             setNames(n);
         }))
         .catch((error) => {
@@ -25,7 +24,7 @@ const RosterLists:React.FC<{filepath: string}> = ({filepath}) => {
     }
     return (
         <>{
-            names.map(n=><div>{n}</div>)
+            names.map((n,i)=><div key={i}>{n}</div>)
         }</>
     )
 }

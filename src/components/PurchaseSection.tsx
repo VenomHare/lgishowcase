@@ -1,7 +1,7 @@
 import './../styles/purchase.css'
 import TicketCreation from './TicketCreation'
 import { RxCross2 } from "react-icons/rx";
-import {  ModPack } from '../../config/config';
+import {  discordServerLink, ModPack } from '../../config/config';
 
 type Props = {
     setActiveVar: React.Dispatch<React.SetStateAction<boolean>>,
@@ -11,7 +11,7 @@ type Props = {
 
 const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
     const ForwardToHowtoBuy = () => { window.location.href = "/howtobuy" }
-    const ForwardToDiscordServer = () => { window.open("https://discord.com/invite/dMzNNVuYv7"); }
+    const ForwardToDiscordServer = () => { window.open(discordServerLink); }
     const ForwardToDiscordChannel = () => { window.open("https://discord.gg/dMzNNVuYv7"); }
     if (!ActiveVar) {
         return <></>

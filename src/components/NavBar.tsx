@@ -3,6 +3,9 @@ import logo from './../assets/Logo_square.png'
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from 'react';
 import { RxCross2 } from "react-icons/rx";
+import { IoOpenOutline } from "react-icons/io5";
+
+import { discordServerLink } from '../../config/config';
 type Props = {active: string}
 const NavBar : React.FC<Props>= ({active}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -59,6 +62,13 @@ const NavBar : React.FC<Props>= ({active}) => {
                     <button data-active={active == "downloads"}>
                         Downloads
                     </button>
+                </a>
+                <a href={discordServerLink} target='blank'>
+                    <button data-active={active == "Discord"} className='discordBtn'>
+                        Discord
+                        <IoOpenOutline />
+                    </button>            
+
                 </a>
                 {/* <a href="faq">
                     <button data-active={active == "faq"}>
