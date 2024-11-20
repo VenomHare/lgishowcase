@@ -77,7 +77,7 @@
         font-size: 1.5rem;
     }
     .logo{
-        width: 10svw;
+        /* width: 10svw; */
         max-height: 10svh;
     }
     .nav-buttons[data-active=false]{
@@ -101,7 +101,7 @@
 }
 @media screen and (max-width: 500px) {
     .logo{
-        width: 25svw;
+        width: 15svw;
         max-height: 10svh;
     }
     .menuButton{

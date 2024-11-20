@@ -11,14 +11,16 @@
     width: 100svw;
 } 
 .maintitle{
+    margin-top: 5svh;
     color: rgb(31, 30, 30);
     font-size: 10rem;
-    font-family: var(--font);
+    font-family: var(--font-freshman);
 }
 .subtitle{
     color: rgb(31, 30, 30);
     font-size: 3rem;
     font-family: "Cedarville Cursive", cursive;
+    /* font-family: var(--font-poppin); */
 }
 .page-details{
     color: rgb(31, 30, 30);
@@ -26,6 +28,7 @@
     font-size: 1.4rem;
     font-family: var(--font);
     width: 75svw;
+    font-family: var(--font-poppin);
 }
 .Brief{
     font-family: var(--font);
