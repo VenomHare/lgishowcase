@@ -6,14 +6,28 @@ import { RxCross2 } from "react-icons/rx";
 import { IoOpenOutline } from "react-icons/io5";
 
 import { discordServerLink } from '../../config/config';
-type Props = {active: string}
-const NavBar : React.FC<Props>= ({active}) => {
+type Props = {
+    active: string,
+    showTitle?: boolean
+}
+const NavBar : React.FC<Props>= ({active, showTitle}) => {
+    
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
     <div className='nav-parent'>
             <div className="titlebox">
                 <img src={logo} className='logo'/>
-                <h2 className='title'>LGI MODZ</h2>
+                {
+                    showTitle !== undefined ? <>
+                        {
+                            showTitle ? <>
+                                <h2 className='title'>LGI MODZ</h2>
+                            </>:<></>
+                        }
+                    </>:<>
+                        <h2 className='title'>LGI MODZ</h2>
+                    </>
+                }
                 
             </div>
             <div className="menuButton" onClick={()=>{setIsMenuOpen(!isMenuOpen)}}>

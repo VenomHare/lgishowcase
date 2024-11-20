@@ -7,7 +7,7 @@ import './App.css'
 import './styles/main.css'
 import './../config/config.css'
 import './styles/roster.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PurchaseSection from './components/PurchaseSection'
 import { ModList, ModPack } from '../config/config'
 import RosterBlock from './components/RosterBlock'
@@ -19,6 +19,24 @@ function App() {
   const [PurchaseBlock, setPurchaseBlock] = useState(false);
   const [ModData, setModData] = useState<ModPack>(ModList.find(m => m.id == "limited") || ModList[0]);
   const [rosterView, setRosterView] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const triggerElement = document.querySelector('.maintitle');
+      const triggerPosition = triggerElement?.getBoundingClientRect().bottom;
+      console.log(triggerPosition);
+      
+      if (triggerPosition && triggerPosition <= 125) {
+        setShowTitle(true);
+      } else {
+        setShowTitle(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -42,7 +60,7 @@ function App() {
       </>
 
 
-      <NavBar active='home' />
+      <NavBar active='home' showTitle={showTitle}/>
       <div className="heading">
         <h1 className='maintitle'>
           LGI MOD'z
