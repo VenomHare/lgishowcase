@@ -221,7 +221,7 @@ const ModList: ModPack[] = [
         isDiscounted: true,
         Discount: 40,
         Price: 22,
-        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/HCTP_2k25_Limited_dmft4v.png",
+        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
         showcaseImgs: [
             "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964177/RR_-3_ofehz4.png",
             "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964176/RR_-1_dkksch.png",
