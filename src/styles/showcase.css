@@ -35,6 +35,7 @@
 .yttitle{
     font-size: 0.8rem;
     width: 80%;
+    font-family: var(--font-footer);
 }
 .ShowcaseVidParent{
     cursor: pointer;
@@ -43,14 +44,15 @@
     justify-content: center;
     align-items: center;
     border: 1px solid white;
-    width: 90%;
-    border-radius: 10px;
+    width: 80%;
+    border-radius: 5px;
     background-color: var(--showcase-video-background);
-    padding: 10px ;
+    padding: 5px;
 }
 .ytthumb{
     height: 25svh;
     aspect-ratio: 16 / 9;
+    border-radius: 10px;
 }
 @media screen and (max-width: 1400px) {
     .videoParent{
