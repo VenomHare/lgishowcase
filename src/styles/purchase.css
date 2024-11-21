@@ -159,6 +159,13 @@
 
 }
 
+.nonDiscount{
+    background-color: rgba(0, 128, 0, 0.726);
+    padding: 4px;
+    border-radius: 5px;
+    border: 3px dashed rgb(43, 167, 43);
+}
+
 .ticket-step-detail {
     font-size: 1.4rem;
 }

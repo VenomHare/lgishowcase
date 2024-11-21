@@ -49,7 +49,7 @@ const DisplayProducts : React.FC<Props>= ({setPurchaseVar, setModData, ModData, 
                 }
             </div>
             <>
-            <DisplayBlock Thumbnail={ModData.thumbnail} description={ModData.description} imgURLs={ModData.showcaseImgs} onClick={()=>{setPurchaseVar(true)}} setRosterView={setRosterView}/>
+            <DisplayBlock Thumbnail={ModData.thumbnail} patchnotes={ModData.patchnotes} imgURLs={ModData.showcaseImgs} onClick={()=>{setPurchaseVar(true)}} setRosterView={setRosterView}/>
             </>
         </div>
     </>

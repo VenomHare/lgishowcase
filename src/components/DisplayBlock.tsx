@@ -7,10 +7,10 @@ type Props = {
     setRosterView?: React.Dispatch<React.SetStateAction<boolean>>;
     imgURLs: string[];
     Thumbnail?: string;
-    description?: string;
+    patchnotes?: string;
 }
 
-const DisplayBlock : React.FC<Props> = ({ ButtonText, onClick, setRosterView, imgURLs, Thumbnail,description}) => {
+const DisplayBlock : React.FC<Props> = ({ ButtonText, onClick, setRosterView, imgURLs, Thumbnail,patchnotes}) => {
 
     const showThumbnail : boolean = !(Thumbnail == null || Thumbnail == "") 
     const [picture, setPicture] = useState(1);
@@ -43,7 +43,7 @@ const DisplayBlock : React.FC<Props> = ({ ButtonText, onClick, setRosterView, im
                     </div>
                     </div>
                 </div>
-                <div className="patchnotes">{description}</div>
+                <div className="patchnotes">{patchnotes}</div>
                 <div className='buy-btn' onClick={onClick}>
                     <span>
                         {(ButtonText == null || ButtonText == "")?<>Buy Now</>:ButtonText}

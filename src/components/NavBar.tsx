@@ -15,7 +15,7 @@ const NavBar : React.FC<Props>= ({active}) => {
     return (
     <div className='nav-parent'>
             <div className="titlebox">
-                <img src={WebsiteLogo} className='logo'/>
+                <img src={WebsiteLogo} className='logo' onClick={()=>{window.location.href= "/"}}/>
             </div>
             <div className="menuButton" onClick={()=>{setIsMenuOpen(!isMenuOpen)}}>
                 {

@@ -48,7 +48,7 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
                                             <div className='price'>${Mod.Price} USD</div>
                                         </div>
                                     </span> 
-                                : <>${Mod.Price} USD</>} 
+                                : <span className='nonDiscount'>${Mod.Price} USD</span>} 
                             </span>
                         </div>
                         {

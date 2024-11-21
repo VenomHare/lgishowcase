@@ -192,6 +192,7 @@ export type ModPack = {
     id: string,
     name: string;
     description?: string;
+    patchnotes?: string;
     isDiscounted: boolean;
     Discount: number;
     Price: number;
@@ -219,7 +220,8 @@ const ModList: ModPack[] = [
     {
         id: "limited",
         name: "Limited Edition",
-        description: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
+        description: "",
+        patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: true,
         Discount: 40,
         Price: 22,
@@ -271,14 +273,19 @@ const ModList: ModPack[] = [
     {
         id: "deluxe",
         name: "Deluxe Edition",
-        description: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
-        isDiscounted: true,
+        description: "",
+        patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
+        isDiscounted: false,
         Discount: 40,
-        Price: 10,
+        Price: 0,
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png ",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193957/DE_hrqp0s.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193957/DE_3_hy5fiy.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193956/DE_4_aggkep.jpg",
+            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193957/DE_2_kkgwwb.jpg",
         ],
         homeShowcase: true,
         rosterListPath: DeluxeListText,

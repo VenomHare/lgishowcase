@@ -29,12 +29,16 @@
     color: var(--basic-text-color);
     margin: 10svh auto;
     padding: 5svh 1svw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .basicTitle{
     font-size: 2.5rem;
     padding: 1svw;
 }
 .basicdetails{
+    width: 70svw;
     margin: 1%;
     font-size: 1.3rem;
 }
