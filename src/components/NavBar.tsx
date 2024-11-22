@@ -31,32 +31,20 @@ const NavBar : React.FC<Props>= ({active}) => {
                         Home
                     </button>
                 </a>
-
-                {/* <a href="/roster">
-                    <button data-active={active == "roster"}>
-                        Roster
-                    </button>
-                </a> */}
-
                 <a href="/showcase">
                     <button data-active={active == "showcase"}>
                         Showcase
                     </button>
                 </a>
 
-                <a href="/free">
-                    <button data-active={active == "free"}>
-                        Free Zone
+                <a href="/mods">
+                    <button data-active={active == "mods"}>
+                        Browse Mods
                     </button>
                 </a>
-                <a href="exclusive">
-                    <button data-active={active == "exclusive"}>
-                        Exclusive Zone
-                    </button>
-                </a>
-                <a href="/policies">
-                    <button data-active={active == "policies"}>
-                        Privacy Policies
+                <a href="/patches">
+                    <button data-active={active == "patches"}>
+                        Browse Patches
                     </button>
                 </a>
                 <a href="/community">

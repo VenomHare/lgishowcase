@@ -1,0 +1,89 @@
+.sorterParent{
+    width: 15svw;
+    min-height: 30svh;
+    background: var(--sorter-background);
+    padding-top: 1svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1svh;
+}
+.tags-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 85%;
+    height: 60%;
+    gap: 5px;
+    padding: 1svh;
+    margin: 1svh 1svw;
+    border: 2px solid var(--sorter-tag-box-border);
+    border-radius: 10px;
+}
+.tagbox{
+    border: 1px solid var(--sorter-tag-border);
+    background: var(--sorter-tag-bg);
+    padding-inline: 5px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    height: fit-content;
+}
+.tagRemove{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tagActive{
+    background: var(--sorter-tag-active-bg) !important;
+    border: 1px solid var(--sorter-tag-active-border) !important;
+}
+.clearButton{
+    position: static;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--sorter-tag-border);
+}
+.filterBtn{
+    display: none;
+}
+.mobileApply{
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .sorterParent{
+        border: 2px solid var(--sorter-tag-box-border);
+        display: none;
+        border-radius: 1rem;
+    }
+    .filterBtn{
+        font-size: 1.5rem;
+        display: block;
+    }
+    .sorterParent[data-mobile="true"]{
+        display: block;
+        position: fixed;
+        width: 90svw;
+        height: 80svh;
+        top: 15svh;
+        left: 5svw;
+        
+        display: flex;
+        box-shadow: 0 0 15px var(--sorter-tag-border);
+    }
+    .mobileApply{
+        display: block;
+        font-size: 1.5rem;
+        width: 80%;
+        height: 7.5%;
+        border-radius: 1rem;
+        background: var(--sorter-applybtn-bg);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+}

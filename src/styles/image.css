@@ -55,11 +55,20 @@
         font-family: 'Jost',"comic sans ms";
     }
     .openimageCancel{
-        width: 12svw !important;
-        height: 12svw !important;
-        top: 20svh;
+        width: 5svw !important;
+        height: 5svw !important;
+        top: 8svh;
         left: 50%;
         transform: translate(-50%);
         border-radius: 50%;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .openimageCancel{
+        width: 10svw !important;
+        height: 10svw !important;
+        font-size: 1.5rem;
+        top: 15svh;
     }
 }

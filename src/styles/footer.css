@@ -9,6 +9,8 @@
     align-items: center;
     flex-direction: column-reverse;
     gap: 1svh;
+
+    z-index: 999;
 }
 .footerlgi{
     width: 5svw;

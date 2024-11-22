@@ -1,6 +1,5 @@
 {
-    "version":2,
-
+    "version": 2,
     "routes": [
         {
             "src": "/api/rss",
@@ -23,11 +22,11 @@
             "dest": "/index.html"
         },
         {
-            "src": "/exclusive",
+            "src": "/patches",
             "dest": "/"
         },
         {
-            "src": "/free",
+            "src": "/mods",
             "dest": "/"
         },
         {
@@ -38,11 +37,9 @@
             "src": "/howtobuy",
             "dest": "/"
         },
-        
         {
             "src": "/",
             "dest": "/"
         }
     ]
-     
 }

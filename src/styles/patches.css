@@ -1,0 +1,70 @@
+.patchBlockParent{
+    border: 1px solid var(--mods-block-border);
+    box-shadow: 0 0 5px var(--mods-block-border);
+    background: var(--sorter-background);
+    width: 18svw;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1svh;
+}
+.patchBlockThumbnail{
+    width: 95%;
+    border-radius: 5px;
+}
+.patchBlockButtons{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    gap: 1svh;
+    width: 100%;
+}
+.patchBlockButton{
+    border: 1px solid var(--mods-block-border);
+    background: var(--mods-btn-background);
+    border-radius: 7px;
+    padding: 1svh 1svw;
+    cursor: pointer;
+    width: 85%;
+}
+.patchtag{
+    border: 1px solid var(--sorter-tag-border);
+    background: var(--sorter-tag-bg);
+    padding-inline: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    font-size: .8rem;
+}
+.patchesTags{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.patchesTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font);
+}
+.mod-display-container{
+    gap: 10px;
+}
+@media screen and (max-width: 1024px) {
+    .patchBlockParent{
+        width: 40svw;
+    }
+    .mod-display-container{
+        margin: 2svh auto;
+        width: 98svw;
+    }
+}
+@media screen and (max-width: 500px) {
+    .patchBlockParent{
+        width: 80svw;
+    }
+    .patchBlockButton{
+        width: 95%;
+    }
+}

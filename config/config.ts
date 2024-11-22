@@ -188,6 +188,34 @@ const OpenTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731
 const TicketViewImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731843630/ticket2_y8rics.png"
 const CloseTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731849487/Close_mswfsk.png"
 
+const LimitedPackImages =  [
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964177/RR_-3_ofehz4.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964176/RR_-1_dkksch.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964175/Season_1_thmer3.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964173/Jeff_vs_Matt_2_j7cbdn.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964172/Season_2_yc1gcm.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964170/RR_2_bcqzfa.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_4_krs3ij.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_3_runrqy.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Season_3_bh33bx.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Jeff_vs_Matt_1_rcaj9n.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964165/gvs_g_3_anlnsa.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_2_u0afxg.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_e3xlja.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964103/Screenshot_273_prt1l2.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964100/Screenshot_263_mfmzka.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964085/Screenshot_298_ialfvq.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964071/Screenshot_297_qvz1bf.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964051/Screenshot_126_u2c7u3.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964044/Screenshot_135_xhckxq.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964031/Untitled1_lu9nsz.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964022/Untitled_4_xa55lh.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964016/Untitled_wmdj24.jpg",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963982/Screenshot_303_yy76sr.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963981/Screenshot_293_f4er2l.png",
+    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963961/Screenshot_286_l9lqo7.png"
+]
+
 export type ModPack = {
     id: string,
     name: string;
@@ -226,33 +254,7 @@ const ModList: ModPack[] = [
         Discount: 40,
         Price: 22,
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
-        showcaseImgs: [
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964177/RR_-3_ofehz4.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964176/RR_-1_dkksch.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964175/Season_1_thmer3.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964173/Jeff_vs_Matt_2_j7cbdn.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964172/Season_2_yc1gcm.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964170/RR_2_bcqzfa.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_4_krs3ij.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_3_runrqy.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Season_3_bh33bx.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Jeff_vs_Matt_1_rcaj9n.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964165/gvs_g_3_anlnsa.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_2_u0afxg.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_e3xlja.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964103/Screenshot_273_prt1l2.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964100/Screenshot_263_mfmzka.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964085/Screenshot_298_ialfvq.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964071/Screenshot_297_qvz1bf.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964051/Screenshot_126_u2c7u3.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964044/Screenshot_135_xhckxq.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964031/Untitled1_lu9nsz.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964022/Untitled_4_xa55lh.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964016/Untitled_wmdj24.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963982/Screenshot_303_yy76sr.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963981/Screenshot_293_f4er2l.png",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963961/Screenshot_286_l9lqo7.png"
-        ],
+        showcaseImgs: LimitedPackImages,
         homeShowcase: true,
         rosterListPath: LimitedListText,
     },
@@ -292,6 +294,93 @@ const ModList: ModPack[] = [
     }
 ]
 
+export type SortingModPack = {
+    id: string;
+    title: string;
+    thumbnail?: string;
+    tags: string[];
+    imagesURL: string[];
+    downloadLink: string;
+    ytvideoLink?: string;
+}
+
+const TagsList: string[] = [
+    "free",
+    "paid",
+    "2K25",
+]
+
+const BrowseModsList: SortingModPack[] = [
+    {
+        id: "free1",
+        title: "",
+        tags: ["2K25","free"],
+        imagesURL: [
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318452/1_smscsd.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318452/4_kfs2yu.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318451/3_ryq52v.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318453/2_fcvptp.png"
+        ],
+        downloadLink: discordServerLink
+    },
+    {
+        id: "exclusive1",
+        title: "",
+        tags: ["2K25","paid"],
+        imagesURL: [
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/3_x0ggaz.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/4_cck1wa.png"
+        ],
+        downloadLink: discordServerLink
+    },
+    {
+        id: "exclusive2",
+        title: "",
+        tags: ["2K25","paid"],
+        imagesURL: [
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/1_cgknma.png",
+            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/2_hik9oi.png"
+        ],
+        downloadLink: discordServerLink
+    },
+    {
+        id: "exclusive3",
+        title: "",
+        tags: ["2K25","paid"],
+        imagesURL: [ "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/5_xnxr9y.png"],
+        downloadLink: discordServerLink
+    },
+]
+
+const PatchesTags : string[] = [
+    "free",
+    "paid",
+    "Limited Edition",
+    "Deluxe Edition"
+]
+
+const Patches : SortingModPack[] = [
+    {    
+        id: "limited",
+        title: "Limited Edition Pack",
+        tags: ["paid", "Limited Edition"],
+        imagesURL: [],
+        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
+        downloadLink: discordServerLink,
+        ytvideoLink: "https://youtube.com/@lgiyt",
+    },
+    {    
+        id: "deluxe",
+        title: "Deluxe Edition Pack",
+        tags: ["free", "Deluxe Edition"],
+        imagesURL: [],
+        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
+        downloadLink: discordServerLink,
+        ytvideoLink: "https://youtube.com/@lgiyt",
+    },
+]
+
+
 export {
     DownloadPageData,
 
@@ -327,4 +416,10 @@ export {
     TicketViewImage,
     CloseTicketImage,
     ModList,
+
+    BrowseModsList,
+    TagsList,
+
+    Patches,
+    PatchesTags,
 }
