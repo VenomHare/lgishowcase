@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
 }
-.heading{
+
+.heading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,31 +10,39 @@
     background-color: var(--home-main-heading-bg);
     height: fit-content;
     width: 100svw;
-} 
-.maintitle{
+}
+
+.maintitle {
     margin-top: 5svh;
-    color:var(--home-main-heading-color);
+    color: var(--home-main-heading-color);
     font-size: 10rem;
     font-family: var(--font-Neon-Rave);
     font-style: italic;
 }
-.subtitle{
-    color:var(--home-main-heading-color);
+
+.subtitle {
+    color: var(--home-main-heading-color);
     font-size: 3rem;
     font-family: "Cedarville Cursive", cursive;
     /* font-family: var(--font-poppin); */
 }
-.page-details{
-    color:var(--home-main-heading-color);
+
+.page-details {
+    color: var(--home-main-heading-color);
     margin: 3svh;
     font-size: 1.4rem;
     font-family: var(--font);
     width: 75svw;
     font-family: var(--font-poppin);
 }
-.Brief{
+
+.Brief {
     font-family: var(--font-poppin);
     width: 70svw;
+    height: fit-content;
+    /* Adapts to content height */
+    min-height: 20svh;
+    /* Sets a minimum height */
     margin: 30px auto;
     color: var(--brief-text-color);
     z-index: 10;
@@ -41,53 +50,91 @@
     padding: 5svh 5svw;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px var(--home-brief-bg-glow);
+
+    display: flex;
+    /* Flex layout */
+    align-items: center;
+    /* Vertically center items */
+    justify-content: space-between;
+    /* Space out children */
 }
-.briefBG{
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    left: 10%;
-    width: 78svw;
-    height: 33svh;
-    transform: skewX(4deg) ;
-    border-radius: 10px;
+
+.arenaParent,
+.featuresParent {
+    width: 60%;
+    min-height: 40svh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: "➦";
 }
-.briefTitle{
-    text-align: center;    
+.arenaParent{
+    align-items: center;
+    width: 25%;
+}
+.divider {
+    min-width: 3px;
+    border-radius: 5px;
+    height: 50svh;
+    background: var(--brief-divider-color);
+    box-shadow: 0 0 5px var(--brief-divider-color);
+}
+
+.briefTitle {
+    text-align: center;
     font-size: 3rem;
     font-weight: 600;
+    margin: 2svh auto;
 }
-.briefSub{
-    text-align: center;    
+
+.briefSub {
+    text-align: center;
     font-size: 2rem;
     font-weight: 600;
 }
-.briefdetail{
-    text-align: center;    
+
+.briefdetail {
+    text-align: left;
     font-size: 1rem;
     font-weight: 500;
 }
+/* 
+.areana-contianer{
+    width: 45%;
+} 
+*/
+
 @media screen and (max-width: 1200px) {
-    .briefBG{
-        width: 85svw;
-        height: 45svh;
-        left: 10%;
+    .Brief {
+        flex-direction: column;
+        gap: 3svh;
+    }
+
+    .divider {
+        width: 100%;
+        height: 3px;
+    }
+
+    .arenaParent,
+    .featuresParent {
+        width: 95%;
     }
 }
+
 @media screen and (max-width: 600px) {
-    .page-details{
+    .page-details {
         font-size: 1rem;
     }
-    .maintitle{
+
+    .maintitle {
         font-size: 4.8rem;
     }
-    .subtitle{
+
+    .subtitle {
         font-size: 2rem;
     }
-    .briefBG{
+    .Brief{
         width: 85svw;
-        height: 60svh;
-        left: 10%;  
     }
 }

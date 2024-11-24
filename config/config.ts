@@ -105,6 +105,56 @@ const DeluxeSliderImages = [
 
 const DeluxeSliderThumbnail = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731317640/3_skbost.png"
 
+const Features = [
+    "82 Wrestlers in Exhibition instead of 65 (including non-unlockable characters and Divas)",
+    "75 Superstars playable in Season Mode",
+    "Total 61 Titantrons, up from 43",
+    "Total 125 Themes, compared to 72 previously",
+    "All high-poly models now appear in Victory Motions!",
+    "Updated Movesets with 180+ new moves, including converted and custom-made ones",
+    "298+ Unique Attires",
+    "Royal Rumble Finishers with cheats assigned to all 82 superstars",
+    "Adjusted damage values for several moves, especially finishers",
+    "New Themes and Titantrons added",
+    "New Finisher Logos introduced",
+    "Updated and restructured Stables",
+    "Enhanced Renders for all superstars"
+];
+
+
+const Cons = [
+    "With the roster hack, we can have 86 characters in Exhibition instead of just 65, but there are side effects.",
+    "Members in stables cannot be changed; attempting to do so causes the game to freeze and an error to appear in the console.",
+    "Certain wrestler IDs cause the pre-match model to appear too big or too small; this issue is related to the ID.",
+    "Some wrestler IDs also affect the size of the belt during entrances, making it appear too big or small, though most are normal."
+];
+
+const Arena = [
+    "Smackdown 1",
+    "Smackdown Oval",
+    "Raw 1",
+    "Raw 2",
+    "NXT",
+    "WrestleMania XL",
+    "Royal Rumble 24",
+    "Elimination Chamber",
+    "WrestleMania XX",
+    "Backlash",
+    "Judgement Day",
+    "King of the Ring XI",
+    "WCW Nitro",
+    "Summer Slam",
+    "Unforgiven",
+    "King Of Sports",
+    "Survivor Series",
+    "Night Of Champion",
+    "ECW",
+    "WrestleMania X8",
+    "Many Hidden Arenas playable through cheats"
+];
+
+
+
 /*
 Free Zone Page
 ███████╗██████╗░███████╗███████╗  ███████╗░█████╗░███╗░░██╗███████╗  ██████╗░░█████╗░░██████╗░███████╗
@@ -188,7 +238,7 @@ const OpenTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731
 const TicketViewImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731843630/ticket2_y8rics.png"
 const CloseTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731849487/Close_mswfsk.png"
 
-const LimitedPackImages =  [
+const LimitedPackImages = [
     "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964177/RR_-3_ofehz4.png",
     "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964176/RR_-1_dkksch.png",
     "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964175/Season_1_thmer3.jpg",
@@ -314,7 +364,7 @@ const BrowseModsList: SortingModPack[] = [
     {
         id: "free1",
         title: "",
-        tags: ["2K25","free"],
+        tags: ["2K25", "free"],
         imagesURL: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318452/1_smscsd.png",
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318452/4_kfs2yu.png",
@@ -326,7 +376,7 @@ const BrowseModsList: SortingModPack[] = [
     {
         id: "exclusive1",
         title: "",
-        tags: ["2K25","paid"],
+        tags: ["2K25", "paid"],
         imagesURL: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/3_x0ggaz.png",
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/4_cck1wa.png"
@@ -336,7 +386,7 @@ const BrowseModsList: SortingModPack[] = [
     {
         id: "exclusive2",
         title: "",
-        tags: ["2K25","paid"],
+        tags: ["2K25", "paid"],
         imagesURL: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/1_cgknma.png",
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/2_hik9oi.png"
@@ -346,21 +396,21 @@ const BrowseModsList: SortingModPack[] = [
     {
         id: "exclusive3",
         title: "",
-        tags: ["2K25","paid"],
-        imagesURL: [ "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/5_xnxr9y.png"],
+        tags: ["2K25", "paid"],
+        imagesURL: ["https://res.cloudinary.com/dzgbkv34a/image/upload/v1731358647/5_xnxr9y.png"],
         downloadLink: discordServerLink
     },
 ]
 
-const PatchesTags : string[] = [
+const PatchesTags: string[] = [
     "free",
     "paid",
     "Limited Edition",
     "Deluxe Edition"
 ]
 
-const Patches : SortingModPack[] = [
-    {    
+const Patches: SortingModPack[] = [
+    {
         id: "limited",
         title: "Limited Edition Pack",
         tags: ["paid", "Limited Edition"],
@@ -369,7 +419,7 @@ const Patches : SortingModPack[] = [
         downloadLink: discordServerLink,
         ytvideoLink: "https://youtube.com/@lgiyt",
     },
-    {    
+    {
         id: "deluxe",
         title: "Deluxe Edition Pack",
         tags: ["free", "Deluxe Edition"],
@@ -395,6 +445,9 @@ export {
     BasicSliderThumbnail,
     LimitedSliderThumbnail,
     DeluxeSliderThumbnail,
+    Features,
+    Cons,
+    Arena,
 
     FreeSliderimgs,
 
