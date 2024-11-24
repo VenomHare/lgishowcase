@@ -266,6 +266,13 @@ const LimitedPackImages = [
     "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963961/Screenshot_286_l9lqo7.png"
 ]
 
+export type CurrencyOptions = {
+    id: string;
+    name: string;
+    price: number;
+}
+
+
 export type ModPack = {
     id: string,
     name: string;
@@ -273,12 +280,14 @@ export type ModPack = {
     patchnotes?: string;
     isDiscounted: boolean;
     Discount: number;
-    Price: number;
+    Price: CurrencyOptions[];
     thumbnail: string;
     showcaseImgs: string[],
     homeShowcase: boolean,
     rosterListPath?: string,
 }
+
+
 
 const ModList: ModPack[] = [
     {
@@ -287,7 +296,23 @@ const ModList: ModPack[] = [
         description: "",
         isDiscounted: true,
         Discount: 40,
-        Price: 22,
+        Price: [
+            {
+                id: "usd",
+                name: "USD",
+                price: 22,
+            },
+            {
+                id: "eur",
+                name: "EUR",
+                price: 22,
+            },
+            {
+                id: "inr",
+                name: "INR",
+                price: 2100,
+            },
+        ],
         thumbnail: BasicSliderThumbnail,
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
@@ -302,7 +327,33 @@ const ModList: ModPack[] = [
         patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: true,
         Discount: 40,
-        Price: 22,
+        Price:[
+            {
+                id: "usd",
+                name: "USD",
+                price: 22,
+            },
+            {
+                id: "eur",
+                name: "EUR",
+                price: 22,
+            },
+            {
+                id: "inr",
+                name: "INR",
+                price: 1800,
+            },
+            {
+                id: "sgd",
+                name: "SGD",
+                price: 38,
+            },
+            {
+                id: "cad",
+                name: "CAD",
+                price: 38,
+            },
+        ],
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
         showcaseImgs: LimitedPackImages,
         homeShowcase: true,
@@ -314,7 +365,23 @@ const ModList: ModPack[] = [
         description: "",
         isDiscounted: true,
         Discount: 40,
-        Price: 22,
+        Price: [
+            {
+                id: "usd",
+                name: "USD",
+                price: 22,
+            },
+            {
+                id: "eur",
+                name: "EUR",
+                price: 22,
+            },
+            {
+                id: "inr",
+                name: "INR",
+                price: 2100,
+            },
+        ],
         thumbnail: rosterExclusiveThumbnail,
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
@@ -329,7 +396,23 @@ const ModList: ModPack[] = [
         patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: false,
         Discount: 40,
-        Price: 0,
+        Price: [
+            {
+                id: "usd",
+                name: "USD",
+                price: 0,
+            },
+            {
+                id: "eur",
+                name: "EUR",
+                price: 0,
+            },
+            {
+                id: "inr",
+                name: "INR",
+                price: 0,
+            },
+        ],
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
         showcaseImgs: [
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
