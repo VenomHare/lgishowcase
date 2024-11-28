@@ -435,6 +435,7 @@ export type SortingModPack = {
     imagesURL: string[];
     downloadLink: string;
     ytvideoLink?: string;
+    credits?: string[];
 }
 
 const TagsList: string[] = [
@@ -501,6 +502,20 @@ const Patches: SortingModPack[] = [
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
         downloadLink: discordServerLink,
         ytvideoLink: "https://youtube.com/@lgiyt",
+        credits: [
+            "Aguila316 (Tools,Mods)",
+            "Ps2 eater (Mods) @ps2eater",
+            "Nero619 (Tools)",
+            "ERI619 (Tools)",
+            "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
+            "Erm31 (Tools)",
+            "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
+            "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
+            "Ryukuuma (Mods) @Ryukuuma",
+            "Ranjay (Arenas) @ranjay12",
+            "THQ (Base Game)",
+            "JAKKS (Base Game)"
+        ]
     },
     {
         id: "deluxe",
@@ -510,6 +525,20 @@ const Patches: SortingModPack[] = [
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
         downloadLink: discordServerLink,
         ytvideoLink: "https://youtube.com/@lgiyt",
+        credits: [
+            "Aguila316 (Tools,Mods)",
+            "Ps2 eater (Mods) @ps2eater",
+            "Nero619 (Tools)",
+            "ERI619 (Tools)",
+            "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
+            "Erm31 (Tools)",
+            "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
+            "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
+            "Ryukuuma (Mods) @Ryukuuma",
+            "Ranjay (Arenas) @ranjay12",
+            "THQ (Base Game)",
+            "JAKKS (Base Game)"
+        ]
     },
 ]
 

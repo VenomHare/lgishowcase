@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 type Props = {
     title: string;
@@ -6,9 +6,11 @@ type Props = {
     ytVideoLink: string;
     thumbnail: string;
     Tags: string[];
+    credits: string[];
 }
 
-const PatchBlock : React.FC<Props> = ({title,Tags, downloadLink, ytVideoLink, thumbnail}) => {
+const PatchBlock : React.FC<Props> = ({title,Tags, downloadLink, ytVideoLink, thumbnail, credits}) => {
+    const [Credits, setCredits] = useState(false);
     return (
         <>
             <div className="patchBlockParent">
@@ -23,7 +25,25 @@ const PatchBlock : React.FC<Props> = ({title,Tags, downloadLink, ytVideoLink, th
                 <div className="patchBlockButtons">
                     <div className="patchBlockButton" onClick={()=>{window.open(downloadLink)}}>Download</div>
                     <div className="patchBlockButton" onClick={()=>{window.open(ytVideoLink)}}>Showcase</div>
+                    {/* {credits.length !== 0 ? */}
+                        <div className="patchBlockButton" id='creditBtn' onClick={()=>{setCredits(true)}}>Credits</div>
+                    {/* :<></>} */}
                 </div>
+                {
+                    Credits ? <>
+                        <div className="patchCredits">
+                            <div className="patchCredTitle"> {title}'s Credits</div>
+                            <ul className="patchCredNames">
+                            {
+                                credits.length !== 0 ? <>
+                                    {credits.map(name => <><li className="patchCredName">{name}</li></>)}
+                                </>:<></>
+                            }
+                            </ul>
+                            <div className="patchCredClose" onClick={()=>{setCredits(false)}}> Close </div>
+                        </div>
+                    </>:<></>
+                }
             </div>
         </>
     )
