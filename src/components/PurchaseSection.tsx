@@ -15,6 +15,7 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
     const ForwardToHowtoBuy = () => { window.location.href = "/howtobuy" }
     const ForwardToDiscordServer = () => { window.open(discordServerLink); }
     const ForwardToDiscordChannel = () => { window.open("https://discord.gg/dMzNNVuYv7"); }
+    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.vercel.app/buy?patchid=limited"); }
 
     const [curCurrency, setCurCurrency] = useState<CurrencyOptions|undefined>(Mod?.Price.find(p => p.id =="usd"));
 
@@ -80,7 +81,7 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
                     <div className="order-btns">
                         <button className="order-btn buy-btn" id="how-to-buy-btn" onClick={ForwardToHowtoBuy}><span>How to Buy</span></button>
                         <button className="order-btn" id="server-btn" onClick={ForwardToDiscordServer}>Join Server </button>
-                        <button className="order-btn" id="channel-btn" onClick={ForwardToDiscordChannel}> <span className="red">Buy Now</span>&nbsp; (Open <span className='dctag'>#create-ticket</span> channel) </button>
+                        <button className="buy-btn" id="channel-btn" onClick={ForwardtoLimitedPayment}> <span> Buy Now</span></button>
                     </div>
                 </div>
             </div>
