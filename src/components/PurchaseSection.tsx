@@ -2,7 +2,7 @@ import './../styles/purchase.css'
 import TicketCreation from './TicketCreation'
 import { RxCross2 } from "react-icons/rx";
 import {  CurrencyOptions, discordServerLink, ModPack } from '../../config/config';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Props = {
     setActiveVar: React.Dispatch<React.SetStateAction<boolean>>,
@@ -18,6 +18,8 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
     const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.vercel.app/buy?patchid=limited"); }
 
     const [curCurrency, setCurCurrency] = useState<CurrencyOptions|undefined>(Mod?.Price.find(p => p.id =="usd"));
+
+    useEffect(()=>{setCurCurrency(Mod?.Price.find(p => p.id =="usd"))},[Mod])
 
     const handleChange = (e:React.FormEvent<HTMLSelectElement>)=>{
         const target = e.target as HTMLSelectElement; 
@@ -79,9 +81,9 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
                         }
                     </div>
                     <div className="order-btns">
-                        <button className="order-btn buy-btn" id="how-to-buy-btn" onClick={ForwardToHowtoBuy}><span>How to Buy</span></button>
+                        <button className="buy-btn" id="how-to-buy-btn" onClick={ForwardToHowtoBuy}><span>How to Open Ticket</span></button>
                         <button className="order-btn" id="server-btn" onClick={ForwardToDiscordServer}>Join Server </button>
-                        <button className="buy-btn" id="channel-btn" onClick={ForwardtoLimitedPayment}> <span> Buy Now</span></button>
+                        <button className="buy-btn" id="channel-btn" onClick={Mod.id=="limited"?ForwardtoLimitedPayment:ForwardToDiscordChannel}> <span> Buy Now</span></button>
                     </div>
                 </div>
             </div>

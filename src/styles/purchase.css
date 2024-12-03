@@ -512,8 +512,9 @@
     }
     #how-to-buy-btn{
         display: block;
-        font-size: 2rem;
+        font-size: 1rem;
         height: 5svh;
+
     }
     .packThumbnail{
         width: 25%;
