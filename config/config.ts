@@ -353,6 +353,16 @@ const ModList: ModPack[] = [
                 name: "CAD",
                 price: 38,
             },
+            {
+                id: "idr",
+                name: "IDR",
+                price: 375000,
+            },
+            {
+                id: "php",
+                name: "PHP",
+                price: 1400,
+            },
         ],
         thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
         showcaseImgs: LimitedPackImages,
@@ -381,6 +391,7 @@ const ModList: ModPack[] = [
                 name: "INR",
                 price: 2100,
             },
+            
         ],
         thumbnail: rosterExclusiveThumbnail,
         showcaseImgs: [
