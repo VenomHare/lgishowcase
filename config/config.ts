@@ -82,7 +82,7 @@ Home Page
 ██║░░██║╚█████╔╝██║░╚═╝░██║███████╗  ██║░░░░░██║░░██║╚██████╔╝███████╗
 ╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
 */
-const WebsiteLogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732126711/LGI_MODZ_blue_shadow_dh1jy2.png";
+const WebsiteLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217494/LGI_MODZ_blue_shadow_nd1fgk.png";
 
 const BasicSliderImages = [
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
@@ -212,11 +212,11 @@ const exclusivePackImage3 = [
 ██║░░░░░╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
 ╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
  */
-const smackLogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731758043/HCTP_logo_2_zoky6o.png"
-const wwlogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731757741/wwe_logo_xx4aud.png"
-const pslogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731757741/ps2_logo_huhowt.png"
+const smackLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215852/HCTP_logo_2_s34tft.png"
+const wwlogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215852/wwe_logo_hckvyf.png"
+const pslogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215851/ps2_logo_vgvkvc.png"
 
-const lgiLogo = "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732130135/LGI_blue_shadow_oietni.png"
+const lgiLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216160/LGI_square_logo_golfzm.png"
 
 const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
@@ -239,31 +239,22 @@ const TicketViewImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731
 const CloseTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731849487/Close_mswfsk.png"
 
 const LimitedPackImages = [
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964177/RR_-3_ofehz4.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964176/RR_-1_dkksch.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964175/Season_1_thmer3.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964173/Jeff_vs_Matt_2_j7cbdn.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964172/Season_2_yc1gcm.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964170/RR_2_bcqzfa.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_4_krs3ij.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964169/Jeff_vs_Matt_3_runrqy.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Season_3_bh33bx.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964168/Jeff_vs_Matt_1_rcaj9n.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964165/gvs_g_3_anlnsa.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_2_u0afxg.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964163/gvs_g_e3xlja.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964103/Screenshot_273_prt1l2.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964100/Screenshot_263_mfmzka.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964085/Screenshot_298_ialfvq.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964071/Screenshot_297_qvz1bf.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964051/Screenshot_126_u2c7u3.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964044/Screenshot_135_xhckxq.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964031/Untitled1_lu9nsz.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964022/Untitled_4_xa55lh.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731964016/Untitled_wmdj24.jpg",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963982/Screenshot_303_yy76sr.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963981/Screenshot_293_f4er2l.png",
-    "https://res.cloudinary.com/dl58zw1ey/image/upload/v1731963961/Screenshot_286_l9lqo7.png"
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216870/Screenshot_2024-12-25_121111_lo1bpb.png",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216834/Untitled_vy135k.jpg",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216861/Screenshot_2024-11-29_224601_lp6qls.png",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216829/Untitled1_i3wsh9.jpg",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216867/Screenshot_2024-11-29_223651_zy1fhk.png",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216805/Season_1_b4ehtf.png",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216804/RR_-1_yka1ig.png",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216803/RR_-3_njf6hj.png",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216801/Jeff_vs_Matt_2_kfvgfl.jpg",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216801/Jeff_vs_Matt_1_xiw4pc.png",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216799/gvs_g_2_cwrxbj.jpg",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216798/gvs_g_onvnxo.jpg",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217105/Screenshot_245_woia0o.jpg",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217147/Screenshot_217_oypd9s.jpg",
+    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217208/Screenshot_276_ncdgbj.jpg"
+    
 ]
 
 export type CurrencyOptions = {
@@ -364,7 +355,7 @@ const ModList: ModPack[] = [
                 price: 1400,
             },
         ],
-        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
+        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216311/LE_new_poster_g62skt.png",
         showcaseImgs: LimitedPackImages,
         homeShowcase: true,
         rosterListPath: LimitedListText,
@@ -424,14 +415,15 @@ const ModList: ModPack[] = [
                 price: 0,
             },
         ],
-        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
+        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216310/FRee_PATCH_cgzaic.png",
         showcaseImgs: [
+            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216661/DE_2_psrfq5.png",
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
             "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png ",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193957/DE_hrqp0s.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193957/DE_3_hy5fiy.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193956/DE_4_aggkep.jpg",
-            "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732193957/DE_2_kkgwwb.jpg",
+            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_2_xq3m1u.jpg",
+            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_4_eqmf8i.jpg",
+            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_3_uhgizv.jpg",
+            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216586/DE_e9wwob.png",
         ],
         homeShowcase: true,
         rosterListPath: DeluxeListText,
@@ -510,7 +502,7 @@ const Patches: SortingModPack[] = [
         title: "Limited Edition Pack",
         tags: ["paid", "Limited Edition"],
         imagesURL: [],
-        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732111832/LE_new_poster_pdw5ix.png",
+        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216311/LE_new_poster_g62skt.png",
         downloadLink: discordServerLink,
         ytvideoLink: "https://youtube.com/@lgiyt",
         credits: [
@@ -533,7 +525,7 @@ const Patches: SortingModPack[] = [
         title: "Deluxe Edition Pack",
         tags: ["free", "Deluxe Edition"],
         imagesURL: [],
-        thumbnail: "https://res.cloudinary.com/dl58zw1ey/image/upload/v1732092081/FRee_PATCH_p2q4nj.png",
+        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216310/FRee_PATCH_cgzaic.png",
         downloadLink: discordServerLink,
         ytvideoLink: "https://youtube.com/@lgiyt",
         credits: [
