@@ -4,6 +4,7 @@ import "./../../styles//showcase.css"
 import  YouTubePlayer from './../YoutubePlayer';
 import { useEffect, useState } from 'react';
 import { fetchYouTubeRSS} from "./../utils.ts"
+import Loader from '../Loader.tsx';
 const channelId = import.meta.env.VITE_CHANNEL_ID;
 
 type Video = {
@@ -33,29 +34,30 @@ const Showcase = () => {
         return () =>{}
     },[])
 
-    if (loading){
-        return <h1> Showcase Videos are loading...</h1>
-    }
-
     return (<>
         <NavBar active="showcase" />
-        <div className='ShowcaseParent'>
-            <div className="videoParent">
-                <div className="player">
-                    <YouTubePlayer url={currentVideo} />
-                </div>  
-                <div className="videolist">
+        {
+            loading ?
+            <><Loader/></>
+            :
+            <div className='ShowcaseParent'>
+                <div className="videoParent">
+                    <div className="player">
+                        <YouTubePlayer url={currentVideo} />
+                    </div>  
+                    <div className="videolist">
 
-                    {videos.map((video, index) => (
-                        <div key={index} onClick={()=>{setCurrentVideo(video.link)}} className='ShowcaseVidParent'>
-                        <p className='yttitle'>{video.title}</p>
-                        <img src={video.thumbnail} alt={video.title} className='ytthumb'/>
-                        </div>
-                    ))}
+                        {videos.map((video, index) => (
+                            <div key={index} onClick={()=>{setCurrentVideo(video.link)}} className='ShowcaseVidParent'>
+                            <p className='yttitle'>{video.title}</p>
+                            <img src={video.thumbnail} alt={video.title} className='ytthumb'/>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        }
         <Footer />
     </>
     )

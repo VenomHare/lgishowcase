@@ -102,6 +102,13 @@
         justify-content: center;
         align-items: center;
     }
+    .nav-parent{
+        justify-content: center;
+    }
+    .menuButton{
+        position: absolute;
+        right: 5svw;
+    }
 }
 @media screen and (max-width: 500px) {
     .logo{
@@ -117,6 +124,13 @@
     }
     .nav-buttons *{
         font-size: 1.3rem;
+    }
+    .nav-parent{
+        justify-content: center;
+    }
+    .menuButton{
+        position: absolute;
+        right: 5svw;
     }
 }
 

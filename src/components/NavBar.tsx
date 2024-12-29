@@ -19,7 +19,7 @@ const NavBar : React.FC<Props>= ({active}) => {
             </div>
             <div className="menuButton" onClick={()=>{setIsMenuOpen(!isMenuOpen)}}>
                 {
-                    isMenuOpen ?
+                    isMenuOpen ? 
                     <RxCross2 />
                     :
                     <RiMenu3Fill />
