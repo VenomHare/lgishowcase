@@ -15,6 +15,7 @@ import Downloads from './components/Pages/Downloads.tsx'
 import HowToBuy from './components/Pages/HowToBuy.tsx'
 import BrowseMods from './components/Pages/BrowseMods.tsx'
 import BrowsePatches from './components/Pages/BrowsePatches.tsx'
+import PopupImage from './components/PopupImage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -60,11 +61,14 @@ const router = createBrowserRouter([
   },
 ]);
 
+const popUp = sessionStorage.getItem("popupview")
+const popupbool = popUp=="true" 
 createRoot(document.getElementById('root')!).render(<>
   <StrictMode>
     {/* <App /> */}
     <Analytics />
     <SpeedInsights />
+    {popupbool?<></>:<PopupImage/>}
     <RouterProvider router={router} />
   </StrictMode>
 </>);
