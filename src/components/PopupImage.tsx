@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 const PopupImageParent = styled.div`
@@ -9,7 +8,7 @@ const PopupImageParent = styled.div`
     left: 50%;
     width: 1300px;
     height: fit-content;
-    background: #000;
+    background: #17191f;
     box-shadow: 0 0 20px 10px #0077ff;
     z-index: 99999;
     border-radius: 1rem;
