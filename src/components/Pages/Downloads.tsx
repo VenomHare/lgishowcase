@@ -7,7 +7,7 @@ import { DownloadPageData } from '../../../config/config'
 
 const Downloads = () => {
     return (<>
-        <NavBar active='downloads' />
+        <NavBar active='community' />
         <div className='downloadssParent'>
             <div className="downloadContent">
                 <div className='DownloadsTitle'>
