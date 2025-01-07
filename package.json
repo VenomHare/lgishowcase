@@ -2,7 +2,7 @@
 {
   "name": "lgishowcase",
   "private": true,
-  "version": "1.6.3",
+  "version": "1.6.4",
   "type": "module",
   "scripts": {
     "dev": "npx vite",

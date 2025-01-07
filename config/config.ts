@@ -282,36 +282,6 @@ export type ModPack = {
 
 const ModList: ModPack[] = [
     {
-        id: "basic",
-        name: "Basic Pack",
-        description: "",
-        isDiscounted: true,
-        Discount: 40,
-        Price: [
-            {
-                id: "usd",
-                name: "USD",
-                price: 22,
-            },
-            {
-                id: "eur",
-                name: "EUR",
-                price: 22,
-            },
-            {
-                id: "inr",
-                name: "INR",
-                price: 2100,
-            },
-        ],
-        thumbnail: BasicSliderThumbnail,
-        showcaseImgs: [
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png ",
-        ],
-        homeShowcase: false,
-    },
-    {
         id: "limited",
         name: "Limited Edition",
         description: "",
@@ -354,42 +324,16 @@ const ModList: ModPack[] = [
                 name: "PHP",
                 price: 1400,
             },
+            {
+                id: "egp",
+                name: "EGP",
+                price: 1200,
+            },
         ],
         thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216311/LE_new_poster_g62skt.png",
         showcaseImgs: LimitedPackImages,
         homeShowcase: true,
         rosterListPath: LimitedListText,
-    },
-    {
-        id: "exclusive",
-        name: "Exclusive Pack",
-        description: "",
-        isDiscounted: true,
-        Discount: 40,
-        Price: [
-            {
-                id: "usd",
-                name: "USD",
-                price: 22,
-            },
-            {
-                id: "eur",
-                name: "EUR",
-                price: 22,
-            },
-            {
-                id: "inr",
-                name: "INR",
-                price: 2100,
-            },
-            
-        ],
-        thumbnail: rosterExclusiveThumbnail,
-        showcaseImgs: [
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png "
-        ],
-        homeShowcase: false,
     },
     {
         id: "deluxe",
