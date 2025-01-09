@@ -6,13 +6,13 @@ const PopupImageParent = styled.div`
     transform: translate(-50%);
     top: 5svh;
     left: 50%;
-    width: 1300px;
-    height: fit-content;
+    /* width: 1300px; */
+    height: 76%;
     background: #17191f;
     box-shadow: 0 0 20px 10px #0077ff;
     z-index: 99999;
     border-radius: 1rem;
-    padding: 2svh 0;
+    padding: 2svh;
 
     display: flex;
     flex-direction: column;
@@ -20,17 +20,21 @@ const PopupImageParent = styled.div`
     justify-content: space-between;
     gap: 1rem;
 
-    @media (max-width: 1300px) {
-        width: 90svw;
+    @media (max-width: 764px) {
         top: 10svh;
+        width: 85svw;
+        height: auto;
     }
 `
 const PopupImageObj = styled.img`
-    width:98%;
+    /* width:98%; */
     border-radius:.5rem;
-    /* height: 90%; */
-    @media (max-width: 1300px) {
-        width: 85svw;
+    height: 90%;
+    object-fit: cover;
+    
+    @media (max-width: 764px) {
+        width: 90svw;
+        height: auto;
     }
 `
 
@@ -68,7 +72,7 @@ const PopupImage: React.FC = () => {
     }, []);
     return (
         <PopupImageParent>
-            <PopupImageObj src={isMobile ? "https://res.cloudinary.com/dzgbkv34a/image/upload/v1735632323/Frame_3_bma85p.png" : 'https://res.cloudinary.com/dzgbkv34a/image/upload/v1735632558/Frame_3_bzodc7.png'} />
+            <PopupImageObj src={'https://res.cloudinary.com/dzgbkv34a/image/upload/v1736444252/Coupon_uqqtek.png'} />
             <ClosePopup onClick={() => { sessionStorage.setItem("popupview", "true"); window.location.reload() }}>Close</ClosePopup>
         </PopupImageParent>
     )
