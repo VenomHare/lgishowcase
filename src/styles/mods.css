@@ -1,5 +1,5 @@
 .modsParent{
-    min-height: 70svh;
+    min-height: 70svh;  
 }
 .mods-content-container{
     display: flex;
@@ -52,8 +52,7 @@
 @media screen and (max-width: 1200px) {
     .sorting{
         position: static;
-        height: 4svh;
-        width: 40svw;
+        padding: .2rem 1rem;
         border-radius: 1rem;
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
@@ -62,5 +61,8 @@
     .mods-content-container{
         flex-direction: column;
         align-items: center;
+    }
+    .modstitle{
+        font-size: 2rem;
     }
 }

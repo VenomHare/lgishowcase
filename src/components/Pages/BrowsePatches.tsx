@@ -28,7 +28,7 @@ const BrowsePatches = () => {
                     <div className="mod-display-container">
                         {
                             sortedModList.map(mod => <>
-                                <PatchBlock title={mod.title} Tags={mod.tags} thumbnail={mod.thumbnail || ""} ytVideoLink={mod.ytvideoLink || ""} downloadLink={mod.downloadLink} credits={mod.credits||[]}/>
+                                <PatchBlock id={mod.id} title={mod.title} Tags={mod.tags} thumbnail={mod.thumbnail || ""} ytVideoLink={mod.ytvideoLink || ""} downloadLink={mod.downloadLink} credits={mod.credits||[]}/>
                             </>)
                         }
                     </div>

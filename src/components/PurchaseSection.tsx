@@ -37,7 +37,7 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
                 <button className='purchaseCloseBtn' onClick={() => { setActiveVar(false) }}><span className='closeT'>Close</span><span className='closeI'><RxCross2 /></span></button>
             </div>
         </>
-    }
+    } 
     let Price = curCurrency?.price || 0;
     let res = Math.floor((Price * 100) / (100 - Mod.Discount));
     return (
@@ -61,14 +61,16 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
                         <div className="packPrice">
                             <span className='detailTitle'>Mod Price:</span>
                             <span className='detailPriceBlock'>
-                                {Mod.isDiscounted ? <span className='discountBlock'>
+                                {
+                                Mod.isDiscounted ? <span className='discountBlock'>
                                         <div className='discountSection'>-{Mod.Discount}%</div>
                                         <div className='priceDisplay'>
                                             <div className='strike'>{res} {curCurrency?.name}</div>
                                             <div className='price'>{curCurrency?.price} {curCurrency?.name}</div>
                                         </div>
                                     </span> 
-                                : <span className='nonDiscount'>{curCurrency?.price} {curCurrency?.name}</span>} 
+                                : <span className='nonDiscount'>{curCurrency?.price} {curCurrency?.name}</span>
+                                } 
                             </span>
                         </div>
                         {

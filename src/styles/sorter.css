@@ -62,6 +62,7 @@
     }
     .filterBtn{
         font-size: 1.5rem;
+        min-height: 5svh;
         display: block;
     }
     .sorterParent[data-mobile="true"]{

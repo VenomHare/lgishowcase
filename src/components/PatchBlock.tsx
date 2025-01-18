@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 type Props = {
+    id: string;
     title: string;
     downloadLink: string;
     ytVideoLink: string;
@@ -9,7 +10,7 @@ type Props = {
     credits: string[];
 }
 
-const PatchBlock : React.FC<Props> = ({title,Tags, downloadLink, ytVideoLink, thumbnail, credits}) => {
+const PatchBlock : React.FC<Props> = ({id, title,Tags, downloadLink, ytVideoLink, thumbnail, credits}) => {
     const [Credits, setCredits] = useState(false);
     return (
         <>
@@ -23,10 +24,10 @@ const PatchBlock : React.FC<Props> = ({title,Tags, downloadLink, ytVideoLink, th
                     }
                 </div>
                 <div className="patchBlockButtons">
-                    <div className="patchBlockButton" onClick={()=>{window.open(downloadLink)}}>Download</div>
-                    <div className="patchBlockButton" onClick={()=>{window.open(ytVideoLink)}}>Showcase</div>
+                    <div className="patchBlockButton" onClick={()=>{window.open("/patches/"+id)}}>View Patch</div>
+                    {/* <div className="patchBlockButton" onClick={()=>{window.open(ytVideoLink)}}>Showcase</div> */}
                     {/* {credits.length !== 0 ? */}
-                        <div className="patchBlockButton" id='creditBtn' onClick={()=>{setCredits(true)}}>Credits</div>
+                        {/* <div className="patchBlockButton" id='creditBtn' onClick={()=>{setCredits(true)}}>Credits</div> */}
                     {/* :<></>} */}
                 </div>
                 {

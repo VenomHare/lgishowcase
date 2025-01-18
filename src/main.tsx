@@ -16,6 +16,7 @@ import HowToBuy from './components/Pages/HowToBuy.tsx'
 import BrowseMods from './components/Pages/BrowseMods.tsx'
 import BrowsePatches from './components/Pages/BrowsePatches.tsx'
 import PopupImage from './components/PopupImage.tsx'
+import PatchDetails from './components/Pages/PatchDetails.tsx'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
   {
     path: "/mods",
     element: <BrowseMods />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/patches/:patch_id", // Dynamic route for patches
+    element: <PatchDetails />,
     errorElement: <ErrorPage />
   },
   {
@@ -61,14 +67,14 @@ const router = createBrowserRouter([
   },
 ]);
 
-const popUp = sessionStorage.getItem("popupview")
-const popupbool = popUp=="true" 
+// const popUp = sessionStorage.getItem("popupview")
+// const popupbool = popUp=="true" 
 createRoot(document.getElementById('root')!).render(<>
   <StrictMode>
     {/* <App /> */}
     <Analytics />
     <SpeedInsights />
-    {popupbool?<></>:<PopupImage/>}
+    {/* {popupbool?<></>:<PopupImage/>} */}
     <RouterProvider router={router} />
   </StrictMode>
 </>);

@@ -64,7 +64,7 @@
     background: var(--patches-credits-bg);
     border: 2px solid var(--patches-credits-border);
     box-shadow: 0 0 10px var(--patches-credits-border),
-                0 0 0 50svh #000000af;
+                0 0 0 100svw #000000af;
     padding: 2svh ;
     z-index: 99;
     border-radius: 5px;
