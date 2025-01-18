@@ -15,6 +15,7 @@ const Parent = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: row-reverse;
 
     @media (max-width: 1200px) {
         flex-direction: column;

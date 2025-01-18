@@ -9,15 +9,15 @@ type Props = {
     Tags: string[];
     credits: string[];
 }
-
-const PatchBlock : React.FC<Props> = ({id, title,Tags, downloadLink, ytVideoLink, thumbnail, credits}) => {
+const PatchBlock : React.FC<Props> = ({id, title,Tags, thumbnail, credits}) => {
     const [Credits, setCredits] = useState(false);
+    
     return (
         <>
             <div className="patchBlockParent">
                 <div className="patchesTitle">{title}</div>
                 <img src={thumbnail} alt="thumbnail" className="patchBlockThumbnail" />
-                <div className="patchesTags">
+                <div className="patchesTags">   
                     Tags: 
                     {
                         Tags.map(tag => <div className='patchtag'>{tag}</div>)
