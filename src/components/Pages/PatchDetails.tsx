@@ -50,7 +50,7 @@ const LeftLayout = styled.div`
 
 const Thumbnail = styled.img`
     width: auto;
-    height: 30%;
+    height: 35%;
     border-radius: .5rem;
     margin-top: 2rem;
 

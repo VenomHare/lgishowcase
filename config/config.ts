@@ -284,7 +284,7 @@ const ModList: ModPack[] = [
     {
         id: "limited",
         name: "Limited Edition",
-        description: "",
+        description: "The patch features an expanded roster with 82 wrestlers in Exhibition Mode (up from 65) and 80 superstars playable in Season Mode. Enhanced visuals and content include high-poly models in Victory Motions, updated movesets with over 180 new moves, 298+ unique attires, 61 Titantrons, and 125 themes. Additionally, Royal Rumble finishers with cheats are available for all 82 superstars. Game adjustments include refined damage values for several finishers, the introduction of new finisher logos, and updated/restructured stables to enhance the gameplay experience.",
         patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: true,
         Discount: 40,
