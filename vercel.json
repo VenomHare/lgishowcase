@@ -26,7 +26,7 @@
             "dest": "/"
         },
         {
-            "src": "/patches/:patch_id",
+            "src": "/patches/.*",
             "dest": "/"
         },
         {

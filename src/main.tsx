@@ -15,7 +15,6 @@ import Downloads from './components/Pages/Downloads.tsx'
 import HowToBuy from './components/Pages/HowToBuy.tsx'
 import BrowseMods from './components/Pages/BrowseMods.tsx'
 import BrowsePatches from './components/Pages/BrowsePatches.tsx'
-import PopupImage from './components/PopupImage.tsx'
 import PatchDetails from './components/Pages/PatchDetails.tsx'
 
 const router = createBrowserRouter([
