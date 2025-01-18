@@ -26,6 +26,10 @@
             "dest": "/"
         },
         {
+            "src": "/patches/:patch_id",
+            "dest": "/"
+        },
+        {
             "src": "/mods",
             "dest": "/"
         },
