@@ -292,12 +292,12 @@ const ModList: ModPack[] = [
             {
                 id: "usd",
                 name: "USD",
-                price: 22,
+                price: 25,
             },
             {
                 id: "eur",
                 name: "EUR",
-                price: 22,
+                price: 25,
             },
             {
                 id: "inr",
@@ -317,17 +317,17 @@ const ModList: ModPack[] = [
             {
                 id: "idr",
                 name: "IDR",
-                price: 375000,
+                price: 400000,
             },
             {
                 id: "php",
                 name: "PHP",
-                price: 1400,
+                price: 1450,
             },
             {
                 id: "egp",
                 name: "EGP",
-                price: 1200,
+                price: 1300,
             },
         ],
         thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216311/LE_new_poster_g62skt.png",
