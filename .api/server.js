@@ -1,34 +1,28 @@
-
+// src/api-server/server.ts
+import { loadEnv } from "dotenv-local";
+import express from "express";
+import * as configure from "@api/configure";
 import { handler } from "@api/handler";
 import { endpoints } from "@api/routers";
-import * as configure from "@api/configure";
-import express from "express";
-
-
-const server = express();
+var server = express();
 configure.serverBefore?.(server);
-
-const { 
-  HOST = '0.0.0.0', 
-  PORT = 3000, 
-  BASE = API_ROUTES.BASE,
-  BASE_API = API_ROUTES.BASE_API,
-  PUBLIC_DIR = API_ROUTES.PUBLIC_DIR,
-} = process.env;
-
-const SERVER_URL = `http://${HOST}:${PORT}${BASE}`;
-
-server.use(BASE, express.static(PUBLIC_DIR));
-server.use(BASE_API, handler);
-
-configure.serverAfter?.(server);
-
-server.listen(PORT, HOST, (error) => {
-  if(error){
-    console.error(`Error at ${SERVER_URL}`, error);
-    configure.serverError?.(server, error);
-  } else {
-    console.log(`Ready at ${SERVER_URL}`);
-    configure.serverListening?.(server, endpoints);
+var { HOST, PORT } = loadEnv({
+  envPrefix: "SERVER_",
+  removeEnvPrefix: true,
+  envInitial: {
+    SERVER_HOST: "127.0.0.1",
+    SERVER_PORT: "3000"
   }
+});
+var SERVER_URL = `http://${HOST}:${PORT}${API_ROUTES.BASE}`;
+server.use(API_ROUTES.BASE_API, handler);
+server.use(API_ROUTES.BASE, express.static(API_ROUTES.PUBLIC_DIR));
+configure.serverAfter?.(server);
+var PORT_NRO = parseInt(PORT);
+server.listen(PORT_NRO, HOST, () => {
+  console.log(`Ready at ${SERVER_URL}`);
+  configure.serverListening?.(server, endpoints);
+}).on("error", (error) => {
+  console.error(`Error at ${SERVER_URL}`, error);
+  configure.serverError?.(server, error);
 });

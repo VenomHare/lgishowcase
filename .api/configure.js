@@ -1,55 +1,55 @@
-
+// src/api-server/configure.ts
 import express from "express";
-
-// ViteServerHook
-// @WARNING: Please don't include the VITE TYPES here, because it has a problem when you build the project
-export const viteServerBefore = (server, viteServer) => {
-    server.use(express.json());
-    server.use(express.urlencoded({ extended: true }));
+var viteServerBefore = (server) => {
+  server.use(express.json());
+  server.use(express.urlencoded({ extended: true }));
 };
-
-// @WARNING: Please don't include the VITE TYPES here, because it has a problem when you build the project
-export const viteServerAfter = (server, viteServer) => {
-    server.use((error, req, res, next) => {
-        if (error instanceof Error) {
-            return res.status(403).json({ error: error.message });
-        }
-        next(error);
-    });
+var viteServerAfter = (server) => {
+  const errorHandler = (err, _, res, next) => {
+    if (err instanceof Error) {
+      res.writeHead(403, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ error: err.message }));
+    } else {
+      next(err);
+    }
+  };
+  server.use(errorHandler);
 };
-
-// ServerHook
-export const serverBefore = (server) => {
-    server.use(express.json());
-    server.use(express.urlencoded({ extended: true }));
+var serverBefore = (server) => {
+  server.use(express.json());
+  server.use(express.urlencoded({ extended: true }));
 };
-
-export const serverAfter = (server) => {
-    server.use((error, req, res, next) => {
-        if (error instanceof Error) {
-            return res.status(403).json({ error: error.message });
-        }
-        next(error);
-    });
+var serverAfter = (server) => {
+  const errorHandler = (error, _, res, next) => {
+    if (error instanceof Error) {
+      res.status(403).json({ error: error.message });
+    } else {
+      next(error);
+    }
+  };
+  server.use(errorHandler);
 };
-
-// HandlerHook
-export const handlerBefore = (handler) => {
+var handlerBefore = () => {
 };
-
-export const handlerAfter = (server) => {
+var handlerAfter = () => {
 };
-
-// CallbackHook
-export const callbackBefore = (callback, route) => {
-    return callback;
+var callbackBefore = (callback) => {
+  return callback;
 };
-
-// StatusHook
-export const serverListening = (server) => {
-
+var serverListening = () => {
+  console.log(`Server Running`);
 };
-
-export const serverError = (server, error) => {
-
+var serverError = (_, error) => {
+  console.log(`Server Error: `, error);
+};
+export {
+  callbackBefore,
+  handlerAfter,
+  handlerBefore,
+  serverAfter,
+  serverBefore,
+  serverError,
+  serverListening,
+  viteServerAfter,
+  viteServerBefore
 };
