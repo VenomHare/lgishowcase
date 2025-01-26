@@ -14,7 +14,7 @@
     
     box-shadow: 0 0 15px black;
     /* background: #4b4a4a ; */
-    background: var(--nav-bar-background) ;
+    background: var(--nav-bar-background);
     
     display: flex;
     justify-content: space-around;

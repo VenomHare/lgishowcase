@@ -24,7 +24,7 @@ const PatchBlock : React.FC<Props> = ({id, title,Tags, thumbnail, credits}) => {
                     }
                 </div>
                 <div className="patchBlockButtons">
-                    <div className="patchBlockButton" onClick={()=>{window.open("/patches/"+id)}}>View Patch</div>
+                    <div className="patchBlockButton" onClick={()=>{window.location.href = ("/patches/"+id)}}>View Patch</div>
                     {/* <div className="patchBlockButton" onClick={()=>{window.open(ytVideoLink)}}>Showcase</div> */}
                     {/* {credits.length !== 0 ? */}
                         {/* <div className="patchBlockButton" id='creditBtn' onClick={()=>{setCredits(true)}}>Credits</div> */}
