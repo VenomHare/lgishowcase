@@ -1,5 +1,6 @@
 import LimitedListText from "./../src/assets/LimitedRosterNames.txt";
 import DeluxeListText from "./../src/assets/DeluxeRosterNames.txt";
+
 /*
 Download page
 ██████╗░░█████╗░░██╗░░░░░░░██╗███╗░░██╗██╗░░░░░░█████╗░░█████╗░██████╗░░██████╗  ██████╗░░█████╗░░██████╗░███████╗
@@ -239,16 +240,16 @@ const TicketViewImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731
 const CloseTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731849487/Close_mswfsk.png"
 
 const LimitedPackImages = [
-    "../public/img/limtedimg/1.jpg",
-    "../public/img/limtedimg/2.jpg",
-    "../public/img/limtedimg/3.jpg",
-    "../public/img/limtedimg/4.png",
-    "../public/img/limtedimg/5.jpg",
-    "../public/img/limtedimg/6.jpg",
-    "../public/img/limtedimg/7.png",
-    "../public/img/limtedimg/8.jpg",
-    "../public/img/limtedimg/9.png",
-    "../public/img/limtedimg/10.jpg",
+    "/img/limtedimg/2.jpg",
+    "/img/limtedimg/1.jpg",
+    "/img/limtedimg/3.jpg",
+    "/img/limtedimg/4.png",
+    "/img/limtedimg/5.jpg",
+    "/img/limtedimg/6.jpg",
+    "/img/limtedimg/7.png",
+    "/img/limtedimg/8.jpg",
+    "/img/limtedimg/9.png",
+    "/img/limtedimg/10.jpg",
 
     
 ]
