@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "preview": "npx vite preview",
     "postinstall": "chmod +x ./node_modules/.bin/vite"
+    
   },
   "dependencies": {
     "@vercel/analytics": "^1.3.2",

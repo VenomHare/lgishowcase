@@ -1,22 +1,26 @@
-// src/api-server/handler.ts
+
 import express from "express";
-import * as configure from "@api/configure";
 import { applyRouters } from "@api/routers";
-var handler = express();
+import * as configure from "@api/configure";
+
+export const handler = express();
+
 configure.handlerBefore?.(handler);
-applyRouters((props) => {
-  const { method, route, path, cb } = props;
-  if (handler[method]) {
-    if (Array.isArray(cb)) {
-      handler[method](route, ...cb);
+
+applyRouters(
+  (props) => {
+    const { method, route, path, cb } = props;
+    if (handler[method]) {
+      if(Array.isArray(cb)) {
+        handler[method](route, ...cb);
+      } else {
+        handler[method](route, cb);
+      }
     } else {
-      handler[method](route, cb);
+      console.log("Not Support", method, "for", route, "in", handler);
     }
-  } else {
-    console.log("Not Support", method, "for", route, "in", handler);
   }
-});
+);
+
 configure.handlerAfter?.(handler);
-export {
-  handler
-};
+

@@ -82,7 +82,7 @@ Home Page
 ██║░░██║╚█████╔╝██║░╚═╝░██║███████╗  ██║░░░░░██║░░██║╚██████╔╝███████╗
 ╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
 */
-const WebsiteLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217494/LGI_MODZ_blue_shadow_nd1fgk.png";
+const WebsiteLogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255095/LGI_MODZ_blue_shadow_nd1fgk_o8y8u8.png";
 
 const BasicSliderImages = [
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
@@ -212,11 +212,11 @@ const exclusivePackImage3 = [
 ██║░░░░░╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
 ╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
  */
-const smackLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215852/HCTP_logo_2_s34tft.png"
-const wwlogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215852/wwe_logo_hckvyf.png"
-const pslogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215851/ps2_logo_vgvkvc.png"
+const smackLogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255098/HCTP_logo_2_s34tft_m0up2d.png"
+const wwlogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255094/wwe_logo_hckvyf_weq8hb.png"
+const pslogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255096/ps2_logo_vgvkvc_bb0d4a.png"
 
-const lgiLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216160/LGI_square_logo_golfzm.png"
+const lgiLogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255095/LGI_square_logo_golfzm_gb7hzb.png"
 
 const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
@@ -239,21 +239,17 @@ const TicketViewImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731
 const CloseTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731849487/Close_mswfsk.png"
 
 const LimitedPackImages = [
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216870/Screenshot_2024-12-25_121111_lo1bpb.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216834/Untitled_vy135k.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216861/Screenshot_2024-11-29_224601_lp6qls.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216829/Untitled1_i3wsh9.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216867/Screenshot_2024-11-29_223651_zy1fhk.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216805/Season_1_b4ehtf.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216804/RR_-1_yka1ig.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216803/RR_-3_njf6hj.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216801/Jeff_vs_Matt_2_kfvgfl.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216801/Jeff_vs_Matt_1_xiw4pc.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216799/gvs_g_2_cwrxbj.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216798/gvs_g_onvnxo.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217105/Screenshot_245_woia0o.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217147/Screenshot_217_oypd9s.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217208/Screenshot_276_ncdgbj.jpg"
+    "../public/img/limtedimg/1.jpg",
+    "../public/img/limtedimg/2.jpg",
+    "../public/img/limtedimg/3.jpg",
+    "../public/img/limtedimg/4.png",
+    "../public/img/limtedimg/5.jpg",
+    "../public/img/limtedimg/6.jpg",
+    "../public/img/limtedimg/7.png",
+    "../public/img/limtedimg/8.jpg",
+    "../public/img/limtedimg/9.png",
+    "../public/img/limtedimg/10.jpg",
+
     
 ]
 
