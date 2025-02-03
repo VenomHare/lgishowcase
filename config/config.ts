@@ -83,7 +83,7 @@ Home Page
 ██║░░██║╚█████╔╝██║░╚═╝░██║███████╗  ██║░░░░░██║░░██║╚██████╔╝███████╗
 ╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
 */
-const WebsiteLogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255095/LGI_MODZ_blue_shadow_nd1fgk_o8y8u8.png";
+const WebsiteLogo = "/img/header/lgimodz.png";
 
 const BasicSliderImages = [
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
@@ -213,11 +213,11 @@ const exclusivePackImage3 = [
 ██║░░░░░╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
 ╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
  */
-const smackLogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255098/HCTP_logo_2_s34tft_m0up2d.png"
-const wwlogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255094/wwe_logo_hckvyf_weq8hb.png"
-const pslogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255096/ps2_logo_vgvkvc_bb0d4a.png"
+const smackLogo = "/img/footer/htcp.png"
+const wwlogo = "/img/footer/wwe.png"
+const pslogo = "/img/footer/ps2.png"
 
-const lgiLogo = "https://res.cloudinary.com/dn2mq5ezy/image/upload/v1738255095/LGI_square_logo_golfzm_gb7hzb.png"
+const lgiLogo = "/img/footer/lgi.png"
 
 const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
@@ -327,7 +327,7 @@ const ModList: ModPack[] = [
                 price: 1300,
             },
         ],
-        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216311/LE_new_poster_g62skt.png",
+        thumbnail: '/img/poster/limited.png',
         showcaseImgs: LimitedPackImages,
         homeShowcase: true,
         rosterListPath: LimitedListText,
@@ -356,15 +356,19 @@ const ModList: ModPack[] = [
                 price: 0,
             },
         ],
-        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216310/FRee_PATCH_cgzaic.png",
+        thumbnail: "/img/poster/deluxe.png",
         showcaseImgs: [
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216661/DE_2_psrfq5.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png ",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_2_xq3m1u.jpg",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_4_eqmf8i.jpg",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_3_uhgizv.jpg",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216586/DE_e9wwob.png",
+            "/img/deluxeimg/1.png",
+            "/img/deluxeimg/2.jpg",
+            "/img/deluxeimg/2.jpg",
+            "/img/deluxeimg/3.jpg",
+            "/img/deluxeimg/4.jpg",
+            "/img/deluxeimg/5.png",
+            "/img/deluxeimg/6.png",
+            "/img/deluxeimg/7.png",
+            "/img/deluxeimg/8.png",
+            "/img/deluxeimg/9.png",
+            "/img/deluxeimg/10.png",
         ],
         homeShowcase: true,
         rosterListPath: DeluxeListText,
