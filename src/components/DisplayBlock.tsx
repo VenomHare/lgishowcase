@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import ImageView from './ImageView'
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 type Props = {
     ButtonText?: string;
+    id: string;
     onClick: () => void;
     setRosterView?: React.Dispatch<React.SetStateAction<boolean>>;
     imgURLs: string[];
@@ -13,8 +14,9 @@ type Props = {
     tags? : string[];
 }
 
-const DisplayBlock: React.FC<Props> = ({ ButtonText, onClick, setRosterView, imgURLs, Thumbnail, patchnotes, title, tags }) => {
-
+const DisplayBlock: React.FC<Props> = ({ ButtonText, id, onClick, setRosterView, imgURLs, Thumbnail, patchnotes, title, tags }) => {
+    
+    const ForwardtoLimitedPayment = useCallback(() => { window.open("https://lgicheckout.venomhare.space/checkout/limited"); },[]);
     const showThumbnail: boolean = !(Thumbnail == null || Thumbnail == "")
     const [picture, setPicture] = useState(1);
     return (
@@ -56,7 +58,7 @@ const DisplayBlock: React.FC<Props> = ({ ButtonText, onClick, setRosterView, img
                         <div className="patchesTags"><span>Tags:</span> {tags?.map(tag=><div className='patchtag'>{tag}</div>)}</div>
                     :<></>
                 }
-                <div className='buy-btn' onClick={onClick}>
+                <div className='buy-btn' onClick={id == "limited" ? ForwardtoLimitedPayment : onClick}>
                     <span>
                         {(ButtonText == null || ButtonText == "") ? <>Buy Now</> : ButtonText}
                     </span>
