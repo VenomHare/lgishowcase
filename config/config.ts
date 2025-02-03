@@ -360,7 +360,6 @@ const ModList: ModPack[] = [
         showcaseImgs: [
             "/img/deluxeimg/1.png",
             "/img/deluxeimg/2.jpg",
-            "/img/deluxeimg/2.jpg",
             "/img/deluxeimg/3.jpg",
             "/img/deluxeimg/4.jpg",
             "/img/deluxeimg/5.png",
