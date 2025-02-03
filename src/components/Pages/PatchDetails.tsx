@@ -176,7 +176,7 @@ const PatchDetails = () => {
         setCurCurrency(data);
     }
     const ForwardToDiscordChannel = () => { window.open("https://discord.gg/dMzNNVuYv7"); }
-    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.vercel.app/checkout/limited"); }
+    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.venomhare.space/checkout/limited"); }
 
     let Price = curCurrency?.price || 0;
     let res = Math.floor((Price * 100) / (100 - (patchData?.Discount || 0)));

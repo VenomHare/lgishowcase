@@ -1,5 +1,6 @@
 import LimitedListText from "./../src/assets/LimitedRosterNames.txt";
 import DeluxeListText from "./../src/assets/DeluxeRosterNames.txt";
+
 /*
 Download page
 ██████╗░░█████╗░░██╗░░░░░░░██╗███╗░░██╗██╗░░░░░░█████╗░░█████╗░██████╗░░██████╗  ██████╗░░█████╗░░██████╗░███████╗
@@ -82,7 +83,7 @@ Home Page
 ██║░░██║╚█████╔╝██║░╚═╝░██║███████╗  ██║░░░░░██║░░██║╚██████╔╝███████╗
 ╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░╚═╝░╚═════╝░╚══════╝
 */
-const WebsiteLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217494/LGI_MODZ_blue_shadow_nd1fgk.png";
+const WebsiteLogo = "/img/header/lgimodz.png";
 
 const BasicSliderImages = [
     "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
@@ -212,11 +213,11 @@ const exclusivePackImage3 = [
 ██║░░░░░╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
 ╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
  */
-const smackLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215852/HCTP_logo_2_s34tft.png"
-const wwlogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215852/wwe_logo_hckvyf.png"
-const pslogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735215851/ps2_logo_vgvkvc.png"
+const smackLogo = "/img/footer/htcp.png"
+const wwlogo = "/img/footer/wwe.png"
+const pslogo = "/img/footer/ps2.png"
 
-const lgiLogo = "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216160/LGI_square_logo_golfzm.png"
+const lgiLogo = "/img/footer/lgi.png"
 
 const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
@@ -239,21 +240,17 @@ const TicketViewImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731
 const CloseTicketImage = "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731849487/Close_mswfsk.png"
 
 const LimitedPackImages = [
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216870/Screenshot_2024-12-25_121111_lo1bpb.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216834/Untitled_vy135k.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216861/Screenshot_2024-11-29_224601_lp6qls.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216829/Untitled1_i3wsh9.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216867/Screenshot_2024-11-29_223651_zy1fhk.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216805/Season_1_b4ehtf.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216804/RR_-1_yka1ig.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216803/RR_-3_njf6hj.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216801/Jeff_vs_Matt_2_kfvgfl.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216801/Jeff_vs_Matt_1_xiw4pc.png",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216799/gvs_g_2_cwrxbj.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216798/gvs_g_onvnxo.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217105/Screenshot_245_woia0o.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217147/Screenshot_217_oypd9s.jpg",
-    "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735217208/Screenshot_276_ncdgbj.jpg"
+    "/img/limtedimg/2.jpg",
+    "/img/limtedimg/1.jpg",
+    "/img/limtedimg/3.jpg",
+    "/img/limtedimg/4.png",
+    "/img/limtedimg/5.jpg",
+    "/img/limtedimg/6.jpg",
+    "/img/limtedimg/7.png",
+    "/img/limtedimg/8.jpg",
+    "/img/limtedimg/9.png",
+    "/img/limtedimg/10.jpg",
+
     
 ]
 
@@ -330,7 +327,7 @@ const ModList: ModPack[] = [
                 price: 1300,
             },
         ],
-        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216311/LE_new_poster_g62skt.png",
+        thumbnail: '/img/poster/limited.png',
         showcaseImgs: LimitedPackImages,
         homeShowcase: true,
         rosterListPath: LimitedListText,
@@ -359,15 +356,19 @@ const ModList: ModPack[] = [
                 price: 0,
             },
         ],
-        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216310/FRee_PATCH_cgzaic.png",
+        thumbnail: "/img/poster/deluxe.png",
         showcaseImgs: [
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216661/DE_2_psrfq5.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/2_tpwk4c.png",
-            "https://res.cloudinary.com/dzgbkv34a/image/upload/v1731318153/1_gyfgdh.png ",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_2_xq3m1u.jpg",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_4_eqmf8i.jpg",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216458/DE_3_uhgizv.jpg",
-            "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216586/DE_e9wwob.png",
+            "/img/deluxeimg/1.png",
+            "/img/deluxeimg/2.jpg",
+            "/img/deluxeimg/2.jpg",
+            "/img/deluxeimg/3.jpg",
+            "/img/deluxeimg/4.jpg",
+            "/img/deluxeimg/5.png",
+            "/img/deluxeimg/6.png",
+            "/img/deluxeimg/7.png",
+            "/img/deluxeimg/8.png",
+            "/img/deluxeimg/9.png",
+            "/img/deluxeimg/10.png",
         ],
         homeShowcase: true,
         rosterListPath: DeluxeListText,
