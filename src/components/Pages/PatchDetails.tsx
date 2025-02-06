@@ -175,7 +175,7 @@ const PatchDetails = () => {
         const data = patchData?.Price.find(p => p.id == target.value);
         setCurCurrency(data);
     }
-    const ForwardToDiscordChannel = () => { window.open("https://discord.gg/dMzNNVuYv7"); }
+    const ForwardToDiscordChannel = () => { window.open("https://socialwolvez.com/app/l/uiwfZA"); }
     const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.venomhare.space/checkout/limited"); }
 
     let Price = curCurrency?.price || 0;

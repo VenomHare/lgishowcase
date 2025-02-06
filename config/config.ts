@@ -446,8 +446,8 @@ const Patches: SortingModPack[] = [
         title: "Limited Edition Pack",
         tags: ["paid", "Limited Edition"],
         imagesURL: [],
-        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216311/LE_new_poster_g62skt.png",
-        downloadLink: discordServerLink,
+        thumbnail: "/img/poster/limited.png",
+        downloadLink: "https://lgicheckout.venomhare.space/checkout/limited",
         ytvideoLink: "https://youtube.com/@lgiyt",
         credits: [
             "Aguila316 (Tools,Mods)",
@@ -469,8 +469,8 @@ const Patches: SortingModPack[] = [
         title: "Deluxe Edition Pack",
         tags: ["free", "Deluxe Edition"],
         imagesURL: [],
-        thumbnail: "https://res.cloudinary.com/dbc7lvsvh/image/upload/v1735216310/FRee_PATCH_cgzaic.png",
-        downloadLink: discordServerLink,
+        thumbnail: "/img/poster/deluxe.png",
+        downloadLink: "https://socialwolvez.com/app/l/uiwfZA",
         ytvideoLink: "https://youtube.com/@lgiyt",
         credits: [
             "Aguila316 (Tools,Mods)",
