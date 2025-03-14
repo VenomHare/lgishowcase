@@ -6,16 +6,20 @@ import { RxCross2 } from "react-icons/rx";
 import { IoOpenOutline } from "react-icons/io5";
 
 import { discordServerLink, WebsiteLogo } from '../../config/config';
+import { useNavigate } from 'react-router-dom';
 type Props = {
     active: string,
 }
 const NavBar : React.FC<Props>= ({active}) => {
     
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const navigate = useNavigate();
+
     return (
     <div className='nav-parent'>
             <div className="titlebox">
-                <img src={WebsiteLogo} className='logo' onClick={()=>{window.location.href= "/"}}/>
+                <img src={WebsiteLogo} className='logo' onClick={()=>{navigate("/")}}/>
             </div>
             <div className="menuButton" onClick={()=>{setIsMenuOpen(!isMenuOpen)}}>
                 {
@@ -26,28 +30,28 @@ const NavBar : React.FC<Props>= ({active}) => {
                 }
             </div>
             <div className="nav-buttons" data-active={isMenuOpen}>
-                <a href="/">
+                <a onClick={() => navigate("/")}>
                     <button data-active={active == "home"}>
                         Home
                     </button>
                 </a>
-                <a href="/showcase">
+                <a onClick={() => navigate("/showcase")}>
                     <button data-active={active == "showcase"}>
                         Showcase
                     </button>
                 </a>
 
-                <a href="/mods">
+                <a onClick={() => navigate("/mods")}>
                     <button data-active={active == "mods"}>
                         Browse Mods
                     </button>
                 </a>
-                <a href="/patches">
+                <a onClick={() => navigate("/patches")}>
                     <button data-active={active == "patches"}>
                         Browse Patches
                     </button>
                 </a>
-                <a href="/community">
+                <a onClick={() => navigate("/community")}>
                     <button data-active={active == "community"}>
                         Community
                     </button>

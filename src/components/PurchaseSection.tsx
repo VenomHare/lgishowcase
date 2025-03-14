@@ -3,7 +3,7 @@ import TicketCreation from './TicketCreation'
 import { RxCross2 } from "react-icons/rx";
 import {  CurrencyOptions, discordServerLink, ModPack } from '../../config/config';
 import { useEffect, useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';     
 type Props = {
     setActiveVar: React.Dispatch<React.SetStateAction<boolean>>,
     ActiveVar: boolean,
@@ -12,7 +12,8 @@ type Props = {
 
 const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
     
-    const ForwardToHowtoBuy = () => { window.location.href = "/howtobuy" }
+    const navigate = useNavigate();
+    const ForwardToHowtoBuy = () => { navigate("/howtobuy") }  
     const ForwardToDiscordServer = () => { window.open(discordServerLink); }
     const ForwardToDiscordChannel = () => { window.open("https://socialwolvez.com/app/l/uiwfZA"); }
     const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.venomhare.space/checkout/limited"); }

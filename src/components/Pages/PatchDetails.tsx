@@ -167,7 +167,9 @@ const PatchDetails = () => {
 
     useEffect(() => { setCurCurrency(patchData?.Price.find(p => p.id == "usd")) }, [patchData])
     useEffect(() => {
-        console.log(patchData);
+        fetch('https://lgicheckout.venomhare.space/api/hello')
+            .then(res => res.json())
+            .then(console.log);
     }, [])
 
     const handleChange = (e: React.FormEvent<HTMLSelectElement>) => {
@@ -184,36 +186,36 @@ const PatchDetails = () => {
     return (
         <>
             <>
-            {
-                creditsView ? <CredsParent className="patchCredits">
+                {
+                    creditsView ? <CredsParent className="patchCredits">
                         <div className="patchCredTitle"> {patchData?.name}'s Credits</div>
                         <PatchList className="patchCredNames">
-                        {
-                            credits?.credits?.length !== 0 ? <>
-                                {credits?.credits?.map(name => <><li className="patchCredName">{name}</li></>)}
-                            </>:<></>
-                        }
+                            {
+                                credits?.credits?.length !== 0 ? <>
+                                    {credits?.credits?.map(name => <><li className="patchCredName">{name}</li></>)}
+                                </> : <></>
+                            }
                         </PatchList>
-                        <div className="patchCredClose" onClick={()=>{setCreditsView(false)}}> Close </div>
-                </CredsParent> : <></>
-            }
+                        <div className="patchCredClose" onClick={() => { setCreditsView(false) }}> Close </div>
+                    </CredsParent> : <></>
+                }
             </>
             <>
-            {
-                rosterView ?
-                    <div className="homeRoster">
-                        <div className="closeRoster" onClick={() => { setRosterView(false); }}><RxCross1/></div>
-                        <RosterBlock thumbnail={patchData?.thumbnail||""} title={patchData?.name||""}>
-                            {
-                                patchData?.rosterListPath !== undefined ?
-                                    <RosterLists filepath={patchData.rosterListPath} />
-                                    : <div>Roster Not Found</div>
-                            }
-                        </RosterBlock>
-                    </div>
-                    : <></>
-            }
-        </>
+                {
+                    rosterView ?
+                        <div className="homeRoster">
+                            <div className="closeRoster" onClick={() => { setRosterView(false); }}><RxCross1 /></div>
+                            <RosterBlock thumbnail={patchData?.thumbnail || ""} title={patchData?.name || ""}>
+                                {
+                                    patchData?.rosterListPath !== undefined ?
+                                        <RosterLists filepath={patchData.rosterListPath} />
+                                        : <div>Roster Not Found</div>
+                                }
+                            </RosterBlock>
+                        </div>
+                        : <></>
+                }
+            </>
 
             <NavBar active='' />
             <Parent>

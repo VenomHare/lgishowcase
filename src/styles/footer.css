@@ -60,6 +60,7 @@
     border-radius: 0;
     padding-left: 1svw;
     color: #fff !important;
+    cursor: pointer;
 }
 .socials{
     display: flex;

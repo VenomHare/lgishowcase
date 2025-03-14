@@ -5,6 +5,7 @@ import ApiRoutes from 'vite-plugin-api-routes'
 // https://vite.dev/config/
 export default defineConfig({
   server: {
+    cors:true,
     proxy: {
       // Proxy for the YouTube RSS feed
       '/api/rss': {
@@ -15,7 +16,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    react(),
+  react(),
     ApiRoutes({
       routeBase:"./src/api"
     }),

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom';
 type Props = {
     id: string;
     title: string;
@@ -11,7 +11,7 @@ type Props = {
 }
 const PatchBlock : React.FC<Props> = ({id, title,Tags, thumbnail, credits}) => {
     const [Credits, setCredits] = useState(false);
-    
+    const navigate = useNavigate();
     return (
         <>
             <div className="patchBlockParent">
@@ -24,7 +24,7 @@ const PatchBlock : React.FC<Props> = ({id, title,Tags, thumbnail, credits}) => {
                     }
                 </div>
                 <div className="patchBlockButtons">
-                    <div className="patchBlockButton" onClick={()=>{window.location.href = ("/patches/"+id)}}>View Patch</div>
+                    <div className="patchBlockButton" onClick={()=>{navigate("/patches/"+id)}}>View Patch</div>
                     {/* <div className="patchBlockButton" onClick={()=>{window.open(ytVideoLink)}}>Showcase</div> */}
                     {/* {credits.length !== 0 ? */}
                         {/* <div className="patchBlockButton" id='creditBtn' onClick={()=>{setCredits(true)}}>Credits</div> */}
