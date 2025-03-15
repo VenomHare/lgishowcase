@@ -16,7 +16,7 @@ type Props = {
 
 const DisplayBlock: React.FC<Props> = ({ ButtonText, id, onClick, setRosterView, imgURLs, Thumbnail, patchnotes, title, tags }) => {
     
-    const ForwardtoLimitedPayment = useCallback(() => { window.open("https://lgicheckout.venomhare.space/checkout/limited"); },[]);
+    const ForwardtoLimitedPayment = useCallback(() => { window.open("https://lgicheckout.vercel.app/checkout/limited"); },[]);
     const ForwardtoDeluxe = useCallback(() => { window.open("https://socialwolvez.com/app/l/uiwfZA"); },[]);
     const showThumbnail: boolean = !(Thumbnail == null || Thumbnail == "")
     const [picture, setPicture] = useState(1);

@@ -447,7 +447,7 @@ const Patches: SortingModPack[] = [
         tags: ["paid", "Limited Edition"],
         imagesURL: [],
         thumbnail: "/img/poster/limited.png",
-        downloadLink: "https://lgicheckout.venomhare.space/checkout/limited",
+        downloadLink: "https://lgicheckout.vercel.app/checkout/limited",
         ytvideoLink: "https://youtube.com/@lgiyt",
         credits: [
             "Aguila316 (Tools,Mods)",

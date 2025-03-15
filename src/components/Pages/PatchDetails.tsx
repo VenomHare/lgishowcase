@@ -168,7 +168,7 @@ const PatchDetails = () => {
 
     useEffect(() => { setCurCurrency(patchData?.Price.find(p => p.id == "usd")) }, [patchData])
     useEffect(() => {
-        fetch('https://lgicheckout.venomhare.space/api/hello')
+        fetch('https://lgicheckout.vercel.app/api/hello')
             .then(res => res.json())
             .then(console.log);
     }, [])
@@ -179,7 +179,7 @@ const PatchDetails = () => {
         setCurCurrency(data);
     }
     const ForwardToDiscordChannel = () => { window.open("https://socialwolvez.com/app/l/uiwfZA"); }
-    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.venomhare.space/checkout/limited"); }
+    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.vercel.app/checkout/limited"); }
 
     let Price = curCurrency?.price || 0;
     let res = Math.floor((Price * 100) / (100 - (patchData?.Discount || 0)));
@@ -207,7 +207,7 @@ const PatchDetails = () => {
                                 "@type": "Offer",
                                 "price": "${Price}",
                                 "priceCurrency": "${curCurrency?.name || 'USD'}",
-                                "url": "${patchData?.id == 'limited' ? 'https://lgicheckout.venomhare.space/checkout/limited' : 'https://socialwolvez.com/app/l/uiwfZA'}"
+                                "url": "${patchData?.id == 'limited' ? 'https://lgicheckout.vercel.app/checkout/limited' : 'https://socialwolvez.com/app/l/uiwfZA'}"
                             },
                             "image": "${patchData?.thumbnail || ''}",
                             "author": {

@@ -238,7 +238,7 @@ const PurchaseSection: React.FC<Props> = ({ setActiveVar, ActiveVar, Mod }) => {
     const ForwardToHowtoBuy = () => { navigate("/howtobuy") }  
     const ForwardToDiscordServer = () => { window.open(discordServerLink); }
     const ForwardToDiscordChannel = () => { window.open("https://socialwolvez.com/app/l/uiwfZA"); }
-    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.venomhare.space/checkout/limited"); }
+    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.vercel.app/checkout/limited"); }
 
     const [curCurrency, setCurCurrency] = useState<CurrencyOptions|undefined>(Mod?.Price.find(p => p.id =="usd"));
 
