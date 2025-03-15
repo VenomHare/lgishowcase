@@ -1,5 +1,17 @@
 import './../styles/display.css'
+import { useEffect } from 'react'
+
 const Basics = () => {
+    useEffect(() => {
+        // Add animation order to blocks
+        const blocks = document.querySelectorAll('.basicBlock')
+        blocks.forEach((block, index) => {
+            if (block instanceof HTMLElement) {
+                block.style.setProperty('--animation-order', index.toString())
+            }
+        })
+    }, [])
+
     return (<div className='basichead' id='basics'>
         <h2 className='basicTitle'>Basics</h2>
         <div className="basicdetails">

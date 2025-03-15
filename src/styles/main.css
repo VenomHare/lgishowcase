@@ -37,74 +37,78 @@
 }
 
 .Brief {
-    font-family: var(--font-poppin);
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 70svw;
-    height: fit-content;
-    /* Adapts to content height */
     min-height: 20svh;
-    /* Sets a minimum height */
     margin: 30px auto;
-    color: var(--brief-text-color);
-    z-index: 10;
-    background: var(--brief-background-color);
     padding: 5svh 5svw;
+
+    /* Visual */
+    background: var(--brief-background-color);
+    color: var(--brief-text-color);
     border-radius: 10px;
     box-shadow: 0 0 10px 2px var(--home-brief-bg-glow);
-
-    display: flex;
-    /* Flex layout */
-    align-items: center;
-    /* Vertically center items */
-    justify-content: space-between;
-    /* Space out children */
+    
+    /* Typography */
+    font-family: var(--font-poppin);
+    
+    /* Stacking context */
+    z-index: 10;
 }
 
+/* Brief Content Sections */
 .arenaParent,
 .featuresParent {
-    width: 60%;
-    min-height: 40svh;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-height: 40svh;
+    height: 100%;
     list-style-type: "➦";
 }
-.arenaParent{
-    align-items: center;
-    width: 25%;
+
+.featuresParent {
+    width: 60%;
 }
+
+.arenaParent {
+    width: 25%;
+    align-items: center;
+}
+
+/* Divider */
 .divider {
     min-width: 3px;
-    border-radius: 5px;
     height: 50svh;
     background: var(--brief-divider-color);
+    border-radius: 5px;
     box-shadow: 0 0 5px var(--brief-divider-color);
 }
 
+/* Typography Elements */
 .briefTitle {
-    text-align: center;
     font-size: 3rem;
     font-weight: 600;
+    text-align: center;
     margin: 2svh auto;
 }
 
 .briefSub {
-    text-align: center;
     font-size: 2rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .briefdetail {
-    text-align: left;
     font-size: 1rem;
     font-weight: 500;
+    text-align: left;
 }
-/* 
-.areana-contianer{
-    width: 45%;
-} 
-*/
 
+/* Responsive Layouts */
 @media screen and (max-width: 1200px) {
     .Brief {
         flex-direction: column;
@@ -123,6 +127,10 @@
 }
 
 @media screen and (max-width: 600px) {
+    .Brief {
+        width: 85svw;
+    }
+
     .page-details {
         font-size: 1rem;
     }
@@ -133,8 +141,5 @@
 
     .subtitle {
         font-size: 2rem;
-    }
-    .Brief{
-        width: 85svw;
     }
 }

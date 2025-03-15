@@ -5,6 +5,7 @@ import ErrorPage from "./components/Pages/ErrorPage.tsx"
 import Showcase from "./components/Pages/Showcase.tsx"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css'
 import {
   createBrowserRouter,
@@ -70,10 +71,11 @@ const router = createBrowserRouter([
 // const popupbool = popUp=="true" 
 createRoot(document.getElementById('root')!).render(<>
   <StrictMode>
-    {/* <App /> */}
-    <Analytics />
-    <SpeedInsights />
-    {/* {popupbool?<></>:<PopupImage/>} */}
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <Analytics />
+      <SpeedInsights />
+      {/* {popupbool?<></>:<PopupImage/>} */}
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>
 </>);

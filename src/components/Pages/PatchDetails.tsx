@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components';
 import NavBar from '../NavBar';
@@ -185,6 +186,38 @@ const PatchDetails = () => {
 
     return (
         <>
+            <Helmet>
+                <title>{patchData?.name ? `${patchData.name} | LGI Mods` : 'Patch Details | LGI Mods'}</title>
+                <meta name="description" content={patchData?.description || 'Detailed information about HCTP game patches and modifications.'} />
+                <meta name="keywords" content={`${patchData?.name}, HCTP patch, mod details, LGI Mods, wrestling game modifications`} />
+                <meta property="og:title" content={patchData?.name ? `${patchData.name} | LGI Mods` : 'Patch Details | LGI Mods'} />
+                <meta property="og:description" content={patchData?.description || 'Detailed information about HCTP game patches and modifications.'} />
+                <meta property="og:type" content="article" />
+                <meta property="og:image" content={patchData?.thumbnail || ''} />
+                <link rel="canonical" href={`https://lgimodz.vercel.app/patches/${patch_id}`} />
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "SoftwareApplication",
+                            "name": "${patchData?.name || 'HCTP Patch'}",
+                            "description": "${patchData?.description || 'HCTP game modification'}",
+                            "applicationCategory": "Game Mod",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "${Price}",
+                                "priceCurrency": "${curCurrency?.name || 'USD'}",
+                                "url": "${patchData?.id == 'limited' ? 'https://lgicheckout.venomhare.space/checkout/limited' : 'https://socialwolvez.com/app/l/uiwfZA'}"
+                            },
+                            "image": "${patchData?.thumbnail || ''}",
+                            "author": {
+                                "@type": "Organization",
+                                "name": "LGI Mods"
+                            }
+                        }
+                    `}
+                </script>
+            </Helmet>
             <>
                 {
                     creditsView ? <CredsParent className="patchCredits">
@@ -255,7 +288,7 @@ const PatchDetails = () => {
                                     <div className="img-container" data-thumbnail={true}>
                                         {
                                             patchData.showcaseImgs.map((str, index) => (
-                                                <ImageView imageURL={str} key={`Image${index}`} alt={`image ${index}`} classname={`slideitem ${picture == index + 1 ? "show" : "hide"}`} />
+                                                <ImageView imageURL={str} key={`Image${index}`} alt={`${patchData.name} showcase image ${index + 1}`} classname={`slideitem ${picture == index + 1 ? "show" : "hide"}`} />
                                             ))
                                         }
                                         <div className="image-scroller">
