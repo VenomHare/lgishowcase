@@ -54,3 +54,4 @@ output
 
 dist
 .flowbite-react
+.vercel

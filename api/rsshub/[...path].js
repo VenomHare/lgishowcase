@@ -33,43 +33,9 @@ export default async function handler(req, res) {
       // Add a timeout
       timeout: 10000
     });
-    
+    console.log(JSON.stringify(response));
     const contentType = response.headers.get('content-type');
     const text = await response.text();
-    
-    // If we got HTML instead of XML, try to extract RSS URL and fetch again
-    if (contentType && contentType.includes('text/html')) {
-      console.log('Received HTML. Attempting alternative approach...');
-      
-      // Check if this is an actual YouTube playlist ID
-      const youtubePlaylistUrl = `https://www.youtube.com/playlist?list=${rawPath}`;
-      
-      // Try using YouTube's RSS feed directly instead of RSSHub
-      const ytFeedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${rawPath}`;
-      console.log('Trying direct YouTube feed URL:', ytFeedUrl);
-      
-      const ytResponse = await fetch(ytFeedUrl, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-          'Accept': 'application/xml, application/rss+xml, text/xml, */*'
-        }
-      });
-      
-      const ytContent = await ytResponse.text();
-      const ytContentType = ytResponse.headers.get('content-type');
-      
-      if (ytContentType && (ytContentType.includes('xml') || ytContentType.includes('application/atom+xml'))) {
-        res.setHeader('Content-Type', ytContentType || 'application/xml');
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        return res.status(200).send(ytContent);
-      } else {
-        return res.status(502).json({ 
-          message: 'Failed to fetch RSS feed from both RSSHub and YouTube directly',
-          originalContentType: contentType,
-          ytContentType: ytContentType
-        });
-      }
-    }
     
     // If we're here, we got XML from the original request
     res.setHeader('Content-Type', contentType || 'application/xml');

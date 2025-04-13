@@ -5,7 +5,6 @@ export async function fetchYouTubeRSS(playlistId: string) {
         if (!response.ok) {
             throw new Error('Failed to fetch RSS feed');
         }
-
         const text = await response.text();
         console.log(text);
         // Parse the XML response
