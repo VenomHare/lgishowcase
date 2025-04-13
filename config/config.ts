@@ -1,6 +1,15 @@
 import LimitedListText from "./../src/assets/LimitedRosterNames.txt";
 import DeluxeListText from "./../src/assets/DeluxeRosterNames.txt";
 
+const Config = {
+
+    playlistId: "PLcz4DKrECTOcEXrasX7nZu43MErW2wtkK",
+    LimitedPlaylistId: "PLcz4DKrECTOegQXsvTXRSuwNDB5TQPPbx",
+    DeluxePlaylistId: "PLcz4DKrECTOcW8Q91dwLJMD4shvRYNbQi",
+};
+
+export default Config;
+
 /*
 Download page
 ██████╗░░█████╗░░██╗░░░░░░░██╗███╗░░██╗██╗░░░░░░█████╗░░█████╗░██████╗░░██████╗  ██████╗░░█████╗░░██████╗░███████╗
@@ -250,8 +259,6 @@ const LimitedPackImages = [
     "/img/limtedimg/8.jpg",
     "/img/limtedimg/9.png",
     "/img/limtedimg/10.jpg",
-
-    
 ]
 
 export type CurrencyOptions = {
@@ -268,13 +275,19 @@ export type ModPack = {
     patchnotes?: string;
     isDiscounted: boolean;
     Discount: number;
-    Price: CurrencyOptions[];
+    Price: CurrencyOptions;
     thumbnail: string;
     showcaseImgs: string[],
     homeShowcase: boolean,
     rosterListPath?: string,
+    purchaseLink: string,
 }
 
+export interface Video  {
+    title: string;
+    link: string;
+    thumbnail: string
+}
 
 
 const ModList: ModPack[] = [
@@ -285,77 +298,29 @@ const ModList: ModPack[] = [
         patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: true,
         Discount: 40,
-        Price:[
-            {
-                id: "usd",
-                name: "USD",
-                price: 25,
-            },
-            {
-                id: "eur",
-                name: "EUR",
-                price: 25,
-            },
-            {
-                id: "inr",
-                name: "INR",
-                price: 1800,
-            },
-            {
-                id: "sgd",
-                name: "SGD",
-                price: 38,
-            },
-            {
-                id: "cad",
-                name: "CAD",
-                price: 38,
-            },
-            {
-                id: "idr",
-                name: "IDR",
-                price: 400000,
-            },
-            {
-                id: "php",
-                name: "PHP",
-                price: 1450,
-            },
-            {
-                id: "egp",
-                name: "EGP",
-                price: 1300,
-            },
-        ],
+        Price: {
+            id: "usd",
+            name: "USD",
+            price: 25,
+        },
         thumbnail: '/img/poster/limited.png',
         showcaseImgs: LimitedPackImages,
         homeShowcase: true,
         rosterListPath: LimitedListText,
+        purchaseLink: "https://lgicheckout.vercel.app/checkout/limited"
     },
     {
         id: "deluxe",
         name: "Deluxe Edition",
-        description: "",
+        description: "This is the LGI Modz free patch of WWE Here Comes The Pain ",
         patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
         isDiscounted: false,
         Discount: 40,
-        Price: [
-            {
-                id: "usd",
-                name: "USD",
-                price: 0,
-            },
-            {
-                id: "eur",
-                name: "EUR",
-                price: 0,
-            },
-            {
-                id: "inr",
-                name: "INR",
-                price: 0,
-            },
-        ],
+        Price: {
+            id: "usd",
+            name: "USD",
+            price: 0,
+        },
         thumbnail: "/img/poster/deluxe.png",
         showcaseImgs: [
             "/img/deluxeimg/1.png",
@@ -371,6 +336,7 @@ const ModList: ModPack[] = [
         ],
         homeShowcase: true,
         rosterListPath: DeluxeListText,
+        purchaseLink: "https://discord.com/channels/836227245881557062/1289225006177325238"
     }
 ]
 
@@ -489,6 +455,32 @@ const Patches: SortingModPack[] = [
     },
 ]
 
+export interface NavItem {
+    slug: string
+    label: string
+}
+export const Navbar: NavItem[] = [
+    {
+        label: "Home",
+        slug: "/"
+    },
+    {
+        label: "Showcase",
+        slug: "/showcase"
+    },
+    {
+        label: "Mods",
+        slug: "/mods"
+    },
+    {
+        label: "Patches",
+        slug: "/patches"
+    },
+    {
+        label: "Community",
+        slug: "/community"
+    },
+]
 
 export {
     DownloadPageData,

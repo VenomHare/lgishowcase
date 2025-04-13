@@ -1,50 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { SortingModPack } from '../../config/config';
+import { Badge, Button } from 'flowbite-react';
+
 type Props = {
-    id: string;
-    title: string;
-    downloadLink: string;
-    ytVideoLink: string;
-    thumbnail: string;
-    Tags: string[];
-    credits: string[];
+    mod: SortingModPack
 }
-const PatchBlock : React.FC<Props> = ({id, title,Tags, thumbnail, credits}) => {
-    const [Credits, setCredits] = useState(false);
+
+const PatchBlock: React.FC<Props> = ({ mod }: Props) => {
     const navigate = useNavigate();
     return (
         <>
-            <div className="patchBlockParent">
-                <div className="patchesTitle">{title}</div>
-                <img src={thumbnail} alt="thumbnail" className="patchBlockThumbnail" />
-                <div className="patchesTags">   
-                    Tags: 
+            <div className='w-[250px] md:w-[250px] xl:w-[300px] h-[40svh] md:h-[45svh] flex flex-col gap-4 bg-black-background border border-primary p-4 rounded-lg'>
+                <div className="flex gap-1 w-full ">
                     {
-                        Tags.map(tag => <div className='patchtag'>{tag}</div>)
+                        mod.tags.map((tag, i) =>
+                            <Badge key={i} color="red">{tag}</Badge>
+                        )
                     }
                 </div>
-                <div className="patchBlockButtons">
-                    <div className="patchBlockButton" onClick={()=>{navigate("/patches/"+id)}}>View Patch</div>
-                    {/* <div className="patchBlockButton" onClick={()=>{window.open(ytVideoLink)}}>Showcase</div> */}
-                    {/* {credits.length !== 0 ? */}
-                        {/* <div className="patchBlockButton" id='creditBtn' onClick={()=>{setCredits(true)}}>Credits</div> */}
-                    {/* :<></>} */}
-                </div>
-                {
-                    Credits ? <>
-                        <div className="patchCredits">
-                            <div className="patchCredTitle"> {title}'s Credits</div>
-                            <ul className="patchCredNames">
-                            {
-                                credits.length !== 0 ? <>
-                                    {credits.map(name => <><li className="patchCredName">{name}</li></>)}
-                                </>:<></>
-                            }
-                            </ul>
-                            <div className="patchCredClose" onClick={()=>{setCredits(false)}}> Close </div>
-                        </div>
-                    </>:<></>
-                }
+                
+                <img className='h-[20svh] md:h-[25svh] object-contain rounded' src={mod.thumbnail} alt={mod.id} />
+                <div className="text-xl font-semibold">{mod.title}</div>
+                <Button outline color="red" onClick={() => { navigate(`/patches/${mod.id}`) }}>View More</Button>
             </div>
         </>
     )

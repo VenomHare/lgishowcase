@@ -10,12 +10,15 @@ export const viteServerBefore = (server, viteServer) => {
 
 // @WARNING: Please don't include the VITE TYPES here, because it has a problem when you build the project
 export const viteServerAfter = (server, viteServer) => {
-    server.use((error, req, res, next) => {
-        if (error instanceof Error) {
-            return res.status(403).json({ error: error.message });
-        }
-        next(error);
-    });
+    const errorHandler = (err, req, res, next) => {
+      if (err instanceof Error) {
+          res.writeHead(403, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ error: err.message }));
+      } else {
+          next(err);
+      }
+    };
+    server.use(errorHandler);
 };
 
 // ServerHook

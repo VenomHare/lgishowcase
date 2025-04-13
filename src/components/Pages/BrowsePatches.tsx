@@ -4,7 +4,6 @@ import NavBar from '../NavBar'
 import Footer from '../Footer'
 import './../../styles/patches.css'
 import Sorter from '../Sorter'
-import DisplayBlock from '../DisplayBlock'
 import { Patches, PatchesTags } from '../../../config/config'
 import PatchBlock from '../PatchBlock'
 
@@ -46,27 +45,19 @@ const BrowsePatches = () => {
                 </script>
             </Helmet>
             <NavBar active='patches' />
-            <main className="modsParent">
-                <header className="modsTitleBlock">
-                    <h1 className="modstitle">Browse Patches</h1>
+            <main className="min-h-[70svh]">
+                <header className="mx-auto my-[1svh] w-[50svw] text-center">
+                    <h1 className="font-Funnel font-semibold text-4xl lg:text-5xl">Browse Patches</h1>
                 </header>
 
-                <section className="mods-content-container">
-                    <aside className="sorting">
-                        <Sorter tagList={PatchesTags} setSortingList={setSortedModList} sortingList={Patches} />
-                    </aside>
+                <section className="flex justify-end flex-col items-center  ">
+                    <Sorter tagList={PatchesTags} setSortingList={setSortedModList} sortingList={Patches} />
                     
-                    <article className="mod-display-container">
+                    <article className="w-[80svw] mr-[1svw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-[.5rem] gap-3 justify-items-center">
                         {sortedModList.map(mod => (
                             <PatchBlock 
                                 key={mod.id}
-                                id={mod.id} 
-                                title={mod.title} 
-                                Tags={mod.tags} 
-                                thumbnail={mod.thumbnail || ""} 
-                                ytVideoLink={mod.ytvideoLink || ""} 
-                                downloadLink={mod.downloadLink} 
-                                credits={mod.credits||[]}
+                                mod={mod}
                             />
                         ))}
                     </article>

@@ -3,9 +3,10 @@ import { Helmet } from 'react-helmet-async'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 import './../../styles/mods.css'
-import DisplayBlock from '../DisplayBlock'
+// import DisplayBlock from '../DisplayBlock'
 import { BrowseModsList, TagsList } from '../../../config/config'
 import Sorter from '../Sorter'
+import ModsDisplayBlock from '../ModsDisplayBlock'
 
 const BrowseMods = () => {
     const openDiscord = (link: string) => window.open(link);
@@ -45,28 +46,17 @@ const BrowseMods = () => {
 
             <NavBar active='mods' />
             
-            <main className="modsParent">
-                <header className="modsTitleBlock">
-                    <h1 className="modstitle">Browse Mods</h1>
+            <main className="min-h-[70svh]">
+                <header className="mx-auto my-[1svh] w-[50svw] text-center">
+                    <h1 className="font-Funnel font-semibold text-4xl lg:text-5xl">Browse Mods</h1>
                 </header>
 
-                <section className="mods-content-container">
-                    <aside className="sorting">
+                <section className="flex justify-end flex-col items-center  ">
                         <Sorter tagList={TagsList} setSortingList={setSortedModList} sortingList={BrowseModsList} />
-                    </aside>
                     
-                    <article className="mod-display-container">
+                    <article className="w-[80svw] mr-[1svw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-[.5rem] gap-3 justify-items-center">
                         {sortedModList.map(mod => (
-                            <div key={mod.id} className='mod-container'>
-                                <DisplayBlock 
-                                    id={mod.id}
-                                    tags={mod.tags} 
-                                    imgURLs={mod.imagesURL} 
-                                    ButtonText='Download' 
-                                    onClick={() => openDiscord(mod.downloadLink)} 
-                                    title={mod.title} 
-                                />
-                            </div>
+                            <ModsDisplayBlock mod={mod} key={mod.id} />
                         ))}
                     </article>
                 </section>

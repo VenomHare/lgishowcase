@@ -1,6 +1,5 @@
-import React from 'react';
-import YouTube, { YouTubeProps } from 'react-youtube';
-
+import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 // Helper function to extract YouTube video ID from a URL
 function extractVideoId(url: string): string | null {
     const regExp = /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|embed)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
@@ -14,24 +13,20 @@ type YouTubePlayerProps = {
 
 const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ url }) => {
     const videoId = extractVideoId(url);
+    
+    const [isPlaying, setIsPlaying] = useState(false);
 
     if (!videoId) {
         return <>
-            <div className='youtubePlayer'>
+            <div className='w-full p-5'>
                 <h2>Invalid YouTube URL</h2>
                 <h3>Click on video to play</h3>
             </div>
         </>;
     }
 
-    const onPlayerReady: YouTubeProps['onReady'] = (event) => {
-        event.target.playVideo();
-    };
-
     return (
-        <div className='youtubePlayer'>
-            <YouTube videoId={videoId}onReady={onPlayerReady}  />
-        </div>
+            <ReactPlayer className="w-full h-50" controls playing={isPlaying} muted url={url} width="100%" height="100%" onReady={async ()=>{setTimeout(()=>setIsPlaying(true), 500)}}/>
     );
 };
 

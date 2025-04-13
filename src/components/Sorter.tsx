@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./../styles/sorter.css"
 import { SortingModPack} from '../../config/config'
 import { RxCross2 } from "react-icons/rx";
+import { Button } from 'flowbite-react';
 
 type Props = {
     sortingList : SortingModPack[];
@@ -11,7 +12,7 @@ type Props = {
 
 const Sorter: React.FC<Props> = ({sortingList, setSortingList,tagList}) => {
     const [activeTags, setActiveTags] = useState<string[]>([]);
-    const [mobileView, setMobileView] = useState(false);
+
     useEffect(()=>{
         if (activeTags.length === 0)
         {
@@ -39,33 +40,31 @@ const Sorter: React.FC<Props> = ({sortingList, setSortingList,tagList}) => {
 
     return (
         <>
-            <div className="filterBtn" onClick={()=>{setMobileView(true)}}>Filter Results</div>
-            <div className="sorterParent" data-mobile={mobileView}>
-                <h2>Filter Results</h2>
-                <span className="clearButton" onClick={()=>{setActiveTags([])}}>
+            <div className="flex flex-col-reverse md:flex-row-reverse  items-center border border-gray-400 rounded-lg bg-gray-700/9 p-3 lg:w-[70svw] my-2" >
+                <Button outline color="red" className="lg:w-[15svw] xl:w-[10svw] 2xl:w-[7.5svw]" onClick={()=>{setActiveTags([])}}>
                     Clear Filters
-                </span>
-                <div className="tags-container">
+                </Button>
+                <div className="flex p-1 m-1 w-[70svw] gap-1 flex-wrap justify-center lg:justify-start">
                     {
                         tagList.map(tag => <>
                             {
                                 activeTags.find((t) => t == tag) ?
-                                    <div className="tagbox tagActive" onClick={()=>{
+                                    <Button size={"sm"} color="red" className="flex gap-1" onClick={()=>{
                                         setActiveTags((prev) => {
                                             return prev.filter(t => t !== tag);
                                         })
                                     }}>
                                         <span className='tagName'>{tag}</span>
                                         <span className='tagRemove'><RxCross2 /></span>
-                                    </div>
-                                : <div className='tagbox' onClick={()=>{
+                                    </Button>
+                                : <Button outline color='gray' className='' size='sm' onClick={()=>{
                                     setActiveTags([...activeTags, tag]);
-                                }}>{tag}</div>
+                                }}>{tag}</Button>
                             }
                         </>)
                     }
                 </div>
-                <div className="mobileApply" onClick={()=>{setMobileView(false)}}>Apply Filters</div>
+                {/* <Button className='lg:hidden w-[7.5svw]'color={"red"} onClick={()=>{setMobileView(false)}}>Apply Filters</Button> */}
             </div>
         </>
     )

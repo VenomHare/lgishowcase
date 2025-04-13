@@ -1,18 +1,14 @@
 import React from 'react'
 type Props = {
-    thumbnail: string;
     title: string;
     children: React.ReactNode;
 }
-const RosterBlock : React.FC<Props> = ({children, title,thumbnail}) => {
+const RosterBlock : React.FC<Props> = ({children, title,}) => {
     return (
-        <div className='RosterBlockParent'>
-            <div >
-                <img  className="rosterThumbnail" src={thumbnail} alt="thumbail" />
-            </div>
-            <div className="listBlock">
-                <div className="rosterTitle">{title}</div>
-                <ul className="rosterlist">
+        <div className={"LimitedEditionRoster w-full flex justify-center "} >
+            <div className="w-[90svw] md:w-[70svw] border-2 border-primary p-10 rounded-xl bg-black-background">
+                <div className="text-5xl font-bold font-Jost my-6 text-primary text-shadow ">{title}'s Roster </div>
+                <ul className="text-lg font-semibold grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 text-left">
                     <>
                         { children}
                     </>

@@ -36,13 +36,13 @@ const Downloads = () => {
             </script>
         </Helmet>
         <NavBar active='community' />
-        <div className='downloadssParent'>
-            <div className="downloadContent">
-                <div className='DownloadsTitle'>
-                    <div className="dTitle">Community Downloads</div>
-                    <div className="dDesc">Here you will find downloads for tools and patches</div>
+        <div className='min-h-[70svh]'>
+            <div className="relative w-[90svw] lg:w-[70svw] mx-auto my-[10svh] px-[2svw] py-[5svh] bg-black-background border-3 border-primary rounded-lg">
+                <div className='absolute top-[-5svh] left-[2svw] bg-primary font-Funnel p-[1svw] rounded-2xl'>
+                    <div className="text-2xl lg:text-4xl font-extrabold">Community Downloads</div>
+                    <div className="text-lg lg:text-xl">Here you will find downloads for tools and patches</div>
                 </div>
-                <div className="downloadData">
+                <div className="overflow-y-hidden overflow-x-visible mt-[4svh] animate-delay h-fit">
                     {
                         DownloadPageData.map((data, index)=><>
                             <DownloadBlock key={`Block ${index}`} title={data.title} downloadLink={data.downloadLink} description={data.description}/>
