@@ -1,13 +1,14 @@
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
-  const rawPath = req.query['0']; // 👈 fix here
-  console.log(JSON.stringify(req));
+  const rawPath = req.query['id']; // 👈 fix here
+  console.log(req.query)
+  console.log(rawPath);
   if (!rawPath) {
     return res.status(400).json({ message: 'Missing RSS path' });
   }
 
-  const targetUrl = `https://rsshub.app/${rawPath}`;
+  const targetUrl = `https://rsshub.app/youtube/playlist/${rawPath}`;
   console.log('Fetching:', targetUrl);
 
   try {

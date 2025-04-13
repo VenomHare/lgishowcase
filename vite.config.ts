@@ -7,22 +7,22 @@ import flowbiteReact from "flowbite-react/plugin/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  server: {
-    port: 3000,
-    cors: true,
-    proxy: {
-      '/api/rsshub': {
-        target: 'https://rsshub.app',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/rsshub/, ''),
-      },
-    }
-  },
-  plugins: [
-    react(),
-    ApiRoutes({
-      routeBase: "./src/api"
-    }),
-    tailwindcss(),
-    flowbiteReact()],
+server: {
+  port: 3000,
+  cors: true,
+  proxy: {
+    '/api/rsshub': {
+      target: 'https://rsshub.app',
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/api\/rsshub/, ''),
+    },
+  }
+},
+plugins: [
+  react(),
+  ApiRoutes({
+    routeBase: "./src/api"
+  }),
+  tailwindcss(),
+  flowbiteReact()],
 })

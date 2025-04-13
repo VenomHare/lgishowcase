@@ -1,6 +1,6 @@
 export async function fetchYouTubeRSS(playlistId: string) {
     try {
-        const response = await fetch(`/api/rsshub/youtube/playlist/${playlistId}`);
+        const response = await fetch(`/api/rsshub/youtube/playlist?id=${playlistId}`);
 
         if (!response.ok) {
             throw new Error('Failed to fetch RSS feed');

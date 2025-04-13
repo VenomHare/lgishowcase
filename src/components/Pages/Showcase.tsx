@@ -7,7 +7,7 @@ import YouTubePlayer from './../YoutubePlayer';
 import { fetchYouTubeRSS } from "./../utils.ts"
 import Loader from '../Loader.tsx';
 import Config, { Video } from '../../../config/config.ts'
-import { Button, Card } from 'flowbite-react'
+import { Button } from 'flowbite-react'
 
 
 
