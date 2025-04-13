@@ -1,57 +1,54 @@
 {
     "version": 2,
     "routes": [
-        {
-            "src": "/api/rsshub/(.*)",
-            "dest": "/api/rsshub/[...path].js"
-        },
-        {
-            "src": "/api/rsshub",
-            "dest": "/api/rsshub/[...path].js"
-        },
-        {
-            "src": "/api/rss",
-            "dest": "/api/rss.js"
-        },
-        {
-            "src": "/api",
-            "dest": "/api/rss.js"
-        },
-        {
-            "src": "/roster",
-            "dest": "/"
-        },
-        {
-            "src": "/showcase",
-            "dest": "/"
-        },
-        {
-            "src": "/policies",
-            "dest": "/index.html"
-        },
-        {
-            "src": "/patches",
-            "dest": "/"
-        },
-        {
-            "src": "/patches/.*",
-            "dest": "/"
-        },
-        {
-            "src": "/mods",
-            "dest": "/"
-        },
-        {
-            "src": "/community",
-            "dest": "/"
-        },
-        {
-            "src": "/howtobuy",
-            "dest": "/"
-        },
-        {
-            "src": "/",
-            "dest": "/"
-        }
+      {
+        "src": "/api/rsshub/(.*)",
+        "dest": "/api/rsshub/[...path].js"
+      },
+      {
+        "src": "/api/rss",
+        "dest": "/api/rss.js"
+      },
+      {
+        "src": "/api",
+        "dest": "/api/rss.js"
+      },
+      {
+        "src": "/roster",
+        "dest": "/"
+      },
+      {
+        "src": "/showcase",
+        "dest": "/"
+      },
+      {
+        "src": "/policies",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/patches",
+        "dest": "/"
+      },
+      {
+        "src": "/patches/.*",
+        "dest": "/"
+      },
+      {
+        "src": "/mods",
+        "dest": "/"
+      },
+      {
+        "src": "/community",
+        "dest": "/"
+      },
+      {
+        "src": "/howtobuy",
+        "dest": "/"
+      },
+      {
+        "src": "/",
+        "dest": "/"
+      }
     ]
-}
+  }
+  
