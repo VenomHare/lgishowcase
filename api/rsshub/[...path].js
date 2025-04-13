@@ -1,11 +1,12 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+
 import fetch from 'node-fetch';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req, res) {
   const { path = [] } = req.query;
   const rssPath = Array.isArray(path) ? path.join('/') : path;
 
   const url = `https://rsshub.app/${rssPath}`;
+
   try {
     const response = await fetch(url);
     const text = await response.text();
