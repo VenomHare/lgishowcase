@@ -14,7 +14,8 @@ export default async function handler(req, res) {
   try {
     const response = await fetch(targetUrl, {
       headers: {
-        'Accept': 'application/rss+xml'
+        'Accept': 'application/rss+xml',
+        'User-Agent': 'Mozilla/5.0 (RSS Proxy)'
       }
     });
     const text = await response.text();
