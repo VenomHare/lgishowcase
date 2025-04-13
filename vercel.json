@@ -2,6 +2,10 @@
     "version": 2,
     "routes": [
         {
+            "src":"/api/rsshub",
+            "dest":"/"
+        },
+        {
             "src": "/api/rss",
             "dest": "/api/rss.js"
         },
