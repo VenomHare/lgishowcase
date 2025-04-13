@@ -11,10 +11,10 @@ export async function fetchYouTubeRSS(playlistId: string) {
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(text, "application/xml");
 
-        const items = Array.from(xmlDoc.getElementsByTagName("item")).map(entry => ({
+        const items = Array.from(xmlDoc.getElementsByTagName("entry")).map(entry => ({
             title: entry.getElementsByTagName('title')[0]?.innerHTML ?? "",
-            link: entry.getElementsByTagName('link')[0]?.innerHTML ?? "",
-            thumbnail: entry.getElementsByTagName('enclosure')[0]?.getAttribute('url')
+            link: entry.getElementsByTagName('link')[0]?.getAttribute("href") ?? "",
+            thumbnail: entry.getElementsByTagName('media:thumbnail')[0]?.getAttribute('url')
         }))
         return items;
     } catch (error) {
