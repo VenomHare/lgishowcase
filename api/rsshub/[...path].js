@@ -1,19 +1,15 @@
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
-  // Get dynamic route segments: e.g., ['youtube', 'playlist', 'ID']
-  const path = req.query.path;
-  console.log(req);
-  console.log(path);
-  // Handle missing path
-  if (!path || (Array.isArray(path) && path.length === 0)) {
+  const rawPath = req.query['0']; // 👈 fix here
+
+  if (!rawPath) {
     return res.status(400).json({ message: 'Missing RSS path' });
   }
 
-  // Construct full path
-  const rssPath = Array.isArray(path) ? path.join('/') : path;
-  const targetUrl = `https://rsshub.app/${rssPath}`;
-  console.log(targetUrl);
+  const targetUrl = `https://rsshub.app/${rawPath}`;
+  console.log('Fetching:', targetUrl);
+
   try {
     const response = await fetch(targetUrl);
     const text = await response.text();
