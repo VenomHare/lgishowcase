@@ -12,7 +12,11 @@ export default async function handler(req, res) {
   console.log('Fetching:', targetUrl);
 
   try {
-    const response = await fetch(targetUrl);
+    const response = await fetch(targetUrl, {
+      headers: {
+        'Accept': 'application/rss+xml'
+      }
+    });
     const text = await response.text();
 
     res.setHeader('Content-Type', 'application/xml');
