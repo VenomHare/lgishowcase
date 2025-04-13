@@ -17,6 +17,8 @@ const Showcase = () => {
     const [currentVideo, setCurrentVideo] = useState<string>("");
 
     useEffect(() => {
+        fetch("https://rsshub.app/youtube/playlist/PLcz4DKrECTOcEXrasX7nZu43MErW2wtkK")
+        .then(e=>e.text().then(d=>console.log("data :"+d)))
         fetchYouTubeRSS(Config.playlistId)
             .then((fetchedVideos) => {
                 setVideos(fetchedVideos as Video[]);
