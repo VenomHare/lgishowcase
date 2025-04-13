@@ -2,7 +2,8 @@ import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
   const rawPath = req.query['0']; // 👈 fix here
-
+  console.log(req.query)
+  console.log(req.params)
   if (!rawPath) {
     return res.status(400).json({ message: 'Missing RSS path' });
   }
