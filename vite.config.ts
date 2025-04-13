@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// import ApiRoutes from 'vite-plugin-api-routes'
+import ApiRoutes from 'vite-plugin-api-routes'
 import flowbiteReact from "flowbite-react/plugin/vite";
 
 // https://vite.dev/config/
@@ -20,9 +20,9 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    // ApiRoutes({
-    //   routeBase: "./src/api"
-    // }),
+    ApiRoutes({
+      routeBase: "./src/api"
+    }),
     tailwindcss(),
     flowbiteReact()],
 })
