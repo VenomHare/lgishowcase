@@ -76,12 +76,10 @@ const router = createBrowserRouter([
 // const popUp = sessionStorage.getItem("popupview")
 // const popupbool = popUp=="true" 
 createRoot(document.getElementById('root')!).render(<>
-  <StrictMode>
     <HelmetProvider>
       <Analytics />
       <SpeedInsights />
       {/* {popupbool?<></>:<PopupImage/>} */}
       <RouterProvider router={router} />
     </HelmetProvider>
-  </StrictMode>
 </>);
