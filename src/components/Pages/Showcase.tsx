@@ -19,7 +19,6 @@ const Showcase = () => {
     useEffect(() => {
         fetchYouTubeRSS(Config.playlistId)
             .then((fetchedVideos) => {
-                console.log(fetchYouTubeRSS);
                 setVideos(fetchedVideos as Video[]);
                 setCurrentVideo(fetchedVideos[0].link);
             })

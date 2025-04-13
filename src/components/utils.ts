@@ -7,10 +7,10 @@ export async function fetchYouTubeRSS(playlistId: string) {
         }
 
         const text = await response.text();
+        console.log(text);
         // Parse the XML response
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(text, "application/xml");
-        console.log(xmlDoc);
 
         const items = Array.from(xmlDoc.getElementsByTagName("item")).map(entry => ({
             title: entry.getElementsByTagName('title')[0]?.innerHTML ?? "",
