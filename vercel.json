@@ -3,11 +3,11 @@
     "routes": [
         {
             "src": "/api/rsshub/(.*)",
-            "dest": "/api/rsshub/[...path].ts"
+            "dest": "/api/rsshub/[...path].js"
         },
         {
             "src": "/api/rsshub",
-            "dest": "/api/rsshub/[...path].ts"
+            "dest": "/api/rsshub/[...path].js"
         },
         {
             "src": "/api/rss",
