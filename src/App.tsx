@@ -15,6 +15,7 @@ import RosterBlock from './components/RosterBlock'
 import RosterLists from './components/RosterLists'
 import { RxCross1 } from "react-icons/rx"
 import styled, { keyframes } from 'styled-components'
+import CommingSoon from './components/CommingSoon'
 
 const fadeInUp = keyframes`
   from {
@@ -99,7 +100,8 @@ function App() {
       <DisplayProducts mod={ModList.find(m=>m.id=="limited")!}/>
       <DisplayProducts mod={ModList.find(m=>m.id=="deluxe")!}/>
       {/* <Brief /> */}
-      {/* <Basics /> */}
+      <CommingSoon mod={ModList.find(m=>m.id=="limited")!}/>
+      <Basics />
       <Footer />
     </div>
   )

@@ -30,6 +30,7 @@
     grid-template-areas: 
       "title"
       "carousel"
+      "launch"
       "buttons"
     ;
     @media (width >= 64rem) {
@@ -37,6 +38,7 @@
       grid-template-areas: 
         "title carousel"
         "buttons carousel"
+        "launch carousel"
       ;
     }
   }
@@ -54,6 +56,9 @@
       max-inline-size: 20svw;
     }
       grid-area: buttons;
+  }
+  .DisplayLaunch{
+    grid-area: launch;
   }
 
   .LimitedEditionGrid{
@@ -141,6 +146,7 @@
       transform: translateY(0);
     }
   }
+
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -161,6 +167,7 @@
     background: hsl(357.7 100% 38%);
   }
 }
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

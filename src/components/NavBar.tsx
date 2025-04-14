@@ -33,7 +33,7 @@ const NavBar: React.FC<Props> = ({ active }) => {
     }
 
     return (
-        <div className='z-[199] fixed top-0 left-0 w-full h-[11%] shadow-2xl  flex justify-around items-center bg-nav-background'>
+        <div className='z-[199] fixed top-0 left-0 w-full h-[11%] shadow-2xl flex justify-around items-center bg-nav-background'>
             <div className={`
                 flex items-center justify-center h-full w-full
                 lg:w-fit

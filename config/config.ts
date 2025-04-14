@@ -6,6 +6,7 @@ const Config = {
     playlistId: "PLcz4DKrECTOcEXrasX7nZu43MErW2wtkK",
     LimitedPlaylistId: "PLcz4DKrECTOegQXsvTXRSuwNDB5TQPPbx",
     DeluxePlaylistId: "PLcz4DKrECTOcW8Q91dwLJMD4shvRYNbQi",
+    DynastyPlaylistId:"PLcz4DKrECTOfWuM_cncBCYxqC_7mBrS1H",
     discordServerLink: "https://discord.com/invite/dMzNNVuYv7",
 
     FooterImgs: [
@@ -518,10 +519,6 @@ export {
     exclusivePackImage2,
     exclusivePackImage3,
 
-    smackLogo,
-    wwlogo,
-    pslogo,
-    lgiLogo,
     discordServerLink,
 
     JoinDiscordImage,

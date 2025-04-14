@@ -64,9 +64,9 @@ const LimitedEdition = () => {
                 <div className="LimitedEditionInfo w-full min-h-[75svh] flex flex-col items-center p-4 gap-6">
                     <img src={patchData?.thumbnail} alt="Thumbnail" className="w-[45svw] md:w-[20svw] lg:w-[10svw] object-center object-cover rounded-2xl shadow-md shadow-gray-800" />
                     <h1 className="text-4xl font-bold font-Jost">{patchData?.name}</h1>
-                    <h2 className="text-md text-gray-400">{patchData?.description}</h2>
+                    <h2 className="text-md text-gray-400 w-[65%]">{patchData?.description}</h2>
                     <h3 className="text-lg font-semibold text-gray-500">Price:  <span className="font-Jost text-offwhite text-4xl">{patchData?.Price.price} {patchData?.Price.name}</span></h3>
-                    <Button className="w-[80%] " color={"red"} size="lg">Buy Now </Button>
+                    <Button className="w-[30%] " color={"red"} size="lg">Buy Now </Button>
                 </div>
                 <div className="LimitedEditionCarousel w-full lg:w-[50svw] min-h-[75svh] flex flex-col gap-6 items-center justify-center font-Jost">
                     <p className="text-3xl">Showcase Images</p>
