@@ -2,8 +2,12 @@ import { Helmet } from 'react-helmet-async'
 import NavBar from './../NavBar'
 import Footer from './../Footer'
 import policies from './../../assets/policies.json'
+import { useEffect } from 'react'
 
 const Privacy = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    })
     // Remove effective date from the first section's data
     const modifiedPolicies = {
         ...policies,
