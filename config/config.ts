@@ -6,9 +6,36 @@ const Config = {
     playlistId: "PLcz4DKrECTOcEXrasX7nZu43MErW2wtkK",
     LimitedPlaylistId: "PLcz4DKrECTOegQXsvTXRSuwNDB5TQPPbx",
     DeluxePlaylistId: "PLcz4DKrECTOcW8Q91dwLJMD4shvRYNbQi",
-};
+    discordServerLink: "https://discord.com/invite/dMzNNVuYv7",
 
+    FooterImgs: [
+        {
+            alt: "lgi",
+            src: "/img/footer/lgi.png"
+        },
+        {
+            alt: "smack",
+            src: "/img/footer/htcp.png"
+        },
+        {
+            alt: "wwelogo",
+            src: "/img/footer/wwe.png"
+        },
+        {
+            alt: "pslogo",
+            src: "/img/footer/ps2.png"
+        },
+    ],
+    footerSocials: {
+        youtube: "https://www.youtube.com/@lgiyt",
+        instagram: "https://instagram.com/lgi.yt",
+        paypal: "https://paypal.me/88shadowIN",
+        discord: "https://discord.com/invite/dMzNNVuYv7"
+    }
+
+};
 export default Config;
+const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
 /*
 Download page
@@ -213,22 +240,7 @@ const exclusivePackImage3 = [
 ]
 
 
-/**
- * 
-███████╗░█████╗░░█████╗░████████╗███████╗██████╗░
-██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
-█████╗░░██║░░██║██║░░██║░░░██║░░░█████╗░░██████╔╝
-██╔══╝░░██║░░██║██║░░██║░░░██║░░░██╔══╝░░██╔══██╗
-██║░░░░░╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
-╚═╝░░░░░░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
- */
-const smackLogo = "/img/footer/htcp.png"
-const wwlogo = "/img/footer/wwe.png"
-const pslogo = "/img/footer/ps2.png"
 
-const lgiLogo = "/img/footer/lgi.png"
-
-const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
 /**
  * 
@@ -283,7 +295,7 @@ export type ModPack = {
     purchaseLink: string,
 }
 
-export interface Video  {
+export interface Video {
     title: string;
     link: string;
     thumbnail: string

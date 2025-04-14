@@ -179,17 +179,10 @@ a:hover, a:active, a:focus{
   background-color: transparent !important;
 }
 *::selection{
-  background-color: var(--selection-color);
+  background-color: #d1d5db60;
 }
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-  border-radius: 8px;
-}
-a:hover {
-  color: #535bf2;
-}
+
+
 body {
   display: block;
   position: absolute;
