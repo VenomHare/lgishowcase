@@ -16,8 +16,7 @@ import Downloads from './components/Pages/Downloads.tsx'
 import HowToBuy from './components/Pages/HowToBuy.tsx'
 import BrowseMods from './components/Pages/BrowseMods.tsx'
 import BrowsePatches from './components/Pages/BrowsePatches.tsx'
-import LimitedEdition from './components/Pages/LimitedEdition.tsx'
-import DeluxeEdition from './components/Pages/DeluxeEdition.tsx'
+import PatchDetails from './components/Pages/PatchDetails.tsx'
 
 const router = createBrowserRouter([
   {
@@ -36,13 +35,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/patches/limited", // Dynamic route for patches
-    element: <LimitedEdition />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/patches/deluxe", // Dynamic route for patches
-    element: <DeluxeEdition />,
+    path: "/patches/:modId", // Dynamic route for patches
+    element: <PatchDetails/>,
     errorElement: <ErrorPage />
   },
   {
@@ -50,7 +44,6 @@ const router = createBrowserRouter([
     element: <BrowsePatches />,
     errorElement: <ErrorPage />
   },
-
   {
     path: "/policies",
     element: <Privacy />,

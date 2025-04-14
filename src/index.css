@@ -36,7 +36,6 @@
     grid-template-areas: 
       "title"
       "carousel"
-      "launch"
       "buttons"
     ;
     @media (width >= 64rem) {
@@ -44,7 +43,6 @@
       grid-template-areas: 
         "title carousel"
         "buttons carousel"
-        "launch carousel"
       ;
     }
   }
@@ -67,6 +65,42 @@
     grid-area: launch;
   }
 
+  .CommingSoonBoxGrid{
+    display: grid;
+    grid-template-areas: 
+      "title"
+      "carousel"
+      "launch"
+      "buttons"
+    ;
+    @media (width >= 64rem) {
+      max-inline-size: 70svw;
+      grid-template-areas: 
+        "title carousel"
+        "buttons carousel"
+        "launch carousel"
+      ;
+    }
+  }
+  .CommingSoonTitle{
+    grid-area: title;
+    @media (width >= 64rem) {
+      max-inline-size: 20svw;
+    }
+  }
+  .CommingSoonCarousel{
+    grid-area: carousel;
+  }
+  .CommingSoonButtons{
+    @media (width >= 64rem) {
+      max-inline-size: 20svw;
+    }
+      grid-area: buttons;
+  }
+  .CommingSoonLaunch{
+    grid-area: launch;
+  }
+  
   .LimitedEditionGrid{
     display: grid;
 
@@ -87,6 +121,7 @@
     }
     
   }
+  
   .LimitedEditionRoster {
     grid-area: roster;
   }

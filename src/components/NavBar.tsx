@@ -55,10 +55,10 @@ const NavBar: React.FC<Props> = ({ active }) => {
                 `} data-active={isMenuOpen} data-out={closeAnimate}>
                 
                 {
-                    Navbar.map(n=><a onClick={() => navigate(n.slug)} className='w-full'>
+                    Navbar.map((n, i)=><a key={i} onClick={() => navigate(n.slug)} className='w-full'>
                     <button className={`
                         cursor-pointer w-full py-4 text-offwhite border-t-1 border-b-1 border-secondary data-[active=true]:bg-primary
-                        lg:rounded-lg lg:border-0 lg:py-2 lg:max-w-[150px]  
+                        lg:rounded-lg lg:border-0 lg:py-2 lg:max-w-[150px] font-Jost
                     `} data-active={active == n.slug.slice(1)}>
                         {n.label}
                     </button>
@@ -68,7 +68,7 @@ const NavBar: React.FC<Props> = ({ active }) => {
                 <a href={discordServerLink} target='blank'className='w-full'>
                     <button data-active={active == "Discord"} className={`
                         cursor-pointer w-full py-4 flex items-center justify-center gap-2 text-black bg-offwhite
-                        lg:rounded-lg lg:py-2 
+                        lg:rounded-lg lg:py-2 font-Jost
                     `}>
                         Discord
                         <IoOpenOutline />

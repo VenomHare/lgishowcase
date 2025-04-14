@@ -31,10 +31,8 @@ const Sorter: React.FC<Props> = ({sortingList, setSortingList,tagList}) => {
                     }
                 }
             })
-            console.log("Sorted List ", list);
             setSortingList(list);
         }
-        console.log(sortingList);
     },[activeTags])
 
 
@@ -46,10 +44,10 @@ const Sorter: React.FC<Props> = ({sortingList, setSortingList,tagList}) => {
                 </Button>
                 <div className="flex p-1 m-1 w-[70svw] gap-1 flex-wrap justify-center lg:justify-start">
                     {
-                        tagList.map(tag => <>
+                        tagList.map((tag, i) => <>
                             {
                                 activeTags.find((t) => t == tag) ?
-                                    <Button size={"sm"} color="red" className="flex gap-1" onClick={()=>{
+                                    <Button size={"sm"} color="red" key={i} className="flex gap-1" onClick={()=>{
                                         setActiveTags((prev) => {
                                             return prev.filter(t => t !== tag);
                                         })
@@ -57,7 +55,7 @@ const Sorter: React.FC<Props> = ({sortingList, setSortingList,tagList}) => {
                                         <span className='tagName'>{tag}</span>
                                         <span className='tagRemove'><RxCross2 /></span>
                                     </Button>
-                                : <Button outline color='gray' className='' size='sm' onClick={()=>{
+                                : <Button outline color='gray' key={i} className='' size='sm' onClick={()=>{
                                     setActiveTags([...activeTags, tag]);
                                 }}>{tag}</Button>
                             }

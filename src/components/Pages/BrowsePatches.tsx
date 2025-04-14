@@ -54,7 +54,7 @@ const BrowsePatches = () => {
                     <Sorter tagList={PatchesTags} setSortingList={setSortedModList} sortingList={Patches} />
                     
                     <article className="w-[80svw] mr-[1svw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-[.5rem] gap-3 justify-items-center">
-                        {sortedModList.map(mod => (
+                        {sortedModList.map((mod) => (
                             <PatchBlock 
                                 key={mod.id}
                                 mod={mod}

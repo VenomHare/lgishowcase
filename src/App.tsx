@@ -1,6 +1,5 @@
 import NavBar from './components/NavBar'
 import DisplayProducts from './components/DisplayProducts'
-import Brief from './components/Brief'
 import Basics from './components/Basics'
 import Footer from './components/Footer'
 import { Helmet } from 'react-helmet-async'
@@ -8,42 +7,9 @@ import './App.css'
 import './styles/main.css'
 import './../config/config.css'
 import './styles/roster.css'
-import { useState } from 'react'
-import PurchaseSection from './components/PurchaseSection'
-import { ModList, ModPack } from '../config/config'
-import RosterBlock from './components/RosterBlock'
-import RosterLists from './components/RosterLists'
-import { RxCross1 } from "react-icons/rx"
-import styled, { keyframes } from 'styled-components'
+import Config from '../config/config'
 import CommingSoon from './components/CommingSoon'
 
-const fadeInUp = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`
-
-
-
-const PageDetails = styled.div`
-  color: var(--home-main-heading-color);
-  margin: 3vh;
-  font-size: 1.4rem;
-  font-family: var(--font-poppin);
-  width: 75%;
-  animation: ${fadeInUp} 0.6s ease-out 0.4s backwards;
-  line-height: 1.6;
-  
-  @media screen and (max-width: 600px) {
-    font-size: 1rem;
-    width: 85%;
-  }
-`
 
 
 
@@ -97,10 +63,10 @@ function App() {
         </div>
       </div>
 
-      <DisplayProducts mod={ModList.find(m=>m.id=="limited")!}/>
-      <DisplayProducts mod={ModList.find(m=>m.id=="deluxe")!}/>
+      <DisplayProducts mod={Config.ModList.find(m=>m.id=="limited")!}/>
+      <DisplayProducts mod={Config.ModList.find(m=>m.id=="deluxe")!}/>
       {/* <Brief /> */}
-      <CommingSoon mod={ModList.find(m=>m.id=="limited")!}/>
+      <CommingSoon mod={Config.ModList.find(m=>m.id=="dynasty")!}/>
       <Basics />
       <Footer />
     </div>
