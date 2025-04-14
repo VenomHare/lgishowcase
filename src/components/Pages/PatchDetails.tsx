@@ -20,6 +20,7 @@ const PatchDetails = () => {
     const [mod, setMod] = useState<ModPack>(Config.ModList.find(mod => mod.id == modId)!);
     const navigate = useNavigate();
     useEffect(() => {
+        window.scrollTo(0, 0);
         const mod = Config.ModList.find(mod => mod.id == modId);
         if (mod)
         {

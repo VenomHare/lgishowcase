@@ -2,8 +2,10 @@ import { AiOutlineYoutube, AiOutlineDiscord } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandPaypal } from "react-icons/tb";
 import Config from '../config/config';
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate = useNavigate()
     return (
         <footer className='w-screen flex flex-col items-center p-10 mt-10 bg-nav-background shadow-[0_0_10px_2px] shadow-black ' id='footer'>
             <div className='w-full flex flex-col-reverse lg:flex-row justify-around gap-10'>
@@ -24,7 +26,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='text-lg font-semibold text-offwhite mt-10 group cursor-pointer'>
+            <div className='text-lg font-semibold text-offwhite mt-10 group cursor-pointer' onClick={()=>{navigate("/policies")}}>
                 &copy;<span className='font-bold'>2025 LGI Modz</span>. All rights reserved. <span className='group-hover:underline group-hover:text-gray-500'>Read our Piracy & Policy page for more details.</span>
             </div>
         </footer>

@@ -1,4 +1,4 @@
-import {  Modal, ModalBody, ModalHeader, Tooltip } from "flowbite-react"
+import {  Button, Modal, ModalBody, ModalFooter, ModalHeader, Tooltip } from "flowbite-react"
 import { Info } from "lucide-react";
 import { useState } from "react"
 import { ModPack } from "../../types";
@@ -26,6 +26,9 @@ const Credits = ({mod}:Props) => {
                        }
                     </div>
                 </ModalBody>
+                <ModalFooter className="lg:hidden">
+                    <Button color={"red"} onClick={()=>setOpenModal(false)}>Close</Button>
+                </ModalFooter>
             </Modal>
         </>
     )
