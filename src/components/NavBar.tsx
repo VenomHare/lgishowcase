@@ -1,10 +1,8 @@
-import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from 'react';
-import { RxCross2 } from "react-icons/rx";
-import { IoOpenOutline } from "react-icons/io5";
-
+import {Menu, X} from "lucide-react"
 import { useNavigate } from 'react-router-dom';
 import Config from '../config/config';
+import {IoOpenOutline} from "react-icons/io5"
 
 type Props = {
     active: string,
@@ -41,9 +39,9 @@ const NavBar: React.FC<Props> = ({ active }) => {
             <div className="z-[13] absolute right-[5svw] text-2xl lg:hidden" onClick={handleOpenClose}>
                 {
                     isMenuOpen ?
-                        <RxCross2 />
+                        <X />
                         :
-                        <RiMenu3Fill />
+                        <Menu />
                 }
             </div>
             <div className={`

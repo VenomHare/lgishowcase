@@ -10,6 +10,7 @@ import RosterLists from "../Patches/RosterLists";
 import { useNavigate, useParams } from "react-router-dom";
 import Brief from "../Patches/Brief";
 import { ModPack, Video } from "../../types";
+import Credits from "../Patches/Credits";
 
 
 
@@ -76,7 +77,7 @@ const PatchDetails = () => {
             <div className='LimitedEditionGrid w-full min-h-[70svh]'>
                 <div className="LimitedEditionInfo w-full min-h-[75svh] flex flex-col items-center p-4 gap-6">
                     <img src={mod?.thumbnail} alt="Thumbnail" className="w-[45svw] md:w-[20svw] lg:w-[10svw] object-center object-cover rounded-2xl shadow-md shadow-gray-800" />
-                    <h1 className="text-4xl font-bold font-Jost">{mod?.name}</h1>
+                    <h1 className="text-4xl font-bold font-Jost flex  items-center gap-4">{mod?.name} <Credits mod={mod} /></h1>
                     <h2 className="text-md text-gray-400 w-[65%]">{mod?.description}</h2>
                     {
                         modId == "dynasty" && <>

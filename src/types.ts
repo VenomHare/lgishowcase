@@ -31,7 +31,8 @@ export type ModPack = {
     purchaseLink: string,
     features: string[],
     arena: string[],
-    cons: string[]
+    cons: string[],
+    credits: string[]
 }
 export interface SortingModPack {
     id: string;
@@ -40,6 +41,4 @@ export interface SortingModPack {
     tags: string[];
     imagesURL: string[];
     downloadLink: string;
-    ytvideoLink?: string;
-    credits?: string[];
 }

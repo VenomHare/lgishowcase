@@ -5,7 +5,7 @@ import Showcase from "./components/Pages/Showcase.tsx"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { HelmetProvider } from 'react-helmet-async';
-import './styles/index.css'
+import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,

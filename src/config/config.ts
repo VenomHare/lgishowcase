@@ -199,7 +199,21 @@ const Config = {
             purchaseLink: "https://lgicheckout.vercel.app/checkout/limited",
             features: LimitedFeatures,
             arena: LimitedArena,
-            cons: LimitedCons
+            cons: LimitedCons,
+            credits: [
+                "Aguila316 (Tools,Mods)",
+                "Ps2 eater (Mods) @ps2eater",
+                "Nero619 (Tools)",
+                "ERI619 (Tools)",
+                "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
+                "Erm31 (Tools)",
+                "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
+                "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
+                "Ryukuuma (Mods) @Ryukuuma",
+                "Ranjay (Arenas) @ranjay12",
+                "THQ (Base Game)",
+                "JAKKS (Base Game)"
+            ]
         },
         {
             id: "deluxe",
@@ -231,7 +245,21 @@ const Config = {
             purchaseLink: "https://discord.com/channels/836227245881557062/1289225006177325238",
             features: [],
             arena: [],
-            cons: []
+            cons: [],
+            credits: [
+                "Aguila316 (Tools,Mods)",
+                "Ps2 eater (Mods) @ps2eater",
+                "Nero619 (Tools)",
+                "ERI619 (Tools)",
+                "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
+                "Erm31 (Tools)",
+                "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
+                "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
+                "Ryukuuma (Mods) @Ryukuuma",
+                "Ranjay (Arenas) @ranjay12",
+                "THQ (Base Game)",
+                "JAKKS (Base Game)"
+            ]
         },
         {
             id: "dynasty",
@@ -257,7 +285,21 @@ const Config = {
             purchaseLink: "https://discord.com/channels/836227245881557062/1289225006177325238",
             features: DynastyFeatures,
             arena: DynastyArena,
-            cons: DynastyCons
+            cons: DynastyCons,
+            credits: [
+                "Aguila316 (Tools,Mods)",
+                "Ps2 eater (Mods) @ps2eater",
+                "Nero619 (Tools)",
+                "ERI619 (Tools)",
+                "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
+                "Erm31 (Tools)",
+                "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
+                "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
+                "Ryukuuma (Mods) @Ryukuuma",
+                "Ranjay (Arenas) @ranjay12",
+                "THQ (Base Game)",
+                "JAKKS (Base Game)"
+            ]
         }
     ],
 
@@ -354,21 +396,7 @@ const Config = {
             imagesURL: [],
             thumbnail: "/img/poster/limited.png",
             downloadLink: "https://lgicheckout.vercel.app/checkout/limited",
-            ytvideoLink: "https://youtube.com/@lgiyt",
-            credits: [
-                "Aguila316 (Tools,Mods)",
-                "Ps2 eater (Mods) @ps2eater",
-                "Nero619 (Tools)",
-                "ERI619 (Tools)",
-                "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
-                "Erm31 (Tools)",
-                "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
-                "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
-                "Ryukuuma (Mods) @Ryukuuma",
-                "Ranjay (Arenas) @ranjay12",
-                "THQ (Base Game)",
-                "JAKKS (Base Game)"
-            ]
+           
         },
         {
             id: "deluxe",
@@ -377,21 +405,6 @@ const Config = {
             imagesURL: [],
             thumbnail: "/img/poster/deluxe.png",
             downloadLink: "https://socialwolvez.com/app/l/uiwfZA",
-            ytvideoLink: "https://youtube.com/@lgiyt",
-            credits: [
-                "Aguila316 (Tools,Mods)",
-                "Ps2 eater (Mods) @ps2eater",
-                "Nero619 (Tools)",
-                "ERI619 (Tools)",
-                "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
-                "Erm31 (Tools)",
-                "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
-                "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
-                "Ryukuuma (Mods) @Ryukuuma",
-                "Ranjay (Arenas) @ranjay12",
-                "THQ (Base Game)",
-                "JAKKS (Base Game)"
-            ]
         },
     ],
 

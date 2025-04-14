@@ -1,6 +1,6 @@
 import React from 'react'
-import { HiOutlineFolderDownload } from "react-icons/hi";
 import { DownloadData } from '../../types';
+import { Download } from 'lucide-react';
 
 const DownloadBlock: React.FC<DownloadData> = ({ title, downloadLink, key, description }) => {
     return (
@@ -16,7 +16,7 @@ const DownloadBlock: React.FC<DownloadData> = ({ title, downloadLink, key, descr
                     Download
                 </div>
                 <div className="text-3xl md:hidden grid">
-                    <HiOutlineFolderDownload />
+                    <Download />
                 </div>
             </div>
         </div>

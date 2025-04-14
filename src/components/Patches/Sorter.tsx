@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { RxCross2 } from "react-icons/rx";
 import { Button } from 'flowbite-react';
 import { SortingModPack } from '../../types';
+import { X } from 'lucide-react';
 
 type Props = {
     sortingList : SortingModPack[];
@@ -52,7 +52,7 @@ const Sorter: React.FC<Props> = ({sortingList, setSortingList,tagList}) => {
                                         })
                                     }}>
                                         <span className='tagName'>{tag}</span>
-                                        <span className='tagRemove'><RxCross2 /></span>
+                                        <span className='tagRemove'><X /></span>
                                     </Button>
                                 : <Button outline color='gray' key={i} className='' size='sm' onClick={()=>{
                                     setActiveTags([...activeTags, tag]);

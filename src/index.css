@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
 @import "tailwindcss";
-@source "../../.flowbite-react/class-list.json";
+@source "../.flowbite-react/class-list.json";
 @plugin "flowbite-react/plugin/tailwindcss";
 @theme{
   --color-primary: #dc2626; /* red-600 */
