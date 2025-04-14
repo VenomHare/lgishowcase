@@ -185,7 +185,7 @@ const Basics = () => {
     }
 
     return (
-        <div className="font-Jost bg-nav-background text-white my-[10svh] py-[5svh] px-[1svw] flex flex-col items-center animate-[fadeIn_0.8s_ease-in-out]" id="basics">
+        <div className="font-Jost  text-white my-[10svh] py-[5svh] px-[1svw] flex flex-col items-center animate-[fadeIn_0.8s_ease-in-out]" id="basics">
             <h2 className="text-4xl p-[1svw] animate-[slideDown_0.6s_ease-out] drop-shadow-[0_0_10px_rgba(220,38,38,0.3)] text-red-600">Basics</h2>
             
             <div className="w-[70svw] m-[1%] text-xl leading-relaxed p-6 rounded-lg bg-gray-800/50 animate-[fadeIn_0.8s_ease-in-out_0.3s_backwards] shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] border border-red-600/20">

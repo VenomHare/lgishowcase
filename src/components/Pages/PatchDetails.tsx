@@ -87,7 +87,7 @@ const PatchDetails = () => {
                     <Button className="w-[80%] md:w-[50%] lg:w-[50%]" color={"red"} size="lg">Buy Now </Button>
                 </div>
                 <div className="LimitedEditionCarousel w-full lg:w-[50svw] min-h-[75svh] flex flex-col gap-6 items-center justify-center font-Jost">
-                    <p className="text-3xl">Showcase Images</p>
+                    <p className="text-3xl font-bold font-Funnel">Showcase Images</p>
                     <div className="w-[80%] aspect-video">
                         <Carousel pauseOnHover>
                             {

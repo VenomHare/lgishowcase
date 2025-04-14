@@ -5,7 +5,7 @@ import Config from '../config/config';
 
 const Footer = () => {
     return (
-        <footer className='w-screen flex flex-col items-center p-10 mt-10 bg-black shadow-[0_0_10px_2px] shadow-black' id='footer'>
+        <footer className='w-screen flex flex-col items-center p-10 mt-10 bg-nav-background shadow-[0_0_10px_2px] shadow-black ' id='footer'>
             <div className='w-full flex flex-col-reverse lg:flex-row justify-around gap-10'>
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:items-center lg:max-w-[60svw] lg:w-fit justify-items-center'>
                     {

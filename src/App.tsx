@@ -12,7 +12,7 @@ import DisplayProducts from './components/home/DisplayProducts'
 function App() {
 
   return (
-    <div className='min-h-screen overflow-x-hidden bg-nav-background'>
+    <div className='min-h-screen overflow-x-hidden'>
       <Helmet>
         <title>LGI MOD'z | Premium HCTP Mods & Patches</title>
         <meta name="description" content="LGI MOD'z offers premium HCTP game modifications and patches. Discover enhanced gaming experiences with improved graphics, sound, gameplay, and presentation." />

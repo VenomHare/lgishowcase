@@ -417,10 +417,10 @@ const Config = {
             label: "Showcase",
             slug: "/showcase"
         },
-        {
-            label: "Mods",
-            slug: "/mods"
-        },
+        // {
+        //     label: "Mods",
+        //     slug: "/mods"
+        // },
         {
             label: "Patches",
             slug: "/patches"
