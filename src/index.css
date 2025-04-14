@@ -3,8 +3,8 @@
 @source "../.flowbite-react/class-list.json";
 
 @theme{
-  --color-primary: oklch(50.5% 0.213 27.518);
-  --color-secondary: hsl(216.94 21% 27%);
+  --color-primary: #dc2626; /* red-600 */
+  --color-secondary: #6b7280; /* gray-500 */
   --color-offwhite: hsl(240.02 5% 84%);
   --color-nav-background: #17191f;
   --color-drop-black: #000000de;
@@ -21,8 +21,14 @@
   --animate-fadeInOut: fadeInOut 600ms ease-out;
   --animate-fadeInOutBack: fadeInOut 0.6s ease-out 0.4s backwards;
   --animate-delay: delay 1s ease;
+  
+  /* Basic component variables */
+  --basic-text-color: #fff;
+  --basics-tab-background: #17191f;
+  --basic-block-background: rgba(220, 38, 38, 0.1); /* red-600 with opacity */
+  --basic-block-border: #dc2626; /* red-600 */
+  --basic-block-glow-color: rgba(220, 38, 38, 0.3); /* red-600 with opacity */
 }
-
 
 @layer theme{
   .displayBoxGrid{
@@ -165,6 +171,45 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(357.7 100% 38%);
+  }
+
+  /* Basic component animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Media queries for responsive design */
+  @media screen and (max-width: 1024px) {
+    .basicTitle {
+      font-size: 8svw;
+    }
+    .basicdetails {
+      font-size: 1em;
+    }
+    .blockcontainer {
+      column-count: 2;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .blockcontainer {
+      column-count: 1;
+    }
+    .basicBlock {
+      padding: 2svh;
+    }
   }
 }
 
