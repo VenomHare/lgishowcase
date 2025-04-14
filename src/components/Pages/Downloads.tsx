@@ -1,10 +1,8 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import './../../styles/downloads.css'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
-import DownloadBlock from '../DownloadBlock'
-import { DownloadPageData } from '../../../config/config' 
+import DownloadBlock from '../community/DownloadBlock'
+import Config from '../../config/config'
 
 const Downloads = () => {
     return (<>
@@ -24,7 +22,7 @@ const Downloads = () => {
                         "name": "Community Downloads",
                         "description": "Collection of community tools and patches for HCTP game",
                         "url": "https://lgimodz.vercel.app/community",
-                        "hasPart": ${JSON.stringify(DownloadPageData.map(item => ({
+                        "hasPart": ${JSON.stringify(Config.DownloadPageData.map(item => ({
                             "@type": "SoftwareApplication",
                             "name": item.title,
                             "description": item.description,
@@ -44,7 +42,7 @@ const Downloads = () => {
                 </div>
                 <div className="overflow-y-hidden overflow-x-visible mt-[4svh] animate-delay h-fit">
                     {
-                        DownloadPageData.map((data, index)=><>
+                        Config.DownloadPageData.map((data, index)=><>
                             <DownloadBlock key={`Block ${index}`} title={data.title} downloadLink={data.downloadLink} description={data.description}/>
                         </>)
                     }

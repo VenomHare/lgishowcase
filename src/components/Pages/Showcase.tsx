@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import NavBar from './../NavBar'
 import Footer from './../Footer'
-import "./../../styles//showcase.css"
-import YouTubePlayer from './../YoutubePlayer';
-import { fetchYouTubeRSS } from "./../utils.ts"
+import YouTubePlayer from '../showcase/YoutubePlayer.tsx';
+import { fetchYouTubeRSS } from "../showcase/utils.ts"
 import Loader from '../Loader.tsx';
-import Config, { Video } from '../../../config/config.ts'
+import Config from '../../config/config.ts'
 import { Button } from 'flowbite-react'
+import { Video } from '../../types.ts'
 
 
 

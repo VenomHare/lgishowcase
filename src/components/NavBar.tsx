@@ -1,12 +1,10 @@
-import './../styles/nav.css'
-// import logo from './../assets/Logo_square.png'
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from 'react';
 import { RxCross2 } from "react-icons/rx";
 import { IoOpenOutline } from "react-icons/io5";
 
-import { discordServerLink, Navbar, WebsiteLogo } from '../../config/config';
 import { useNavigate } from 'react-router-dom';
+import Config from '../config/config';
 
 type Props = {
     active: string,
@@ -38,7 +36,7 @@ const NavBar: React.FC<Props> = ({ active }) => {
                 flex items-center justify-center h-full w-full
                 lg:w-fit
             `}>
-                <img src={WebsiteLogo} alt='LGI MODz Logo' className='max-h-[80%] lg:max-h-full max-w-[70%]' onClick={() => { navigate("/") }} />
+                <img src={Config.WebsiteLogo} alt='LGI MODz Logo' className='max-h-[80%] lg:max-h-full max-w-[70%]' onClick={() => { navigate("/") }} />
             </div>
             <div className="z-[13] absolute right-[5svw] text-2xl lg:hidden" onClick={handleOpenClose}>
                 {
@@ -55,7 +53,7 @@ const NavBar: React.FC<Props> = ({ active }) => {
                 `} data-active={isMenuOpen} data-out={closeAnimate}>
                 
                 {
-                    Navbar.map((n, i)=><a key={i} onClick={() => navigate(n.slug)} className='w-full'>
+                    Config.Navbar.map((n, i)=><a key={i} onClick={() => navigate(n.slug)} className='w-full'>
                     <button className={`
                         cursor-pointer w-full py-4 text-offwhite border-t-1 border-b-1 border-secondary data-[active=true]:bg-primary
                         lg:rounded-lg lg:border-0 lg:py-2 lg:max-w-[150px] font-Jost
@@ -65,7 +63,7 @@ const NavBar: React.FC<Props> = ({ active }) => {
                 </a>)
                 }
                 
-                <a href={discordServerLink} target='blank'className='w-full'>
+                <a href={Config.discordServerLink} target='blank'className='w-full'>
                     <button data-active={active == "Discord"} className={`
                         cursor-pointer w-full py-4 flex items-center justify-center gap-2 text-black bg-offwhite
                         lg:rounded-lg lg:py-2 font-Jost

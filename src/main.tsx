@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Privacy from "./components/Pages/Privacy.tsx"
 import ErrorPage from "./components/Pages/ErrorPage.tsx"
@@ -6,7 +5,7 @@ import Showcase from "./components/Pages/Showcase.tsx"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { HelmetProvider } from 'react-helmet-async';
-import './index.css'
+import './styles/index.css'
 import {
   createBrowserRouter,
   RouterProvider,

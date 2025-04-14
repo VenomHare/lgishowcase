@@ -1,14 +1,15 @@
 import { Helmet } from "react-helmet-async";
 import Footer from "../Footer";
 import NavBar from "../NavBar";
-import Config, {  ModPack, Video } from "../../../config/config";
+import Config from "../../config/config";
 import { Button, Carousel } from "flowbite-react";
-import Brief from "../Brief";
 import { useEffect, useState } from "react";
-import { fetchYouTubeRSS } from "../utils";
-import RosterBlock from "../RosterBlock";
-import RosterLists from "../RosterLists";
+import { fetchYouTubeRSS } from "../showcase/utils";
+import RosterBlock from "../Patches/RosterBlock";
+import RosterLists from "../Patches/RosterLists";
 import { useNavigate, useParams } from "react-router-dom";
+import Brief from "../Patches/Brief";
+import { ModPack, Video } from "../../types";
 
 
 
@@ -77,8 +78,13 @@ const PatchDetails = () => {
                     <img src={mod?.thumbnail} alt="Thumbnail" className="w-[45svw] md:w-[20svw] lg:w-[10svw] object-center object-cover rounded-2xl shadow-md shadow-gray-800" />
                     <h1 className="text-4xl font-bold font-Jost">{mod?.name}</h1>
                     <h2 className="text-md text-gray-400 w-[65%]">{mod?.description}</h2>
-                    <h3 className="text-lg font-semibold text-gray-500">Price:  <span className="font-Jost text-offwhite text-4xl">{mod?.Price.price} {mod?.Price.name}</span></h3>
-                    <Button className="w-[30%] " color={"red"} size="lg">Buy Now </Button>
+                    {
+                        modId == "dynasty" && <>
+                            <h5 className="text-4xl mt-10 font-bold font-Funnel text-primary">Launching Soon</h5>
+                        </>
+                    }
+                    <h3 className="text-lg font-semibold text-gray-500">{modId=="dynasty"&&<>Pre Order </>}Price:  <span className="font-Jost text-offwhite text-4xl">{mod?.Price.price} {mod?.Price.name}</span></h3>
+                    <Button className="w-[80%] md:w-[50%] lg:w-[50%]" color={"red"} size="lg">Buy Now </Button>
                 </div>
                 <div className="LimitedEditionCarousel w-full lg:w-[50svw] min-h-[75svh] flex flex-col gap-6 items-center justify-center font-Jost">
                     <p className="text-3xl">Showcase Images</p>

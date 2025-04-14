@@ -1,14 +1,10 @@
 import NavBar from './components/NavBar'
-import DisplayProducts from './components/DisplayProducts'
-import Basics from './components/Basics'
+import Basics from './components/home/Basics'
 import Footer from './components/Footer'
 import { Helmet } from 'react-helmet-async'
-import './App.css'
-import './styles/main.css'
-import './../config/config.css'
-import './styles/roster.css'
-import Config from '../config/config'
-import CommingSoon from './components/CommingSoon'
+import Config from './config/config'
+import CommingSoon from './components/home/CommingSoon'
+import DisplayProducts from './components/home/DisplayProducts'
 
 
 

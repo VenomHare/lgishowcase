@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import  {  useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
-import './../../styles/mods.css'
-// import DisplayBlock from '../DisplayBlock'
-import { BrowseModsList, TagsList } from '../../../config/config'
-import Sorter from '../Sorter'
-import ModsDisplayBlock from '../ModsDisplayBlock'
+import ModsDisplayBlock from '../Patches/ModsDisplayBlock'
+import Config from '../../config/config'
+import Sorter from '../Patches/Sorter'
 
 const BrowseMods = () => {
-    const openDiscord = (link: string) => window.open(link);
-    const [sortedModList, setSortedModList] = useState(BrowseModsList);
+    const [sortedModList, setSortedModList] = useState(Config.BrowseModsList);
 
     return (
         <>
@@ -52,7 +49,7 @@ const BrowseMods = () => {
                 </header>
 
                 <section className="flex justify-end flex-col items-center  ">
-                        <Sorter tagList={TagsList} setSortingList={setSortedModList} sortingList={BrowseModsList} />
+                        <Sorter tagList={Config.TagsList} setSortingList={setSortedModList} sortingList={Config.BrowseModsList} />
                     
                     <article className="w-[80svw] mr-[1svw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-[.5rem] gap-3 justify-items-center">
                         {sortedModList.map(mod => (

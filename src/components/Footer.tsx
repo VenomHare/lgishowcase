@@ -1,14 +1,13 @@
-import './../styles/footer.css'
 import { AiOutlineYoutube, AiOutlineDiscord } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandPaypal } from "react-icons/tb";
-import Config from '../../config/config';
+import Config from '../config/config';
 
 const Footer = () => {
     return (
         <footer className='w-screen flex flex-col items-center p-10 mt-10 bg-black shadow-[0_0_10px_2px] shadow-black' id='footer'>
             <div className='w-full flex flex-col-reverse lg:flex-row justify-around gap-10'>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-10 lg:items-center lg:max-w-[50svw] lg:w-fit justify-items-center'>
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:items-center lg:max-w-[60svw] lg:w-fit justify-items-center'>
                     {
                         Config.FooterImgs.map((image, i) =>
                             <img src={image.src} alt={image.alt} key={i} className='max-w-[30svw] md:max-w-[15svw] lg:max-w-[10svw] xl:max-w-[7.5svw] h-auto' />

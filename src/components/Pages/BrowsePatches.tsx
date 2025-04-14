@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
-import './../../styles/patches.css'
-import Sorter from '../Sorter'
-import { Patches, PatchesTags } from '../../../config/config'
-import PatchBlock from '../PatchBlock'
-
-import "./../../styles/patches.css"
+import Config from '../../config/config'
+import Sorter from '../Patches/Sorter'
+import PatchBlock from '../Patches/PatchBlock'
+import { SortingModPack } from '../../types'
 
 const BrowsePatches = () => {
 
-    const [sortedModList, setSortedModList] = useState(Patches);
+    const [sortedModList, setSortedModList] = useState<SortingModPack[]>(Config.Patches);
 
     return (
         <>
@@ -51,7 +49,7 @@ const BrowsePatches = () => {
                 </header>
 
                 <section className="flex justify-end flex-col items-center  ">
-                    <Sorter tagList={PatchesTags} setSortingList={setSortedModList} sortingList={Patches} />
+                    <Sorter tagList={Config.PatchesTags} setSortingList={setSortedModList} sortingList={Config.Patches} />
                     
                     <article className="w-[80svw] mr-[1svw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-[.5rem] gap-3 justify-items-center">
                         {sortedModList.map((mod) => (

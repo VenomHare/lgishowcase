@@ -1,9 +1,7 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
-import TicketCreation from '../TicketCreation'
-import "./../../styles/howtobuy.css"
+import TicketCreation from './TicketCreation'
 
 const HowToBuy = () => {
     return (
