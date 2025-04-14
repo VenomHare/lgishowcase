@@ -86,7 +86,7 @@ const PatchDetails = () => {
                         </>
                     }
                     <h3 className="text-lg font-semibold text-gray-500">{modId=="dynasty"&&<>Pre Order </>}Price:  <span className="font-Jost text-offwhite text-4xl">{mod?.Price.price} {mod?.Price.name}</span></h3>
-                    <Button className="w-[80%] md:w-[50%] lg:w-[50%]" color={"red"} size="lg">Buy Now </Button>
+                    <Button className="w-[80%] md:w-[50%] lg:w-[50%]" color={"red"} size="lg">{modId == "dynasty" ?<>Pre Order </> : <>Buy</>} Now </Button>
                 </div>
                 <div className="LimitedEditionCarousel w-full lg:w-[50svw] min-h-[75svh] flex flex-col gap-6 items-center justify-center font-Jost">
                     <p className="text-3xl font-bold font-Funnel">Showcase Images</p>
