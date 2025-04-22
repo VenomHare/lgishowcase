@@ -260,7 +260,7 @@ const Config = {
         {
             id: "dynasty",
             name: "Dynasty Edition",
-            description: `In Version 10.5, new content has been added, including updated Titantrons and loading screens. Graphical bugs have been fixed, and character models have been enhanced with improved shine. Gameplay adjustments include over 290 attires, updated damage values for finishers and other moves, and changes to stables. UI enhancements bring a new menu style and finisher logo integration. Performance fixes have resolved screen freezing issues while preserving save data. To ensure proper functionality, users are advised to use the memory card included with the download. For PC users, the latest PCSX2 nightly build is recommended for the best experience. Some wrestler movesets may require manual configuration. Unauthorized sharing or distribution of this mod is strictly prohibited. Support the creators by downloading only through official channels.`,
+            description: `This patch focuses on general stability and performance improvements across multiple modes. In Universe mode, issues with Self-Promo segments during King and Queen of the Ring matches have been addressed, along with an incorrect “Intergender Wrestling” message appearing inappropriately. Character updates include a fix to Santos Escobar’s facial hair color and a correction to the spelling on CM Punk’s shirt. Create-A-Superstar improvements resolve several concerns, including missing sub-menus in Create an Arena and Create a Superstar, grayed-out Parts Color options, issues with duplicating face tattoos, and improper display of custom images in matches. Online mode also benefits from additional stability and performance enhancements.`,
             patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
             Price: {
                 id: "usd",
@@ -278,7 +278,7 @@ const Config = {
             ],
             homeShowcase: true,
             rosterListPath: DeluxeListText,
-            purchaseLink: "https://discord.com/channels/836227245881557062/1289225006177325238",
+            purchaseLink: "https://lgicheckout.vercel.app/checkout/dynasty",
             features: DynastyFeatures,
             arena: DynastyArena,
             cons: DynastyCons,
