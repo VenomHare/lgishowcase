@@ -51,3 +51,7 @@ output
 
 # Linux specific files
 *.swp
+
+dist
+.flowbite-react
+.vercel

@@ -1,136 +1,18 @@
 import NavBar from './components/NavBar'
-import DisplayProducts from './components/DisplayProducts'
-import Brief from './components/Brief'
-import Basics from './components/Basics'
+import Basics from './components/home/Basics'
 import Footer from './components/Footer'
 import { Helmet } from 'react-helmet-async'
-import './App.css'
-import './styles/main.css'
-import './../config/config.css'
-import './styles/roster.css'
-import { useState } from 'react'
-import PurchaseSection from './components/PurchaseSection'
-import { ModList, ModPack } from '../config/config'
-import RosterBlock from './components/RosterBlock'
-import RosterLists from './components/RosterLists'
-import { RxCross1 } from "react-icons/rx"
-import styled, { keyframes } from 'styled-components'
+import Config from './config/config'
+import CommingSoon from './components/home/CommingSoon'
+import DisplayProducts from './components/home/DisplayProducts'
 
-const fadeInUp = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`
 
-const scaleIn = keyframes`
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-`
 
-const AppContainer = styled.div`
-  min-height: 100vh;
-  background-color: var(--home-main-heading-bg);
-  overflow-x: hidden;
-`
-
-const HeadingContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  animation: ${fadeInUp} 0.6s ease-out;
-`
-
-const MainTitle = styled.h1`
-  margin-top: 5vh;
-  color: var(--home-main-heading-color);
-  font-size: 10rem;
-  font-family: var(--font-Neon-Rave);
-  font-style: italic;
-  animation: ${scaleIn} 0.6s ease-out;
-  
-  @media screen and (max-width: 600px) {
-    font-size: 4.8rem;
-  }
-`
-
-const SubTitle = styled.h3`
-  color: var(--home-main-heading-color);
-  font-size: 3rem;
-  font-family: "Cedarville Cursive", cursive;
-  animation: ${fadeInUp} 0.6s ease-out 0.2s backwards;
-  
-  @media screen and (max-width: 600px) {
-    font-size: 2rem;
-  }
-`
-
-const PageDetails = styled.div`
-  color: var(--home-main-heading-color);
-  margin: 3vh;
-  font-size: 1.4rem;
-  font-family: var(--font-poppin);
-  width: 75%;
-  animation: ${fadeInUp} 0.6s ease-out 0.4s backwards;
-  line-height: 1.6;
-  
-  @media screen and (max-width: 600px) {
-    font-size: 1rem;
-    width: 85%;
-  }
-`
-
-const RosterOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: ${scaleIn} 0.3s ease-out;
-`
-
-const CloseButton = styled.div`
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: var(--home-main-heading-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  
-  &:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-  }
-`
 
 function App() {
-  const [PurchaseBlock, setPurchaseBlock] = useState(false);
-  const [ModData, setModData] = useState<ModPack>(ModList.find(m => m.id == "limited") || ModList[0]);
-  const [rosterView, setRosterView] = useState(false);
 
   return (
-    <AppContainer>
+    <div className='min-h-screen overflow-x-hidden'>
       <Helmet>
         <title>LGI MOD'z | Premium HCTP Mods & Patches</title>
         <meta name="description" content="LGI MOD'z offers premium HCTP game modifications and patches. Discover enhanced gaming experiences with improved graphics, sound, gameplay, and presentation." />
@@ -157,29 +39,12 @@ function App() {
         </script>
       </Helmet>
 
-      <PurchaseSection setActiveVar={setPurchaseBlock} ActiveVar={PurchaseBlock} Mod={ModData} />
+      <NavBar active='' />
       
-      {rosterView && (
-        <RosterOverlay>
-          <CloseButton onClick={() => setRosterView(false)}>
-            <RxCross1 />
-          </CloseButton>
-          <RosterBlock thumbnail={ModData.thumbnail} title={ModData.name}>
-            {ModData.rosterListPath !== undefined ? (
-              <RosterLists filepath={ModData.rosterListPath} />
-            ) : (
-              <div>Roster Not Found</div>
-            )}
-          </RosterBlock>
-        </RosterOverlay>
-      )}
-
-      <NavBar active='home' />
-      
-      <HeadingContainer>
-        <MainTitle>LGI MOD'z</MainTitle>
-        <SubTitle>A Mod that you always want</SubTitle>
-        <PageDetails>
+      <div className='flex flex-col justify-center items-center w-full animate-fadeInOut'>
+        <h1 className='mt-[5vh] text-offwhite text-6xl md:text-8xl lg:text-10xl  font-NeonRave italic font-extrabold'><span className='text-red-700'>LGI</span> MOD'z</h1>
+        <h3 className='text-offwhite text-3xl md:text-6xl font-Cursive animate-fadeInOutBack'>A Mod that you always want</h3>
+        <div className='text-gray-400 m-[3vh] text-xl font-Poppins w-[75%] animate-fadeInOutBack'>
           HCTP is considered a favourite by many (whether it is for improved graphics/sound/gameplay/presentation). 
           Secondly, this game is the second game in the series not to include commentary. Thirdly, it is the only 
           game in the series to have won a Player's Choice Award. Fourth, HCTP boasts one of the largest wrestler 
@@ -191,19 +56,16 @@ function App() {
           Another bonus is that all of the Create A Wrestler parts were available from the word "go" (in Smackdown! 
           Shut Your Mouth, players progressed through Season Mode to unlock CAW parts). Furthermore, as mentioned above, 
           HCTP included (for the first time in the series) eleven Legends from the 1970s, 80s and 90s.
-        </PageDetails>
-      </HeadingContainer>
+        </div>
+      </div>
 
-      <DisplayProducts 
-        setPurchaseVar={setPurchaseBlock} 
-        setModData={setModData} 
-        ModData={ModData} 
-        setRosterView={setRosterView}
-      />
-      <Brief />
+      <DisplayProducts mod={Config.ModList.find(m=>m.id=="limited")!}/>
+      <DisplayProducts mod={Config.ModList.find(m=>m.id=="deluxe")!}/>
+      {/* <Brief /> */}
+      <CommingSoon mod={Config.ModList.find(m=>m.id=="dynasty")!}/>
       <Basics />
       <Footer />
-    </AppContainer>
+    </div>
   )
 }
 

@@ -1,97 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import NavBar from "./../NavBar"
 import { Link } from 'react-router-dom'
-import styled, { keyframes } from 'styled-components'
-
-const fadeIn = keyframes`
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`
-
-const ErrorContainer = styled.div`
-    width: 100svw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(33, 150, 243, 0.05) 0%, rgba(0, 188, 212, 0.05) 100%);
-    animation: ${fadeIn} 0.6s ease-out;
-`
-
-const ErrorCode = styled.h1`
-    font-size: 12rem;
-    font-weight: 800;
-    margin: 0;
-    background: linear-gradient(45deg, #2196f3, #00bcd4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(33, 150, 243, 0.1);
-    letter-spacing: -5px;
-    line-height: 1;
-    animation: ${fadeIn} 0.6s ease-out 0.2s backwards;
-`
-
-const ErrorMessage = styled.h2`
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin: 1rem 0;
-    color: #1976d2;
-    letter-spacing: -1px;
-    animation: ${fadeIn} 0.6s ease-out 0.4s backwards;
-`
-
-const ErrorDescription = styled.p`
-    font-size: 1.2rem;
-    color: #546e7a;
-    margin: 1.5rem 0 2.5rem;
-    max-width: 600px;
-    line-height: 1.6;
-    animation: ${fadeIn} 0.6s ease-out 0.6s backwards;
-`
-
-const HomeButton = styled(Link)`
-    padding: 1.2rem 2.4rem;
-    background: linear-gradient(45deg, #2196f3, #00bcd4);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    animation: ${fadeIn} 0.6s ease-out 0.8s backwards;
-    position: relative;
-    overflow: hidden;
-    
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-    
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(33, 150, 243, 0.2);
-        
-        &:before {
-            transform: translateX(0);
-        }
-    }
-`
 
 const ErrorPage = () => {
     return (<>
@@ -120,15 +29,18 @@ const ErrorPage = () => {
             </script>
         </Helmet>
         <NavBar active='' />
-        <ErrorContainer>
-            <ErrorCode>404</ErrorCode>
-            <ErrorMessage>Page Not Found</ErrorMessage>
-            <ErrorDescription>
+        <div className="w-screen flex flex-col items-center justify-center min-h-[89vh] text-center p-8 bg-black animate-fadeIn">
+            <h1 className="text-[12rem] font-extrabold m-0 bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent shadow-lg animate-fadeIn delay-200">404</h1>
+            <h2 className="text-4xl font-semibold my-4 text-red-600 animate-fadeIn delay-400">Page Not Found</h2>
+            <p className="text-lg text-gray-500 my-6 max-w-xl leading-relaxed animate-fadeIn delay-600">
                 Oops! The page you're looking for seems to have disappeared into the digital void.
                 Don't worry, you can always return to our homepage and start fresh.
-            </ErrorDescription>
-            <HomeButton to="/">Return to Homepage</HomeButton>
-        </ErrorContainer>
+            </p>
+            <Link to="/" className="inline-block py-3 px-6 bg-gradient-to-r from-red-500 to-red-700 text-white no-underline rounded-full font-semibold text-lg transition-all duration-300 ease-in-out relative overflow-hidden animate-fadeIn delay-800">
+                <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/20 transform -translate-x-full transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
+                Return to Homepage
+            </Link>
+        </div>
     </>)
 }
 

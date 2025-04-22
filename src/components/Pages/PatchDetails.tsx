@@ -1,215 +1,67 @@
-import { useEffect, useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { useParams } from 'react-router-dom'
-import styled from 'styled-components';
-import NavBar from '../NavBar';
-import { CurrencyOptions, ModList, Patches } from '../../../config/config';
-import ImageView from '../ImageView';
-import { MdOutlineRemoveRedEye } from 'react-icons/md';
-import RosterBlock from '../RosterBlock';
-import RosterLists from '../RosterLists';
-import { RxCross1 } from 'react-icons/rx';
+import { Helmet } from "react-helmet-async";
+import Footer from "../Footer";
+import NavBar from "../NavBar";
+import Config from "../../config/config";
+import { Button, Carousel } from "flowbite-react";
+import { useEffect, useState } from "react";
+import { fetchYouTubeRSS } from "../showcase/utils";
+import RosterBlock from "../Patches/RosterBlock";
+import RosterLists from "../Patches/RosterLists";
+import { useNavigate, useParams } from "react-router-dom";
+import Brief from "../Patches/Brief";
+import { ModPack, Video } from "../../types";
+import Credits from "../Patches/Credits";
 
-const Parent = styled.div`
-    height: 89svh;
-    width: 100svw;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
 
-    @media (max-width: 1200px) {
-        flex-direction: column;
-        height: fit-content;
-    }
-`
-const NotFoundText = styled.h1`
-    width: 100svw;
-    height: 89svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-
-const LeftLayout = styled.div`
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    
-    @media (max-width: 1200px) {
-        width: 80%;
-        height: fit-content;
-    }
-
-    @media (max-width: 648px) {
-        width: 100%;
-    }
-`
-
-const Thumbnail = styled.img`
-    width: auto;
-    height: 35%;
-    border-radius: .5rem;
-    margin-top: 2rem;
-
-    @media (max-width: 1200px) {
-        width: 30svw;
-    }
-    @media (max-width: 648px) {
-        width: 50%;
-    }
-`
-const PatchTitle = styled.div`
-    font-family: var(--font);
-    font-size: 2.2rem;
-    font-weight: 500;
-    margin: 1rem;
-`
-const BuyBtn = styled.button`
-    @media (max-width: 1200px) {
-        width: 12svh;
-    }
-`
-const PatchDesc = styled.div`
-    font-size: 1rem;
-    font-family: var(--font);
-    width: 80%;
-`
-const PatchPricing = styled.div`
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-`
-const PriceBlock = styled.div`
-    font-family: var(--font);
-    font-size: 1.1rem;
-    font-weight: 600;
-    @media (max-width: 1200px) {
-        width: 25%;
-        height: fit-content;
-    }
-    @media (max-width: 648px) {
-        width: 50%;
-    }
-    @media (max-width: 350px) {
-        width: 65%;
-    }
-`
-const PriceSelect = styled.select`
-    margin: 0%;
-`
-
-const RightLayout = styled.div`
-    width: 60%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-around;
-
-    @media (max-width: 1200px) {
-        width: 80%;
-        height: fit-content;
-    }
-
-    @media (max-width: 648px) {
-        width: 100%;
-    }
-`
-
-const ShowcaseImgs = styled.div`
-    margin-top: 2rem;
-    border-radius: 5px;
-    width: fit-content;
-    border: 1px solid var(--showcase-main-block-border);
-`
-const RosterBtn = styled.button`
-    width: 65%;
-    @media (max-width: 1200px) {
-        width: 30svw;
-    }
-    @media (max-width: 648px) {
-        width: 50%;
-    }
-`
-const CredsParent = styled.div`
-    height: 60svh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    @media (max-width: 1200px) {
-        width: 75svh;
-    }
-`
-const PatchList = styled.ul`
-    max-height: 90%;
-`
 
 const PatchDetails = () => {
-
-    const { patch_id } = useParams();
-
-    const patchData = ModList.find(mod => mod.id === patch_id);
-    const credits = Patches.find(pat => pat.id == patch_id);
-    const [curCurrency, setCurCurrency] = useState<CurrencyOptions | undefined>(patchData?.Price.find(p => p.id == "usd"));
-    const [picture, setPicture] = useState(1);
-    const [rosterView, setRosterView] = useState(false);
-    const [creditsView, setCreditsView] = useState(false);
-
-    useEffect(() => { setCurCurrency(patchData?.Price.find(p => p.id == "usd")) }, [patchData])
+    const { modId } = useParams();
+    const [videos, setVideos] = useState<Video[]>([]);
+    const [mod, setMod] = useState<ModPack>(Config.ModList.find(mod => mod.id == modId)!);
+    const navigate = useNavigate();
     useEffect(() => {
-        fetch('https://lgicheckout.vercel.app/api/hello')
-            .then(res => res.json())
-            .then(console.log);
-    }, [])
+        window.scrollTo(0, 0);
+        const mod = Config.ModList.find(mod => mod.id == modId);
+        if (mod) {
+            setMod(mod);
+        }
+        else {
+            navigate("/404");
+        }
+        const fetchVideos = async () => {
+            const data = await fetchYouTubeRSS(Config.modsShowasePlaylist.find(m => m.id == modId)!.playlistId) as Video[]
+            setVideos(data);
+        }
+        fetchVideos();
+    }, [modId, navigate])
 
-    const handleChange = (e: React.FormEvent<HTMLSelectElement>) => {
-        const target = e.target as HTMLSelectElement;
-        const data = patchData?.Price.find(p => p.id == target.value);
-        setCurCurrency(data);
-    }
-    const ForwardToDiscordChannel = () => { window.open("https://socialwolvez.com/app/l/uiwfZA"); }
-    const ForwardtoLimitedPayment = () => { window.open("https://lgicheckout.vercel.app/checkout/limited"); }
-
-    let Price = curCurrency?.price || 0;
-    let res = Math.floor((Price * 100) / (100 - (patchData?.Discount || 0)));
 
     return (
         <>
             <Helmet>
-                <title>{patchData?.name ? `${patchData.name} | LGI Mods` : 'Patch Details | LGI Mods'}</title>
-                <meta name="description" content={patchData?.description || 'Detailed information about HCTP game patches and modifications.'} />
-                <meta name="keywords" content={`${patchData?.name}, HCTP patch, mod details, LGI Mods, wrestling game modifications`} />
-                <meta property="og:title" content={patchData?.name ? `${patchData.name} | LGI Mods` : 'Patch Details | LGI Mods'} />
-                <meta property="og:description" content={patchData?.description || 'Detailed information about HCTP game patches and modifications.'} />
+                <title>{mod?.name ? `${mod.name} | LGI Mods` : 'Patch Details | LGI Mods'}</title>
+                <meta name="description" content={mod?.description || 'Detailed information about HCTP game patches and modifications.'} />
+                <meta name="keywords" content={`${mod?.name}, HCTP patch, mod details, LGI Mods, wrestling game modifications`} />
+                <meta property="og:title" content={mod?.name ? `${mod.name} | LGI Mods` : 'Patch Details | LGI Mods'} />
+                <meta property="og:description" content={mod?.description || 'Detailed information about HCTP game patches and modifications.'} />
                 <meta property="og:type" content="article" />
-                <meta property="og:image" content={patchData?.thumbnail || ''} />
-                <link rel="canonical" href={`https://lgimodz.vercel.app/patches/${patch_id}`} />
+                <meta property="og:image" content={mod?.thumbnail || ''} />
+                <link rel="canonical" href={`https://lgimodz.vercel.app/patches/limited`} />
                 <script type="application/ld+json">
                     {`
                         {
                             "@context": "https://schema.org",
                             "@type": "SoftwareApplication",
-                            "name": "${patchData?.name || 'HCTP Patch'}",
-                            "description": "${patchData?.description || 'HCTP game modification'}",
+                            "name": "${mod?.name || 'HCTP Patch'}",
+                            "description": "${mod?.description || 'HCTP game modification'}",
                             "applicationCategory": "Game Mod",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "${Price}",
-                                "priceCurrency": "${curCurrency?.name || 'USD'}",
-                                "url": "${patchData?.id == 'limited' ? 'https://lgicheckout.vercel.app/checkout/limited' : 'https://socialwolvez.com/app/l/uiwfZA'}"
+                                "price": "${mod?.Price}",
+                                "priceCurrency": "USD",
+                                "url": "${mod?.id == 'limited' ? 'https://lgicheckout.vercel.app/checkout/limited' : 'https://socialwolvez.com/app/l/uiwfZA'}"
                             },
-                            "image": "${patchData?.thumbnail || ''}",
+                            "image": "${mod?.thumbnail || ''}",
                             "author": {
                                 "@type": "Organization",
                                 "name": "LGI Mods"
@@ -218,94 +70,69 @@ const PatchDetails = () => {
                     `}
                 </script>
             </Helmet>
-            <>
-                {
-                    creditsView ? <CredsParent className="patchCredits">
-                        <div className="patchCredTitle"> {patchData?.name}'s Credits</div>
-                        <PatchList className="patchCredNames">
-                            {
-                                credits?.credits?.length !== 0 ? <>
-                                    {credits?.credits?.map(name => <><li className="patchCredName">{name}</li></>)}
-                                </> : <></>
-                            }
-                        </PatchList>
-                        <div className="patchCredClose" onClick={() => { setCreditsView(false) }}> Close </div>
-                    </CredsParent> : <></>
-                }
-            </>
-            <>
-                {
-                    rosterView ?
-                        <div className="homeRoster">
-                            <div className="closeRoster" onClick={() => { setRosterView(false); }}><RxCross1 /></div>
-                            <RosterBlock thumbnail={patchData?.thumbnail || ""} title={patchData?.name || ""}>
-                                {
-                                    patchData?.rosterListPath !== undefined ?
-                                        <RosterLists filepath={patchData.rosterListPath} />
-                                        : <div>Roster Not Found</div>
-                                }
-                            </RosterBlock>
-                        </div>
-                        : <></>
-                }
-            </>
 
-            <NavBar active='' />
-            <Parent>
-                {
-                    patchData == undefined ? <>
-                        <NotFoundText> Patch Not Found</NotFoundText>
-                    </>
-                        :
-                        <>
-                            <LeftLayout>
-                                <Thumbnail src={patchData.thumbnail} />
-                                <PatchTitle>{patchData.name}</PatchTitle>
-                                <PatchDesc>
-                                    {patchData.description}
-                                </PatchDesc>
-                                <PatchPricing>
-                                    <PriceSelect name="currency" onChange={handleChange} className="currencySelect">
-                                        {
-                                            patchData.Price.map((p, index) => <option key={index} value={p.id}>{p.name}</option>)
-                                        }
-                                    </PriceSelect>
-                                    {
-                                        patchData.isDiscounted ? <PriceBlock className='discountBlock'>
-                                            <div className='discountSection'>-{patchData.Discount}%</div>
-                                            <div className='priceDisplay'>
-                                                <div className='strike'>{res} {curCurrency?.name}</div>
-                                                <div className='price'>{curCurrency?.price} {curCurrency?.name}</div>
-                                            </div>
-                                        </PriceBlock>
-                                            : <PriceBlock className='nonDiscount'>{curCurrency?.price} {curCurrency?.name}</PriceBlock>
-                                    }
-                                </PatchPricing>
-                                <BuyBtn className="buy-btn" id="channel-btn" onClick={patchData.id == "limited" ? ForwardtoLimitedPayment : ForwardToDiscordChannel}> <span> Buy Now</span></BuyBtn>
-                            </LeftLayout>
-                            <RightLayout>
-                                <ShowcaseImgs>
-                                    <div className="img-container" data-thumbnail={true}>
-                                        {
-                                            patchData.showcaseImgs.map((str, index) => (
-                                                <ImageView imageURL={str} key={`Image${index}`} alt={`${patchData.name} showcase image ${index + 1}`} classname={`slideitem ${picture == index + 1 ? "show" : "hide"}`} />
-                                            ))
-                                        }
-                                        <div className="image-scroller">
-                                            {
-                                                patchData.showcaseImgs.map((img, index) => <>
-                                                    <div className={"scrollerItem"} data-active={(picture == index + 1)} onClick={() => setPicture(index + 1)} style={{ background: `url("${img}")` }}>{picture == index + 1 ? <><MdOutlineRemoveRedEye /></> : <></>}</div>
-                                                </>)
-                                            }
-                                        </div>
-                                    </div>
-                                </ShowcaseImgs>
-                                {setRosterView !== undefined ? <RosterBtn className="slideRosterButton" onClick={() => { setRosterView(true); }}>View Roster</RosterBtn> : <></>}
-                                {credits !== undefined ? <RosterBtn className="slideRosterButton" onClick={() => { setCreditsView(true); }}>View Credits</RosterBtn> : <></>}
-                            </RightLayout>
+
+            <NavBar active='patchdetails' />
+            <div className='LimitedEditionGrid w-full min-h-[70svh]'>
+                <div className="LimitedEditionInfo w-full min-h-[75svh] flex flex-col items-center p-4 gap-6">
+                    <img src={mod?.thumbnail} alt="Thumbnail" className="w-[45svw] md:w-[20svw] lg:w-[10svw] object-center object-cover rounded-2xl shadow-md shadow-gray-800" />
+                    <h1 className="text-3xl md:text-4xl font-bold font-Jost flex items-center gap-4">{mod?.name} <Credits mod={mod} /></h1>
+                    <h2 className="text-md text-gray-400 w-[85%] md:w-[65%]">{mod?.description}</h2>
+                    {
+                        modId == "dynasty" && <>
+                            <h5 className="text-4xl mt-10 font-bold font-Funnel text-primary">Launching Soon</h5>
                         </>
+                    }
+                    <h3 className="text-lg font-semibold text-gray-500">{modId == "dynasty" && <>Pre Order </>}Price:  <span className="font-Jost text-offwhite text-4xl">{mod?.Price.price} {mod?.Price.name}</span></h3>
+                    <Button onClick={()=>window.open(mod.purchaseLink)} className="w-[80%] md:w-[50%] lg:w-[50%]" color={"red"} size="lg">{modId == "dynasty" ? <>Pre Order </> : <>Buy</>} Now </Button>
+                </div>
+                <div className="LimitedEditionCarousel w-full lg:w-[50svw] min-h-[75svh] flex flex-col gap-6 items-center justify-center font-Jost">
+                    <p className="text-3xl font-bold font-Funnel">Showcase Images</p>
+                    <div className="w-[80%] aspect-video">
+                        <Carousel pauseOnHover>
+                            {
+                                mod?.showcaseImgs.map((imgLink, i) =>
+                                    <img src={imgLink} alt={"Image " + i} key={i} className="object-cover" />
+                                )
+                            }
+                        </Carousel>
+                    </div>
+                </div>
+                {
+                    mod.id !== "dynasty" && 
+                        <RosterBlock title={mod?.name || ""}>
+                            {
+                                mod?.rosterListPath !== undefined ?
+                                    <RosterLists filepath={mod.rosterListPath} />
+                                    : <div>Roster Not Found</div>
+                            }
+                        </RosterBlock>
                 }
-            </Parent>
+
+                {
+                    modId !== "deluxe" &&
+                    <div className="LimitedEditionFeatures min-h-[10svh] ">
+                        <Brief mod={mod} />
+                    </div>
+                }
+
+
+                <div className="LimitedEditionVideos min-h-[50svh] w-full flex flex-col items-center">
+                    <p className="text-5xl font-semibold font-Jost my-5">Showcase Videos</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 w-[90%] lg:grid-cols-3 gap-6 justify-items-center my-6">
+                        {
+                            videos.map((video, i) => <div key={i} className={`
+                                w-full flex flex-col items-center shadow-md shadow-gray-400/40 rounded-xl overflow-clip 
+                                cursor-pointer lg:w-[25svw] shrink-0 
+                            `} onClick={() => window.open(video.link)}>
+                                <img src={video.thumbnail} alt={"Thumbnail " + i} className='object-contain max-h-[90%] lg:max-h-full lg:max-w-full' />
+                                <p className='text-md px-6 py-3 font-semibold font-Jost text-offwhite'>{video.title}</p>
+                            </div>)
+                        }
+                    </div>
+                </div>
+            </div>
+            <Footer />
         </>
     )
 }

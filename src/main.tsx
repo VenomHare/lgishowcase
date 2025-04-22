@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Privacy from "./components/Pages/Privacy.tsx"
 import ErrorPage from "./components/Pages/ErrorPage.tsx"
@@ -35,8 +34,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/patches/:patch_id", // Dynamic route for patches
-    element: <PatchDetails />,
+    path: "/patches/:modId", // Dynamic route for patches
+    element: <PatchDetails/>,
     errorElement: <ErrorPage />
   },
   {
@@ -44,7 +43,6 @@ const router = createBrowserRouter([
     element: <BrowsePatches />,
     errorElement: <ErrorPage />
   },
-
   {
     path: "/policies",
     element: <Privacy />,
@@ -70,12 +68,10 @@ const router = createBrowserRouter([
 // const popUp = sessionStorage.getItem("popupview")
 // const popupbool = popUp=="true" 
 createRoot(document.getElementById('root')!).render(<>
-  <StrictMode>
     <HelmetProvider>
       <Analytics />
       <SpeedInsights />
       {/* {popupbool?<></>:<PopupImage/>} */}
       <RouterProvider router={router} />
     </HelmetProvider>
-  </StrictMode>
 </>);
