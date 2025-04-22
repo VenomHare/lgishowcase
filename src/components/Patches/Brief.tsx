@@ -4,6 +4,16 @@ interface Props {
   mod: ModPack
 }
 const Brief = ({mod}:Props) => {
+  if (mod.id == "dynasty")
+  {
+    return (<>
+      <div className="w-[100svw] flex flex-col items-center my-10">
+        <div className="w-[85svw] text-center text-3xl lg:text-4xl font-bold">
+          Roster, Features, Limitations and Areana will be Announced Soon.
+        </div>
+      </div>
+    </>)
+  }
   return (
     <div className={`
         w-[85svw] flex flex-col gap-4 items-center justify-between min-h-[20svh] mx-auto my-[30px] bg-black-background text-offwhite rounded-lg shadow-lg shadow-primary border-2 border-primary font-Poppins z-10

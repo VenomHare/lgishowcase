@@ -9,16 +9,17 @@ const Privacy = () => {
         window.scrollTo(0,0);
     })
     // Remove effective date from the first section's data
-    const modifiedPolicies = {
-        ...policies,
-        sections: policies.sections.map((section, index) => {
-            if (index === 0) {
-                const modifiedData = section.data.replace(/<p><strong>Effective Date:<\/strong>.*?<\/p>/, '');
-                return { ...section, data: modifiedData };
-            }
-            return section;
-        })
-    };
+    // const modifiedPolicies = {
+    //     ...policies,
+    //     sections: policies.sections.map((section, index) => {
+    //         if (index === 0) {
+    //             const modifiedData = section.data.replace(/<p><strong>Effective Date:<\/strong>.*?<\/p>/, '');
+    //             return { ...section, data: modifiedData };
+    //         }
+    //         return section;
+    //     })
+    // };
+    const modifiedPolicies = policies;
 
     return (<>
         <Helmet>

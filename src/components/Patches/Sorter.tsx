@@ -19,10 +19,10 @@ const Sorter: React.FC<Props> = ({sortingList, setSortingList,tagList}) => {
         }
         else 
         {
-            let list : SortingModPack[] = []
+            const list : SortingModPack[] = []
             sortingList.forEach(item =>{
                 for (let i = 0; i < activeTags.length; i++){
-                    let tag = activeTags[i];
+                    const tag = activeTags[i];
                     if(item.tags.includes(tag))
                     {
                         list.push(item);

@@ -22,20 +22,18 @@ const PatchDetails = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         const mod = Config.ModList.find(mod => mod.id == modId);
-        if (mod)
-        {
+        if (mod) {
             setMod(mod);
         }
-        else 
-        {
+        else {
             navigate("/404");
         }
         const fetchVideos = async () => {
-            const data = await fetchYouTubeRSS(Config.modsShowasePlaylist.find(m=>m.id==modId)!.playlistId) as Video[]
+            const data = await fetchYouTubeRSS(Config.modsShowasePlaylist.find(m => m.id == modId)!.playlistId) as Video[]
             setVideos(data);
         }
         fetchVideos();
-    }, [])
+    }, [modId, navigate])
 
 
     return (
@@ -78,15 +76,15 @@ const PatchDetails = () => {
             <div className='LimitedEditionGrid w-full min-h-[70svh]'>
                 <div className="LimitedEditionInfo w-full min-h-[75svh] flex flex-col items-center p-4 gap-6">
                     <img src={mod?.thumbnail} alt="Thumbnail" className="w-[45svw] md:w-[20svw] lg:w-[10svw] object-center object-cover rounded-2xl shadow-md shadow-gray-800" />
-                    <h1 className="text-4xl font-bold font-Jost flex  items-center gap-4">{mod?.name} <Credits mod={mod} /></h1>
-                    <h2 className="text-md text-gray-400 w-[65%]">{mod?.description}</h2>
+                    <h1 className="text-3xl md:text-4xl font-bold font-Jost flex items-center gap-4">{mod?.name} <Credits mod={mod} /></h1>
+                    <h2 className="text-md text-gray-400 w-[85%] md:w-[65%]">{mod?.description}</h2>
                     {
                         modId == "dynasty" && <>
                             <h5 className="text-4xl mt-10 font-bold font-Funnel text-primary">Launching Soon</h5>
                         </>
                     }
-                    <h3 className="text-lg font-semibold text-gray-500">{modId=="dynasty"&&<>Pre Order </>}Price:  <span className="font-Jost text-offwhite text-4xl">{mod?.Price.price} {mod?.Price.name}</span></h3>
-                    <Button className="w-[80%] md:w-[50%] lg:w-[50%]" color={"red"} size="lg">{modId == "dynasty" ?<>Pre Order </> : <>Buy</>} Now </Button>
+                    <h3 className="text-lg font-semibold text-gray-500">{modId == "dynasty" && <>Pre Order </>}Price:  <span className="font-Jost text-offwhite text-4xl">{mod?.Price.price} {mod?.Price.name}</span></h3>
+                    <Button className="w-[80%] md:w-[50%] lg:w-[50%]" color={"red"} size="lg">{modId == "dynasty" ? <>Pre Order </> : <>Buy</>} Now </Button>
                 </div>
                 <div className="LimitedEditionCarousel w-full lg:w-[50svw] min-h-[75svh] flex flex-col gap-6 items-center justify-center font-Jost">
                     <p className="text-3xl font-bold font-Funnel">Showcase Images</p>
@@ -100,17 +98,20 @@ const PatchDetails = () => {
                         </Carousel>
                     </div>
                 </div>
-                <RosterBlock title={mod?.name || ""}>
-                    {
-                        mod?.rosterListPath !== undefined ?
-                            <RosterLists filepath={mod.rosterListPath} />
-                            : <div>Roster Not Found</div>
-                    }
-                </RosterBlock>
+                {
+                    mod.id !== "dynasty" && 
+                        <RosterBlock title={mod?.name || ""}>
+                            {
+                                mod?.rosterListPath !== undefined ?
+                                    <RosterLists filepath={mod.rosterListPath} />
+                                    : <div>Roster Not Found</div>
+                            }
+                        </RosterBlock>
+                }
 
                 {
                     modId !== "deluxe" &&
-                    <div className="LimitedEditionFeatures min-h-[50svh] ">
+                    <div className="LimitedEditionFeatures min-h-[10svh] ">
                         <Brief mod={mod} />
                     </div>
                 }

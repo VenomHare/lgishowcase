@@ -19,7 +19,7 @@ const DisplayProducts = ({ mod }: Props) => {
           </div>
 
           <div className=' text-md font-semibold lg:text-md text-gray-400'>
-            {(mod.description?.length! > 200) ? <>
+            {(mod.description && mod.description?.length > 200) ? <>
               {mod.description?.slice(0, 200)}...
               <span className="underline cursor-pointer hover:text-primary" onClick={() => { navigate(`/patches/${mod.id}`) }}>Read More</span>
             </> : <>

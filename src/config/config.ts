@@ -53,52 +53,48 @@ const LimitedArena = [
 
 
 const DynastyFeatures = [
-    "82 Wrestlers in Exhibition instead of 65 (including non-unlockable characters and Divas)",
-    "75 Superstars playable in Season Mode",
-    "Total 61 Titantrons, up from 43",
-    "Total 125 Themes, compared to 72 previously",
-    "All high-poly models now appear in Victory Motions!",
-    "Updated Movesets with 180+ new moves, including converted and custom-made ones",
-    "298+ Unique Attires",
-    "Royal Rumble Finishers with cheats assigned to all 82 superstars",
-    "Adjusted damage values for several moves, especially finishers",
-    "New Themes and Titantrons added",
-    "New Finisher Logos introduced",
-    "Updated and restructured Stables",
-    "Enhanced Renders for all superstars"
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
 ];
 
-
 const DynastyCons = [
-    "With the roster hack, we can have 86 characters in Exhibition instead of just 65, but there are side effects.",
-    "Members in stables cannot be changed; attempting to do so causes the game to freeze and an error to appear in the console.",
-    "Certain wrestler IDs cause the pre-match model to appear too big or too small; this issue is related to the ID.",
-    "Some wrestler IDs also affect the size of the belt during entrances, making it appear too big or small, though most are normal."
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
+    "To Be Decided",
 ];
 
 const DynastyArena = [
-    "Smackdown 1",
-    "Smackdown Oval",
-    "Raw 1",
+    "Smackdown 2025",
+    "Smackdown 2",
+    "Raw 2025",
     "Raw 2",
-    "NXT",
+    "NXT 2025",
+    "NXT 2",
+    "Royal Rumble 2024",
+    "Elimination Chamber 2025",
     "WrestleMania XL",
-    "Royal Rumble 24",
-    "Elimination Chamber",
-    "WrestleMania XX",
     "Backlash",
     "Judgement Day",
     "King of the Ring XI",
-    "WCW Nitro",
+    "Saturday Night Main Events",
     "Summer Slam",
     "Unforgiven",
-    "King Of Sports",
+    "AEW Dynamite",
     "Survivor Series",
-    "Night Of Champion",
-    "ECW",
-    "WrestleMania X8",
+    "Night Of Champion 2025",
+    "Bad Blood",
+    "WrestleMania X",
     "Many Hidden Arenas playable through cheats"
-];
+];;
 
 const discordServerLink = "https://discord.com/invite/dMzNNVuYv7";
 
@@ -269,7 +265,7 @@ const Config = {
             Price: {
                 id: "usd",
                 name: "USD",
-                price: 0,
+                price: 32,
             },
             thumbnail: "/img/poster/deluxe.png",
             showcaseImgs: [
@@ -300,7 +296,47 @@ const Config = {
                 "THQ (Base Game)",
                 "JAKKS (Base Game)"
             ]
-        }
+        },
+        {
+            id: "dynasty",
+            name: "Dynasty Edition",
+            description: `In Version 10.5, new content has been added, including updated Titantrons and loading screens. Graphical bugs have been fixed, and character models have been enhanced with improved shine. Gameplay adjustments include over 290 attires, updated damage values for finishers and other moves, and changes to stables. UI enhancements bring a new menu style and finisher logo integration. Performance fixes have resolved screen freezing issues while preserving save data. To ensure proper functionality, users are advised to use the memory card included with the download. For PC users, the latest PCSX2 nightly build is recommended for the best experience. Some wrestler movesets may require manual configuration. Unauthorized sharing or distribution of this mod is strictly prohibited. Support the creators by downloading only through official channels.`,
+            patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
+            Price: {
+                id: "usd",
+                name: "USD",
+                price: 32,
+            },
+            thumbnail: "/img/poster/deluxe.png",
+            showcaseImgs: [
+                "/img/dynastyimg/1.png",
+                "/img/dynastyimg/2.png",
+                "/img/dynastyimg/3.png",
+                "/img/dynastyimg/4.png",
+                "/img/dynastyimg/6.png",
+                "/img/dynastyimg/5.png",
+            ],
+            homeShowcase: true,
+            rosterListPath: DeluxeListText,
+            purchaseLink: "https://discord.com/channels/836227245881557062/1289225006177325238",
+            features: DynastyFeatures,
+            arena: DynastyArena,
+            cons: DynastyCons,
+            credits: [
+                "Aguila316 (Tools,Mods)",
+                "Ps2 eater (Mods) @ps2eater",
+                "Nero619 (Tools)",
+                "ERI619 (Tools)",
+                "a7med7assan5 (Mods,Cheats,Movesets,Render and texture) @a7med7assan5",
+                "Erm31 (Tools)",
+                "Modding Generation (Mods,Arenas,Render and texture) @ModdingGenerationOfficial",
+                "Angry game show (Mods,moves,Render and texture) @angrygamershow848",
+                "Ryukuuma (Mods) @Ryukuuma",
+                "Ranjay (Arenas) @ranjay12",
+                "THQ (Base Game)",
+                "JAKKS (Base Game)"
+            ]
+        },
     ],
 
 
@@ -396,12 +432,27 @@ const Config = {
             imagesURL: [],
             thumbnail: "/img/poster/limited.png",
             downloadLink: "https://lgicheckout.vercel.app/checkout/limited",
-           
         },
         {
             id: "deluxe",
             title: "Deluxe Edition Pack",
             tags: ["free", "Deluxe Edition"],
+            imagesURL: [],
+            thumbnail: "/img/poster/deluxe.png",
+            downloadLink: "https://socialwolvez.com/app/l/uiwfZA",
+        },
+        {
+            id: "dynasty",
+            title: "Dynasty Edition Pack",
+            tags: ["paid", "Dynasty Edition","preorder", "beta"],
+            imagesURL: [],
+            thumbnail: "/img/poster/dynasty.png",
+            downloadLink: "",
+        },
+        {
+            id: "fantasy",
+            title: "Fantasy Edition Pack",
+            tags: ["paid", "Fantasy Edition", "beta"],
             imagesURL: [],
             thumbnail: "/img/poster/deluxe.png",
             downloadLink: "https://socialwolvez.com/app/l/uiwfZA",
@@ -417,8 +468,12 @@ const Config = {
     PatchesTags: [
         "free",
         "paid",
+        "preorder",
+        "beta",
         "Limited Edition",
-        "Deluxe Edition"
+        "Deluxe Edition",
+        "Fantasy Edition",
+        "Dynasty Edition"
     ],
 
     Navbar: [
@@ -444,7 +499,7 @@ const Config = {
         },
     ],
 
-  
+
 
 
 };

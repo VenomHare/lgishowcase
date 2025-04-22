@@ -7,7 +7,7 @@ const RosterLists:React.FC<{filepath: string}> = ({filepath}) => {
     useEffect(() => {
         fetch(filepath)
         .then((response) => response.text().then((data) => {
-            let n = data.split('\n');
+            const n = data.split('\n');
             setNames(n);
         }))
         .catch((error) => {
@@ -17,7 +17,7 @@ const RosterLists:React.FC<{filepath: string}> = ({filepath}) => {
         .finally(() => {
             setIsLoading(false);
         })
-    }, [])
+    }, [filepath])
 
     if (isLoading){
         return <div> Roster is Loading</div>
