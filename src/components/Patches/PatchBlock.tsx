@@ -11,7 +11,7 @@ const PatchBlock: React.FC<Props> = ({ mod }: Props) => {
     const navigate = useNavigate();
     return (
         <>
-            <div className='w-[250px] md:w-[250px] xl:w-[300px] h-[40svh] md:h-[45svh] flex flex-col gap-4 bg-black-background border border-primary p-4 rounded-lg'>
+            <div className='w-[250px] md:w-[250px] xl:w-[300px] min-h-[40svh] md:min-h-[45svh] flex flex-col gap-4 bg-black-background border border-primary p-4 rounded-lg'>
                 <div className="flex flex-wrap gap-1 w-full ">
                     {
                         mod.tags.map((tag, i) =>

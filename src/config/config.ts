@@ -238,7 +238,7 @@ const Config = {
             ],
             homeShowcase: true,
             rosterListPath: DeluxeListText,
-            purchaseLink: "https://discord.com/channels/836227245881557062/1289225006177325238",
+            purchaseLink: "https://socialwolvez.com/app/l/uiwfZA",
             features: [],
             arena: [],
             cons: [],
