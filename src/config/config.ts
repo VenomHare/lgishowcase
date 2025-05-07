@@ -265,7 +265,7 @@ const Config = {
             Price: {
                 id: "usd",
                 name: "USD",
-                price: 32,
+                price: 50,
             },
             thumbnail: "/img/poster/dynasty.png",
             showcaseImgs: [
