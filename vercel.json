@@ -6,6 +6,10 @@
         "dest": "/api/rsshub/[...path].js"
       },
       {
+        "src":"/maintenance",
+        "dest":"/"
+      },
+      {
         "src": "/roster",
         "dest": "/"
       },
