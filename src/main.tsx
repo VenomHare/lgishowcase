@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
-import Privacy from "./components/Pages/Privacy.tsx"
+// import Privacy from "./components/Pages/Privacy.tsx"
 import ErrorPage from "./components/Pages/ErrorPage.tsx"
-import Showcase from "./components/Pages/Showcase.tsx"
+// import Showcase from "./components/Pages/Showcase.tsx"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { HelmetProvider } from 'react-helmet-async';
@@ -11,12 +11,12 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import App from './App.tsx'
-import Downloads from './components/Pages/Downloads.tsx'
-import HowToBuy from './components/Pages/HowToBuy.tsx'
-import BrowseMods from './components/Pages/BrowseMods.tsx'
-import BrowsePatches from './components/Pages/BrowsePatches.tsx'
-import PatchDetails from './components/Pages/PatchDetails.tsx'
+// import App from './App.tsx'
+// import Downloads from './components/Pages/Downloads.tsx'
+// import HowToBuy from './components/Pages/HowToBuy.tsx'
+// import BrowseMods from './components/Pages/BrowseMods.tsx'
+// import BrowsePatches from './components/Pages/BrowsePatches.tsx'
+// import PatchDetails from './components/Pages/PatchDetails.tsx'
 import Maintenance from './components/Pages/Maintenance.tsx'
 
 const router = createBrowserRouter([

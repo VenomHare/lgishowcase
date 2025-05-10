@@ -77,7 +77,6 @@ const NavBar: React.FC<Props> = ({ active, isMaintenance = false }) => {
                     <button data-active={active == "Discord"} className={`
                         cursor-pointer w-full py-4 flex items-center justify-center gap-2 text-black bg-offwhite
                         lg:rounded-lg lg:py-2 font-Jost
-                        ${isMaintenance ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}
                     `}>
                         Discord
                         <IoOpenOutline />
