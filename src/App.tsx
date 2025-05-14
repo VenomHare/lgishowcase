@@ -62,7 +62,7 @@ function App() {
       <DisplayProducts mod={Config.ModList.find(m=>m.id=="limited")!}/>
       <DisplayProducts mod={Config.ModList.find(m=>m.id=="deluxe")!}/>
       {/* <Brief /> */}
-      <CommingSoon mod={Config.ModList.find(m=>m.id=="dynasty")!}/>
+      <CommingSoon mod={Config.ModList.find(m=>m.id=="evolution")!}/>
       <Basics />
       <Footer />
     </div>

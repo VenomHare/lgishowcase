@@ -72,7 +72,7 @@ const router = createBrowserRouter([
   {
     path: "/howtobuy",
     element: <HowToBuy />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage /> 
   },
 ]);
 

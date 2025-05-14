@@ -52,7 +52,16 @@ const LimitedArena = [
 ];
 
 
-const DynastyFeatures = [
+const EvolutionFeatures = [
+    "Fully Updated 2025 Roster (RAW, SmackDown, NXT, and Legends)",
+    "HD Arenas: WrestleMania 40, Royal Rumble, SmackDown & more",
+    "Realistic Entrances, Titantrons & Theme Songs",
+    "New Movesets, Attires & Commentary",
+    "Enhanced Graphics, UI & Match Presentation",
+    "Easy Installation - Works with PCSX2 & Modded PS2",
+];
+
+const EvolutionCons = [
     "To Be Decided",
     "To Be Decided",
     "To Be Decided",
@@ -62,17 +71,7 @@ const DynastyFeatures = [
     "To Be Decided",
 ];
 
-const DynastyCons = [
-    "To Be Decided",
-    "To Be Decided",
-    "To Be Decided",
-    "To Be Decided",
-    "To Be Decided",
-    "To Be Decided",
-    "To Be Decided",
-];
-
-const DynastyArena = [
+const EvolutionArena = [
     "Smackdown 2025",
     "Smackdown 2",
     "Raw 2025",
@@ -122,7 +121,7 @@ const Config = {
             playlistId: "PLcz4DKrECTOcW8Q91dwLJMD4shvRYNbQi"
         },
         {
-            id: "dynasty",
+            id: "evolution",
             playlistId: "PLcz4DKrECTOfWuM_cncBCYxqC_7mBrS1H"
         },
     ],
@@ -258,8 +257,8 @@ const Config = {
             ]
         },
         {
-            id: "dynasty",
-            name: "Dynasty Edition",
+            id: "evolution",
+            name: "2K25 Evolution Patch",
             description: `This patch focuses on general stability and performance improvements across multiple modes. In Universe mode, issues with Self-Promo segments during King and Queen of the Ring matches have been addressed, along with an incorrect “Intergender Wrestling” message appearing inappropriately. Character updates include a fix to Santos Escobar’s facial hair color and a correction to the spelling on CM Punk’s shirt. Create-A-Superstar improvements resolve several concerns, including missing sub-menus in Create an Arena and Create a Superstar, grayed-out Parts Color options, issues with duplicating face tattoos, and improper display of custom images in matches. Online mode also benefits from additional stability and performance enhancements.`,
             patchnotes: "Piracy Warning: Unauthorized distribution and sharing of this mod is strictly prohibited. Piracy not only undermines the hard work and effort that went into creating this content but also violates copyright laws. Respect the developers—only purchase this mod through official channels. Thank you for supporting fair practices!",
             Price: {
@@ -267,21 +266,21 @@ const Config = {
                 name: "USD",
                 price: 50,
             },
-            thumbnail: "/img/poster/dynasty.png",
+            thumbnail: "/img/poster/evolution.png",
             showcaseImgs: [
-                "/img/dynastyimg/1.png",
-                "/img/dynastyimg/2.png",
-                "/img/dynastyimg/3.png",
-                "/img/dynastyimg/4.png",
-                "/img/dynastyimg/6.png",
-                "/img/dynastyimg/5.png",
+                "/img/evolutionimg/1.png",
+                "/img/evolutionimg/2.png",
+                "/img/evolutionimg/3.png",
+                "/img/evolutionimg/4.png",
+                "/img/evolutionimg/6.png",
+                "/img/evolutionimg/5.png",
             ],
             homeShowcase: true,
             rosterListPath: DeluxeListText,
-            purchaseLink: "https://lgicheckout.vercel.app/checkout/dynasty",
-            features: DynastyFeatures,
-            arena: DynastyArena,
-            cons: DynastyCons,
+            purchaseLink: "https://lgicheckout.vercel.app/checkout/evolution",
+            features: EvolutionFeatures,
+            arena: EvolutionArena,
+            cons: EvolutionCons,
             credits: [
                 "Aguila316 (Tools,Mods)",
                 "Ps2 eater (Mods) @ps2eater",
@@ -402,11 +401,11 @@ const Config = {
             downloadLink: "https://socialwolvez.com/app/l/uiwfZA",
         },
         {
-            id: "dynasty",
-            title: "Dynasty Edition Pack",
-            tags: ["paid", "Dynasty Edition","preorder", "beta"],
+            id: "evolution",
+            title: "2K25 Evolution Patch ",
+            tags: ["paid", "2K25 Evolution Patch","preorder", "beta"],
             imagesURL: [],
-            thumbnail: "/img/poster/dynasty.png",
+            thumbnail: "/img/poster/evolution.png",
             downloadLink: "",
         },
         {
@@ -433,7 +432,7 @@ const Config = {
         "Limited Edition",
         "Deluxe Edition",
         "Fantasy Edition",
-        "Dynasty Edition"
+        "2K25 Evolution Patch"
     ],
 
     Navbar: [
