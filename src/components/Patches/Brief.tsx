@@ -4,7 +4,7 @@ interface Props {
   mod: ModPack;
 }
 const Brief = ({ mod }: Props) => {
-  if (mod.id == "dynasty") {
+  if (mod.id == "evolution") {
     return (
       <>
         <div
